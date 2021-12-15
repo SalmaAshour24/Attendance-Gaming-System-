@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 
 import 'app_bar.dart';
 import 'drawer.dart';
@@ -11,6 +12,8 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
+    final CountDownController _controller = CountDownController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,54 +41,79 @@ class _QuestionScreenState extends State<QuestionScreen> {
           child: ListView(
             children: [
               SizedBox(
-                height: 100,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(40),
-                      bottomRight: Radius.circular(40)),
-                  child: Card(
-                    color: Color(0xffD05B19),
-                    elevation: 10,
-                    child: GridTile(
-                      child: Center(
-                        child: Text(
-                          "Mobile device programming",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontFamily: 'Mouse Memoirs',
-                            fontSize: 35,
-                            color: Color(0xff48210B),
+               // height: 80,
+                child:Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20))
+                            ),
+                        child: ListTile(
+                          title: Text(
+                            "theory of computation",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontFamily: 'Mouse Memoirs',
+                              fontSize: 35,
+                              color: Color(0xffffffff),
+                            ),
                           ),
                         ),
-                      ),
-                    ),
-                  ),
-                ),
+                        elevation: 40,
+                        color: Color(0xff110C52),
+                      )
               ),
+              
               Text(
                 "Please answer the following!",
-                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Mouse Memoirs',
-                  fontSize: 35,
+                  fontSize: 30,
                   color: Color(0xffffffff),
                 ),
               ),
-              ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(40)),
-                child: Container(
-                  width: double.infinity,
-                  height: 30,
-                  color: Colors.white,
-                ),
+                    Container(
+margin: EdgeInsets.only(left: 240),  
+            child: CircularCountDownTimer(
+                duration: 60,
+                initialDuration: 0,
+                controller: _controller,
+                width: MediaQuery.of(context).size.width / 10,
+                height: MediaQuery.of(context).size.height / 10,
+                ringColor: Colors.grey[300]!,
+                ringGradient: null,
+                fillColor: Color(0xff8ECAE6),
+                fillGradient: null,
+                backgroundColor: Color(0xff0E0A57),
+                textStyle: const TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+                autoStart: true,
+                onStart: () {
+                  print('Countdown Started');
+                },
+                onComplete: () {
+                  print('Countdown Ended');
+                },
               ),
+            ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   child: Container(
+                    child:  Padding(
+                      padding: const EdgeInsets.all(30.0),
+                      child: Text('q1:what is automata',textAlign: TextAlign.center, style: TextStyle(
+                          fontFamily: 'Mouse Memoirs',
+                          fontSize: 40,
+                          color: Color(0xff8C86F5),
+                        ),),
+                    ),
+
                     width: double.infinity,
-                    height: 150,
+                    height: 120,
                     color: Colors.white,
                   ),
                 ),
@@ -117,7 +145,21 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     ],
                   )
                 ],
-              )
+              ),
+               Padding(
+                 padding: const EdgeInsets.all(10.0),
+                 child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              primary: Color(0xff353189)),
+                          child: Text(
+                            'submit',
+                            style: TextStyle(
+                              color: Color(0xffffffff),
+                            ),
+                          ),
+                        ),
+               ),
             ],
           ),
         ),
@@ -134,9 +176,17 @@ class AnswerWidget extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.all(Radius.circular(40)),
       child: Container(
-        width: MediaQuery.of(context).size.width / 2 - 80,
-        height: MediaQuery.of(context).size.width / 2 - 80,
-        color: Colors.black,
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Text('Answer',textAlign: TextAlign.center, style: TextStyle(
+                            fontFamily: 'Mouse Memoirs',
+                            fontSize: 40,
+                            color: Color(0xffffffff),
+                          ),),
+        ),
+        width: MediaQuery.of(context).size.width / 2 - 70,
+        height: MediaQuery.of(context).size.width / 2 - 90,
+        color: Color(0xff0E0A57),
       ),
     );
   }
