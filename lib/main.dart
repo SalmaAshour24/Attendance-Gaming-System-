@@ -1,5 +1,4 @@
 import 'package:flutter_application_1/screens/edit_profile.dart';
-import 'package:flutter_application_1/screens/edit_questions.dart';
 import 'package:flutter_application_1/screens/new_points.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter/material.dart';
