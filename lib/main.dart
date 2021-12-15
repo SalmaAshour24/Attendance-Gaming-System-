@@ -1,4 +1,5 @@
 import 'package:flutter_application_1/screens/add_question.dart';
+import 'package:flutter_application_1/screens/doctor/edit_questions.dart';
 import 'package:flutter_application_1/screens/doctor/students_points.dart';
 import 'package:flutter_application_1/screens/edit_profile.dart';
 import 'package:flutter_application_1/screens/students/new_points.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         '/point': (context) => NewPoints(),
         '/vp': (context) => NewPoints1(),
         '/addQ': (context) => AddQuestions(),
+        '/eq': (context) => EditQuestions(),
       },
 
       debugShowCheckedModeBanner: false,

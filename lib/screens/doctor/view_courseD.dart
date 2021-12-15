@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 
+import '../app_bar.dart';
+import '../drawer.dart';
+
 class ViewCourseD extends StatefulWidget {
   const ViewCourseD({Key? key}) : super(key: key);
 
@@ -13,85 +16,9 @@ class _ViewCourseDState extends State<ViewCourseD> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 30),
-              child: Row(
-                children: [
-                  Image.asset(
-                    'assets/profile.jpeg',
-                    scale: 10.2,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 30, horizontal: 10),
-                    child: Column(
-                      children: [
-                        Text('laknvldknvdlksfnv'),
-                        Text('dlkfvndflkbndlfkbndlkbnd'),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Divider(
-              height: 10,
-              thickness: 1.2,
-            ),
-            ListTile(
-              leading: Icon(Icons.favorite),
-              title: Text('Edit profile'),
-              onTap: () {
-                Navigator.pushNamed(context, '/edit');
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.delete),
-              title: Text('View Courses'),
-              onTap: () {
-                Navigator.pushNamed(context, '/viewcD');
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.label),
-              title: Text('Item 3'),
-              onTap: () {},
-            ),
-            Divider(
-              height: 1,
-              thickness: 1.2,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                'Label',
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.bookmark),
-              title: Text('Item A'),
-              onTap: () {},
-            ),
-          ],
-        ),
-      ),
+      drawer: Drawer1(),
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            'name',
-            style: TextStyle(
-              fontFamily: 'Mouse Memoirs',
-              fontSize: 50,
-              color: Color(0xffFFFFFF),
-            ),
-          ),
-        ),
-        backgroundColor: Color(0xff0E0A57),
+        title: App(),
         actions: [
           IconButton(
               onPressed: () {},
@@ -101,6 +28,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                 color: Color(0xff6E85B2),
               ))
         ],
+        backgroundColor: Color(0xff0E0A57),
       ),
       backgroundColor: Color(0xffFFB703),
       body: Container(

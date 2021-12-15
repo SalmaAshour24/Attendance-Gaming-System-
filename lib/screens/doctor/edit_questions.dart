@@ -86,16 +86,59 @@ class _EditQuestionsState extends State<EditQuestions> {
                           bottom: 30, top: 30, left: 90, right: 90),
                     ),
 
-                    Text(
-                      'Choices:',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontFamily: 'Mouse Memoirs',
-                        fontSize: 35,
-                        color: Color(0xffFFFFFF),
-                      ),
+                    Column(
+                      children: [
+                        Text(
+                          '1)programming language:',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: 'Mouse Memoirs',
+                            fontSize: 35,
+                            color: Color(0xffFFFFFF),
+                          ),
+                        ),
+                        Text(
+                          '2)framework:',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: 'Mouse Memoirs',
+                            fontSize: 35,
+                            color: Color(0xffFFFFFF),
+                          ),
+                        ),
+                        Text(
+                          '3)None',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: 'Mouse Memoirs',
+                            fontSize: 35,
+                            color: Color(0xffFFFFFF),
+                          ),
+                        ),
+                      ],
                     ),
-                    Row(
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(35),
+                      ),
+                      child: const ListTile(
+                        title: Text(
+                          "What is Dart?",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: 'Mouse Memoirs',
+                            fontSize: 40,
+                            color: Color(0xffFFFFFF),
+                          ),
+                        ),
+                      ),
+                      elevation: 20,
+                      color: Color(0xff8C86F5),
+                      margin: EdgeInsets.only(
+                          bottom: 30, top: 30, left: 90, right: 90),
+                    ),
+
+                    Column(
                       children: [
                         Text(
                           '1)programming language:',
@@ -131,10 +174,11 @@ class _EditQuestionsState extends State<EditQuestions> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                            primary: Color(0xff0E0A57)),
+                            primary: Color(0xff023047)),
                         child: Text(
-                          'Add',
+                          'Edit',
                           style: TextStyle(
+                            fontSize: 30,
                             color: Color(0xffffffff),
                           ),
                         ),
