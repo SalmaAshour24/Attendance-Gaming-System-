@@ -46,6 +46,13 @@ class _Drawer1State extends State<Drawer1> {
             },
           ),
           ListTile(
+            leading: Icon(Icons.favorite),
+            title: Text('Questions'),
+            onTap: () {
+              Navigator.pushNamed(context, '/eq');
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.ac_unit_outlined),
             title: Text('Edit Questions'),
             onTap: () {
