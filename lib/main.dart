@@ -1,3 +1,4 @@
+import 'package:flutter_application_1/screens/doctor/students_points.dart';
 import 'package:flutter_application_1/screens/edit_profile.dart';
 import 'package:flutter_application_1/screens/students/new_points.dart';
 import 'package:page_transition/page_transition.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         '/edit': (context) => Editprofile(),
         '/signout': (context) => HomeScreen(),
         '/point': (context) => NewPoints(),
-        //  '/q': (context) => Questions(),
+        '/vp': (context) => NewPoints1(),
       },
 
       debugShowCheckedModeBanner: false,

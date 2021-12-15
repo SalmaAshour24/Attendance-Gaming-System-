@@ -53,6 +53,13 @@ class _Drawer1State extends State<Drawer1> {
             },
           ),
           ListTile(
+            leading: Icon(Icons.ac_unit_outlined),
+            title: Text('View points'),
+            onTap: () {
+              Navigator.pushNamed(context, '/vp');
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.label),
             title: Text('View Points'),
             onTap: () {
