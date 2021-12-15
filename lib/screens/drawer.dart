@@ -66,6 +66,13 @@ class _Drawer1State extends State<Drawer1> {
               Navigator.pushNamed(context, '/point');
             },
           ),
+          ListTile(
+            leading: Icon(Icons.label),
+            title: Text('Add Questions'),
+            onTap: () {
+              Navigator.pushNamed(context, '/addQ');
+            },
+          ),
           Divider(
             height: 1,
             thickness: 1.2,
