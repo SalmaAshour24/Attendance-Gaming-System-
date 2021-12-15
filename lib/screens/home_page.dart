@@ -1,0 +1,138 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:flutter/material.dart';
+
+import 'app_bar.dart';
+import 'drawer.dart';
+
+class homePage extends StatefulWidget {
+  @override
+  _homePageState createState() => _homePageState();
+}
+
+class _homePageState extends State<homePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: Drawer1(),
+      appBar: AppBar(
+        title: App(),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.search,
+                size: 30,
+                color: Color(0xff6E85B2),
+              ))
+        ],
+        backgroundColor: Color(0xff0E0A57),
+      ),
+      backgroundColor: Color(0xffFFB703),
+      body: Container(
+        decoration: new BoxDecoration(
+            image: new DecorationImage(
+                image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
+        child: CustomScrollView(
+          primary: false,
+          slivers: <Widget>[
+            SliverPadding(
+              padding: const EdgeInsets.all(20),
+              sliver: SliverGrid.count(
+                crossAxisSpacing: 30,
+                mainAxisSpacing: 40,
+                crossAxisCount: 2,
+                children: <Widget>[
+                  Container(
+                      padding: const EdgeInsets.all(0),
+                      child: Card(
+                        color: Color(0xffD05B19),
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25)),
+                        child: GridTile(
+                          child: Center(
+                            child: Text(
+                              "Data Engineering",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Mouse Memoirs',
+                                fontSize: 35,
+                                color: Color(0xff48210B),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )),
+                  Container(
+                      padding: const EdgeInsets.all(0),
+                      child: Card(
+                        color: Color(0xffD05B19),
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25)),
+                        child: GridTile(
+                          child: Center(
+                            child: Text(
+                              "Theory of computation",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Mouse Memoirs',
+                                fontSize: 35,
+                                color: Color(0xff48210B),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )),
+                  Container(
+                      padding: const EdgeInsets.all(0),
+                      child: Card(
+                        color: Color(0xffD05B19),
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25)),
+                        child: GridTile(
+                          child: Center(
+                            child: Text(
+                              "Selected Topics",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Mouse Memoirs',
+                                fontSize: 35,
+                                color: Color(0xff48210B),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )),
+                  Container(
+                      padding: const EdgeInsets.all(0),
+                      child: Card(
+                        color: Color(0xffD05B19),
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25)),
+                        child: GridTile(
+                          child: Center(
+                            child: Text(
+                              "Mobile device programming",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Mouse Memoirs',
+                                fontSize: 35,
+                                color: Color(0xff48210B),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
