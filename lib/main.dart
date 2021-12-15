@@ -1,5 +1,5 @@
 import 'package:flutter_application_1/screens/edit_profile.dart';
-import 'package:flutter_application_1/screens/new_points.dart';
+import 'package:flutter_application_1/screens/students/new_points.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter/material.dart';
 import "package:animated_splash_screen/animated_splash_screen.dart";
