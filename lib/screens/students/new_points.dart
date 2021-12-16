@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import '../app_bar.dart';
-import '../drawer.dart';
+import '../doctor/app_bar.dart';
+import '../doctor/drawer.dart';
+import 'app_barS.dart';
+import 'drawerS.dart';
 
 class NewPoints extends StatefulWidget {
   @override
@@ -11,19 +13,20 @@ class _PointsState extends State<NewPoints> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer1(),
-        appBar: AppBar(
-          title: App(),
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.search,
-                  size: 30,
-                  color: Color(0xff6E85B2),
-                ))
-          ],
-        ),
+        drawer: Drawer1s(),
+      appBar: AppBar(
+        title: Apps(),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.search,
+                size: 30,
+                color: Color(0xff6E85B2),
+              ))
+        ],
+        backgroundColor: Color(0xff0E0A57),
+      ),
         backgroundColor: Color(0xffFFB703),
         body: Container(
           decoration: new BoxDecoration(

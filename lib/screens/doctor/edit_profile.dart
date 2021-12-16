@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'drawer.dart';
-import 'app_bar.dart';
+import 'package:flutter_application_1/screens/doctor/app_bar.dart';
+import 'package:flutter_application_1/screens/doctor/drawer.dart';
+
 
 class Editprofile extends StatefulWidget {
   @override
@@ -12,18 +13,19 @@ class _EditprofileState extends State<Editprofile> {
   Widget build(BuildContext context) {
     return Scaffold(
         drawer: Drawer1(),
-        appBar: AppBar(
-          title: App(),
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.search,
-                  size: 30,
-                  color: Color(0xff6E85B2),
-                ))
-          ],
-        ),
+      appBar: AppBar(
+        title: App(),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.search,
+                size: 30,
+                color: Color(0xff6E85B2),
+              ))
+        ],
+        backgroundColor: Color(0xff0E0A57),
+      ),
         backgroundColor: Color(0xffFFB703),
         body: Container(
             decoration: new BoxDecoration(

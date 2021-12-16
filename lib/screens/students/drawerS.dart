@@ -1,11 +1,13 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
-class Drawer1 extends StatefulWidget {
+class Drawer1s extends StatefulWidget {
   @override
-  _Drawer1State createState() => _Drawer1State();
+  _Drawer1sState createState() => _Drawer1sState();
 }
 
-class _Drawer1State extends State<Drawer1> {
+class _Drawer1sState extends State<Drawer1s> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -40,55 +42,28 @@ class _Drawer1State extends State<Drawer1> {
           ),
           ListTile(
             leading: Icon(Icons.favorite),
-            title: Text('Edit profile'),
+            title: Text('Home'),
             onTap: () {
-              Navigator.pushNamed(context, '/edit');
+              Navigator.pushNamed(context, '/third');
             },
           ),
           ListTile(
             leading: Icon(Icons.favorite),
-            title: Text('Questions'),
+            title: Text('Edit Profile'),
             onTap: () {
-              Navigator.pushNamed(context, '/eq');
+              Navigator.pushNamed(context, '/edits');
             },
           ),
           ListTile(
             leading: Icon(Icons.ac_unit_outlined),
-            title: Text('Edit Questions'),
-            onTap: () {
-              Navigator.pushNamed(context, '/q');
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.ac_unit_outlined),
-            title: Text('View points'),
-            onTap: () {
-              Navigator.pushNamed(context, '/vp');
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.label),
-            title: Text('View Points'),
+            title: Text('Points'),
             onTap: () {
               Navigator.pushNamed(context, '/point');
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.label),
-            title: Text('Add Questions'),
-            onTap: () {
-              Navigator.pushNamed(context, '/addQ');
             },
           ),
           Divider(
             height: 1,
             thickness: 1.2,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(
-              'Label',
-            ),
           ),
           ListTile(
             leading: Icon(Icons.exit_to_app_rounded),

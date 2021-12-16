@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_application_1/screens/doctor/app_bar.dart';
+import 'package:flutter_application_1/screens/doctor/drawer.dart';
+
 class EditQuestions extends StatefulWidget {
   const EditQuestions({Key? key}) : super(key: key);
 
@@ -11,9 +14,9 @@ class _EditQuestionsState extends State<EditQuestions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // drawer: Drawer1(),
+      drawer: Drawer1(),
       appBar: AppBar(
-        // title: App(),
+        title: App(),
         actions: [
           IconButton(
               onPressed: () {},

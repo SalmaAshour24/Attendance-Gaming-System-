@@ -1,12 +1,16 @@
-import 'package:flutter_application_1/screens/add_question.dart';
+import 'package:flutter_application_1/screens/doctor/add_question.dart';
 import 'package:flutter_application_1/screens/doctor/edit_questions.dart';
 import 'package:flutter_application_1/screens/doctor/students_points.dart';
-import 'package:flutter_application_1/screens/edit_profile.dart';
+import 'package:flutter_application_1/screens/doctor/view_answers.dart';
+import 'package:flutter_application_1/screens/doctor/view_courseD.dart';
+import 'package:flutter_application_1/screens/doctor/edit_profile.dart';
+import 'package:flutter_application_1/screens/students/edit_profiles.dart';
 import 'package:flutter_application_1/screens/students/new_points.dart';
+import 'package:flutter_application_1/screens/students/question_screen.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter/material.dart';
 import "package:animated_splash_screen/animated_splash_screen.dart";
-import 'screens/home_page.dart';
+import 'screens/students/home_page.dart';
 import 'screens/home_screen.dart';
 import 'screens/signup.dart';
 
@@ -31,6 +35,11 @@ class MyApp extends StatelessWidget {
         '/vp': (context) => NewPoints1(),
         '/addQ': (context) => AddQuestions(),
         '/eq': (context) => EditQuestions(),
+        '/viewA': (context) => ViewAnswers(),
+        '/pointsD': (context) => NewPoints1(),
+        '/homeD': (context) => ViewCourseD(),
+        '/edits': (context) => Editprofiles(),
+        '/question': (context) => QuestionScreen()
       },
 
       debugShowCheckedModeBanner: false,

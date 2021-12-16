@@ -2,9 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
-
-import 'app_bar.dart';
-import 'drawer.dart';
+import '../doctor/app_bar.dart';
+import '../doctor/drawer.dart';
+import 'app_barS.dart';
+import 'drawerS.dart';
 
 class QuestionScreen extends StatefulWidget {
   @override
@@ -17,9 +18,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer1(),
+      drawer: Drawer1s(),
       appBar: AppBar(
-        title: App(),
+        title: Apps(),
         actions: [
           IconButton(
               onPressed: () {},

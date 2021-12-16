@@ -81,9 +81,19 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
+                      Padding(padding: EdgeInsets.only(top: 20),
+                      child: Text('SignIn',
+                      style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xff110C52),
+                            ),
+                      ),
+                      ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 50),
-                        child: ElevatedButton(
+                        padding: const EdgeInsets.only(top: 20,left: 60),
+                        child: Row(
+                          children: [
+                            ElevatedButton(
                               onPressed: () {
                               Navigator.pushNamed(context, '/third');
                             },
@@ -98,11 +108,33 @@ class _HomeScreenState extends State<HomeScreen> {
                                   fontFamily: 'Mouse Memoirs',
                                 )),
                             child: Text(
-                              'SIGN IN ',
+                              'As Student',
                               style: TextStyle(
                                 color: Color(0xff110C52),
                               ),
                             )),
+                            ElevatedButton(
+                              onPressed: () {
+                              Navigator.pushNamed(context, '/homeD');
+                            },
+                            style: ElevatedButton.styleFrom(
+                                primary: Color(0xffF7E6AD),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(40),
+                                ),
+                                textStyle: TextStyle(
+                                  fontSize: 40,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Mouse Memoirs',
+                                )),
+                            child: Text(
+                              'As Doctor',
+                              style: TextStyle(
+                                color: Color(0xff110C52),
+                              ),
+                            )),
+                          ],
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(15.0),
