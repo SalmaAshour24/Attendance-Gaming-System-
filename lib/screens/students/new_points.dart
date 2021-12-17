@@ -25,13 +25,13 @@ class _PointsState extends State<NewPoints> {
                 color: Color(0xff6E85B2),
               ))
         ],
-        backgroundColor: Color(0xff0E0A57),
+        backgroundColor: Color(0xff5A0C0C),
       ),
         backgroundColor: Color(0xffFFB703),
         body: Container(
           decoration: new BoxDecoration(
               image: new DecorationImage(
-                  image: new AssetImage('assets/view.PNG'), fit: BoxFit.cover)),
+                  image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
           child: ListView(children: [
             Column(children: [
               Card(
@@ -50,7 +50,7 @@ class _PointsState extends State<NewPoints> {
                   ),
                 ),
                 elevation: 30,
-                color: Color(0xff023047),
+                color: Color(0xff5A0C0C),
                 margin:
                     EdgeInsets.only(bottom: 60, top: 60, left: 90, right: 90),
               ),

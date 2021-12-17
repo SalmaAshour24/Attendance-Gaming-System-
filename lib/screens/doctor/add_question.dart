@@ -25,13 +25,13 @@ class _AddQuestionsState extends State<AddQuestions> {
                 color: Color(0xff6E85B2),
               ))
         ],
-        backgroundColor: Color(0xff0E0A57),
+        backgroundColor: Color(0xff581313),
       ),
       backgroundColor: Color(0xffFFB703),
       body: Container(
         decoration: new BoxDecoration(
             image: new DecorationImage(
-                image: new AssetImage('assets/edit2.PNG'), fit: BoxFit.cover)),
+                image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
         child: ListView(
           children: [
             Column(
@@ -52,7 +52,7 @@ class _AddQuestionsState extends State<AddQuestions> {
                     ),
                   ),
                   elevation: 20,
-                  color: Color(0xff023047),
+                  color: Color(0xff581313),
                   margin:
                       EdgeInsets.only(bottom: 30, top: 30, left: 90, right: 90),
                 ),
@@ -71,7 +71,7 @@ class _AddQuestionsState extends State<AddQuestions> {
                       padding: EdgeInsets.all(20),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Color(0xff8E7364),
                           borderRadius: BorderRadius.circular(25.0),
                         ),
                         child: TextFormField(
@@ -89,14 +89,14 @@ class _AddQuestionsState extends State<AddQuestions> {
                       style: TextStyle(
                         fontFamily: 'Mouse Memoirs',
                         fontSize: 35,
-                        color: Color(0xffFFFFFF),
+                        color: Color(0xff000000),
                       ),
                       ),
                       Padding(
                       padding: EdgeInsets.all(15),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Color(0xff8E7364),
                           borderRadius: BorderRadius.circular(25.0),
                         ),
                         child: TextFormField(
@@ -112,7 +112,7 @@ class _AddQuestionsState extends State<AddQuestions> {
                       padding: EdgeInsets.all(15),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Color(0xff8E7364),
                           borderRadius: BorderRadius.circular(25.0),
                         ),
                         child: TextFormField(
@@ -128,7 +128,7 @@ class _AddQuestionsState extends State<AddQuestions> {
                       padding: EdgeInsets.all(15),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Color(0xff8E7364),
                           borderRadius: BorderRadius.circular(25.0),
                         ),
                         child: TextFormField(
@@ -145,11 +145,12 @@ class _AddQuestionsState extends State<AddQuestions> {
                       child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                              primary: Color(0xff0E0A57)),
+                              primary: Color(0xff5A0C0C)),
                           child: Text(
                             'Add',
                             style: TextStyle(
-                              color: Color(0xffffffff),
+                              color: Color(0xffffffff),fontSize: 50,                                    fontFamily: 'Mouse Memoirs',
+
                             ),
                           ),
                         ),

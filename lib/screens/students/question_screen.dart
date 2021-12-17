@@ -180,7 +180,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     ),
                   ),
                   child: Text(
-                    'Bonous Quwstions',
+                    'Bonous Questions',
                     style: TextStyle(
                       color: Color(0xffffffff),
                                             fontSize: 25,

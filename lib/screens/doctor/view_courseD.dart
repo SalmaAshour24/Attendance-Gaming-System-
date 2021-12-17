@@ -28,9 +28,9 @@ class _ViewCourseDState extends State<ViewCourseD> {
                 color: Color(0xff6E85B2),
               ))
         ],
-        backgroundColor: Color(0xff0E0A57),
+        backgroundColor: Color(0xff5A0C0C),
       ),
-      backgroundColor: Color(0xffFFB703),
+      backgroundColor: Color(0xff5A0C0C),
       body: Container(
         decoration: new BoxDecoration(
             image: new DecorationImage(
@@ -44,7 +44,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                     Container(
                         padding: const EdgeInsets.all(20),
                         child: Card(
-                          color: Color(0xffD05B19),
+                          color: Color(0xff8E7364),
                           elevation: 10,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25)),
@@ -59,7 +59,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                                     style: TextStyle(
                                       fontFamily: 'Mouse Memoirs',
                                       fontSize: 35,
-                                      color: Color(0xff48210B),
+                                      color: Color(0xff000000),
                                     ),
                                   )),
                             ),
@@ -72,7 +72,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/addQ');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff0E0A57),
+                                primary: Color(0xff581313),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40),
                                 ),
@@ -93,7 +93,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/eq');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff0E0A57),
+                                primary: Color(0xff581313),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40),
                                 ),
@@ -114,7 +114,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/homeD');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff0E0A57),
+                                primary: Color(0xff581313),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40),
                                 ),
@@ -139,7 +139,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                     Container(
                         padding: const EdgeInsets.all(20),
                         child: Card(
-                          color: Color(0xffD05B19),
+                          color: Color(0xff8E7364),
                           elevation: 10,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25)),
@@ -154,7 +154,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                                     style: TextStyle(
                                       fontFamily: 'Mouse Memoirs',
                                       fontSize: 35,
-                                      color: Color(0xff48210B),
+                                      color: Color(0xff000000),
                                     ),
                                   )),
                             ),
@@ -167,7 +167,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/addQ');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff0E0A57),
+                                primary: Color(0xff581313),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40),
                                 ),
@@ -188,7 +188,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/eq');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff0E0A57),
+                                primary: Color(0xff581313),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40),
                                 ),
@@ -209,7 +209,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/homeD');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff0E0A57),
+                                primary: Color(0xff581313),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40),
                                 ),
@@ -234,7 +234,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                     Container(
                         padding: const EdgeInsets.all(20),
                         child: Card(
-                          color: Color(0xffD05B19),
+                          color: Color(0xff8E7364),
                           elevation: 10,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25)),
@@ -249,7 +249,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                                     style: TextStyle(
                                       fontFamily: 'Mouse Memoirs',
                                       fontSize: 35,
-                                      color: Color(0xff48210B),
+                                      color: Color(0xff000000),
                                     ),
                                   )),
                             ),
@@ -262,7 +262,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/addQ');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff0E0A57),
+                                primary: Color(0xff581313),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40),
                                 ),
@@ -283,7 +283,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/eq');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff0E0A57),
+                                primary: Color(0xff581313),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40),
                                 ),
@@ -304,7 +304,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/homeD');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff0E0A57),
+                                primary: Color(0xff581313),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40),
                                 ),

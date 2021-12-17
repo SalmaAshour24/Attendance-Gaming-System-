@@ -131,7 +131,8 @@ class _signupState extends State<signup> {
                           textAlign: TextAlign.center,
                           decoration: const InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Enter your password',  focusedBorder: OutlineInputBorder(
+                              hintText: 'Enter your password', 
+                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color(0xffffffff),
                                 ),
@@ -174,7 +175,6 @@ class _signupState extends State<signup> {
                       
                              Container(
                                 decoration: BoxDecoration(
-                            //color: Color(0xff8E7364),
                             borderRadius: BorderRadius.circular(25.0),
                           ),
                             child: ElevatedButton(

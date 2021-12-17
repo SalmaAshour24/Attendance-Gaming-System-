@@ -12,7 +12,8 @@ class _PointsState extends State<NewPoints1> {
   Widget build(BuildContext context) {
     return Scaffold(
         drawer: Drawer1(),
-        appBar: AppBar(
+        appBar: AppBar(          backgroundColor: Color(0xff581313),
+
           title: App(),
           actions: [
             IconButton(
@@ -24,11 +25,11 @@ class _PointsState extends State<NewPoints1> {
                 ))
           ],
         ),
-        backgroundColor: Color(0xffFFB703),
+        backgroundColor: Color(0xff581313),
         body: Container(
           decoration: new BoxDecoration(
               image: new DecorationImage(
-                  image: new AssetImage('assets/view.PNG'), fit: BoxFit.cover)),
+                  image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
           child: ListView(children: [
             Column(children: [
               Card(
@@ -47,7 +48,7 @@ class _PointsState extends State<NewPoints1> {
                   ),
                 ),
                 elevation: 30,
-                color: Color(0xff023047),
+                color: Color(0xff581313),
                 margin:
                     EdgeInsets.only(bottom: 60, top: 60, left: 90, right: 90),
               ),

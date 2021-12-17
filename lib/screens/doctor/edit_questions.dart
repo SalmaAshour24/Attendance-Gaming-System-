@@ -26,13 +26,13 @@ class _EditQuestionsState extends State<EditQuestions> {
                 color: Color(0xff6E85B2),
               ))
         ],
-        backgroundColor: Color(0xff0E0A57),
+        backgroundColor: Color(0xff5A0C0C),
       ),
       backgroundColor: Color(0xffFFB703),
       body: Container(
         decoration: new BoxDecoration(
             image: new DecorationImage(
-                image: new AssetImage('assets/edit2.PNG'), fit: BoxFit.cover)),
+                image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
         child: ListView(
           children: [
             Column(
@@ -53,7 +53,7 @@ class _EditQuestionsState extends State<EditQuestions> {
                     ),
                   ),
                   elevation: 20,
-                  color: Color(0xff023047),
+                  color: Color(0xff5A0C0C),
                   margin:
                       EdgeInsets.only(bottom: 30, top: 30, left: 90, right: 90),
                 ),
@@ -79,12 +79,12 @@ class _EditQuestionsState extends State<EditQuestions> {
                           style: TextStyle(
                             fontFamily: 'Mouse Memoirs',
                             fontSize: 40,
-                            color: Color(0xffFFFFFF),
+                            color: Color(0xff000000),
                           ),
                         ),
                       ),
                       elevation: 20,
-                      color: Color(0xff8C86F5),
+                      color: Color(0xff8E7364),
                       margin: EdgeInsets.only(
                           bottom: 30, top: 30, left: 90, right: 90),
                     ),
@@ -97,7 +97,7 @@ class _EditQuestionsState extends State<EditQuestions> {
                           style: TextStyle(
                             fontFamily: 'Mouse Memoirs',
                             fontSize: 35,
-                            color: Color(0xffFFFFFF),
+                            color: Color(0xff000000),
                           ),
                         ),
                         Text(
@@ -106,7 +106,7 @@ class _EditQuestionsState extends State<EditQuestions> {
                           style: TextStyle(
                             fontFamily: 'Mouse Memoirs',
                             fontSize: 35,
-                            color: Color(0xffFFFFFF),
+                            color: Color(0xff000000),
                           ),
                         ),
                         Text(
@@ -115,7 +115,7 @@ class _EditQuestionsState extends State<EditQuestions> {
                           style: TextStyle(
                             fontFamily: 'Mouse Memoirs',
                             fontSize: 35,
-                            color: Color(0xffFFFFFF),
+                            color: Color(0xff000000),
                           ),
                         ),
                       ],
@@ -131,12 +131,12 @@ class _EditQuestionsState extends State<EditQuestions> {
                           style: TextStyle(
                             fontFamily: 'Mouse Memoirs',
                             fontSize: 40,
-                            color: Color(0xffFFFFFF),
+                            color: Color(0xff000000),
                           ),
                         ),
                       ),
                       elevation: 20,
-                      color: Color(0xff8C86F5),
+                      color: Color(0xff8E7364),
                       margin: EdgeInsets.only(
                           bottom: 30, top: 30, left: 90, right: 90),
                     ),
@@ -149,7 +149,7 @@ class _EditQuestionsState extends State<EditQuestions> {
                           style: TextStyle(
                             fontFamily: 'Mouse Memoirs',
                             fontSize: 35,
-                            color: Color(0xffFFFFFF),
+                            color: Color(0xff000000),
                           ),
                         ),
                         Text(
@@ -158,7 +158,7 @@ class _EditQuestionsState extends State<EditQuestions> {
                           style: TextStyle(
                             fontFamily: 'Mouse Memoirs',
                             fontSize: 35,
-                            color: Color(0xffFFFFFF),
+                            color: Color(0xff000000),
                           ),
                         ),
                         Text(
@@ -167,7 +167,7 @@ class _EditQuestionsState extends State<EditQuestions> {
                           style: TextStyle(
                             fontFamily: 'Mouse Memoirs',
                             fontSize: 35,
-                            color: Color(0xffFFFFFF),
+                            color: Color(0xff000000),
                           ),
                         ),
                       ],
@@ -177,7 +177,7 @@ class _EditQuestionsState extends State<EditQuestions> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                            primary: Color(0xff023047)),
+                            primary: Color(0xff5A0C0C)),
                         child: Text(
                           'Edit',
                           style: TextStyle(

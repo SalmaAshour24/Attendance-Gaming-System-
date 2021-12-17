@@ -13,6 +13,8 @@ class _ViewAnswersState extends State<ViewAnswers> {
     return Scaffold(
         drawer: Drawer1(),
         appBar: AppBar(
+                    backgroundColor: Color(0xff581313),
+
           title: App(),
           actions: [
             IconButton(
@@ -28,7 +30,7 @@ class _ViewAnswersState extends State<ViewAnswers> {
         body: Container(
           decoration: new BoxDecoration(
               image: new DecorationImage(
-                  image: new AssetImage('assets/view.PNG'), fit: BoxFit.cover)),
+                  image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
           child: ListView(children: [
             Column(children: [
               Card(
@@ -47,7 +49,7 @@ class _ViewAnswersState extends State<ViewAnswers> {
                   ),
                 ),
                 elevation: 30,
-                color: Color(0xff023047),
+                color: Color(0xff5A0C0C),
                 margin:
                     EdgeInsets.only(bottom: 7, top: 40, left: 90, right: 90),
               ),
