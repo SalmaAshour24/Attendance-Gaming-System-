@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
           fit: BoxFit.fill,
         ),
         nextScreen: HomeScreen(),
-        backgroundColor: Color(0xff110C52),
+        backgroundColor: Color(0xff3D0000),
         splashIconSize: double.infinity,
         splashTransition: SplashTransition.slideTransition,
         pageTransitionType: PageTransitionType.leftToRight,

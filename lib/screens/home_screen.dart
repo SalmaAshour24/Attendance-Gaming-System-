@@ -11,7 +11,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff4F102C),
+        backgroundColor: Color(0xff3D0000),
         body: ListView(
           children: [
             Padding(
@@ -36,13 +36,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontFamily: 'Mouse Memoirs',
-                              fontSize: 50,
-                              color: Color(0xff110C52),
+                              fontSize: 40,
+                              color: Color(0xffffffff),
                             ),
                           ),
                         ),
                         elevation: 30,
-                        color: Color(0xffFFBCBC),
+                        color: Color(0xff3D0000),
                         margin: EdgeInsets.only(
                             bottom: 60, top: 100, left: 90, right: 90),
                       ),
@@ -51,14 +51,25 @@ class _HomeScreenState extends State<HomeScreen> {
                             const EdgeInsets.only(left: 15, right: 15, top: 5),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.grey,
+                            color: Color(0xff8E7364),
                             borderRadius: BorderRadius.circular(25.0),
                           ),
                           child: TextFormField(
+                            cursorColor:
+                                Color(0XFFFFCCFF), //Cursor color change
+
                             textAlign: TextAlign.center,
                             decoration: const InputDecoration(
                                 border: InputBorder.none,
-                                hintText: 'Enter your Email'),
+                              hintText: 'Enter your Email',
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xffffffff),
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(25)),
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -67,106 +78,118 @@ class _HomeScreenState extends State<HomeScreen> {
                             const EdgeInsets.only(left: 15, right: 15, top: 20),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.grey,
+                            color: Color(0xff8E7364),
                             borderRadius: BorderRadius.circular(25.0),
                           ),
                           child: TextFormField(
                             // obscure tkhalih msh bayn el pass
                             obscureText: true,
-
+cursorColor:
+                                Color(0XFFFFCCFF),
                             textAlign: TextAlign.center,
                             decoration: const InputDecoration(
                                 border: InputBorder.none,
-                                hintText: 'Enter your password'),
+                                hintText: 'Enter your password',
+                                focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xffffffff),
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(25)),
+                              ),),
                           ),
                         ),
                       ),
-                      Padding(padding: EdgeInsets.only(top: 20),
-                      child: Text('SignIn',
-                      style: TextStyle(
-                              fontSize: 20,
-                              color: Color(0xff110C52),
-                            ),
-                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 40),
+                        child: Text(
+                          'SignIn',
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Color(0xff5A0C0C),
+                            fontFamily: 'Mouse Memoirs',
+                          ),
+                        ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 20,left: 60),
+                        padding: const EdgeInsets.only(top: 30),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             ElevatedButton(
-                              onPressed: () {
-                              Navigator.pushNamed(context, '/third');
-                            },
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xffF7E6AD),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
-                                ),
-                                textStyle: TextStyle(
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Mouse Memoirs',
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/third');
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    primary: Color(0xff5A0C0C),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40),
+                                    ),
+                                    textStyle: TextStyle(
+                                      fontSize: 40,
+                                      fontWeight: FontWeight.normal,
+                                      fontFamily: 'Mouse Memoirs',
+                                    )),
+                                child: Text(
+                                  'As Student',
+                                  style: TextStyle(
+                                    color: Color(0xffffffff),
+                                  ),
                                 )),
-                            child: Text(
-                              'As Student',
-                              style: TextStyle(
-                                color: Color(0xff110C52),
-                              ),
-                            )),
                             ElevatedButton(
-                              onPressed: () {
-                              Navigator.pushNamed(context, '/homeD');
-                            },
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xffF7E6AD),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
-                                ),
-                                textStyle: TextStyle(
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Mouse Memoirs',
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/homeD');
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    primary: Color(0xff5A0C0C),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(40),
+                                    ),
+                                    textStyle: TextStyle(
+                                      fontSize: 40,
+                                      fontWeight: FontWeight.normal,
+                                      fontFamily: 'Mouse Memoirs',
+                                    )),
+                                child: Text(
+                                  'As Doctor',
+                                  style: TextStyle(
+                                    color: Color(0xffffffff),
+                                  ),
                                 )),
-                            child: Text(
-                              'As Doctor',
-                              style: TextStyle(
-                                color: Color(0xff110C52),
-                              ),
-                            )),
                           ],
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(15.0),
+                        padding: const EdgeInsets.only(top: 70.0),
                         child: Text(
                           'Do not have an account?',
                           style: TextStyle(
-                            color: Color(0xffffffff),
+                            color: Color(0xff5A0C0C),
                             fontFamily: 'Mouse Memoirs',
                             fontSize: 30,
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 50, bottom: 70),
+                        padding: const EdgeInsets.only(top: 10, bottom: 70),
                         child: ElevatedButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/second');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xffF7E6AD),
+                                primary: Color(0xff3D0000),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40),
                                 ),
                                 textStyle: TextStyle(
                                   fontSize: 40,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.normal,
                                   fontFamily: 'Mouse Memoirs',
                                 )),
                             child: Text(
                               'SIGN UP',
                               style: TextStyle(
-                                color: Color(0xff110C52),
+                                color: Color(0xffffffff),
                               ),
                             )),
                       ),

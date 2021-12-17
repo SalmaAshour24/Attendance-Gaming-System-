@@ -25,12 +25,12 @@ class _homePageState extends State<homePage> {
               icon: Icon(
                 Icons.search,
                 size: 30,
-                color: Color(0xff6E85B2),
+                color: Color(0xffffffff),
               ))
         ],
-        backgroundColor: Color(0xff0E0A57),
+        backgroundColor: Color(0xff3D0000),
       ),
-      backgroundColor: Color(0xffFFB703),
+      //backgroundColor: Color(0xffFFB703),
       body: Container(
         decoration: new BoxDecoration(
             image: new DecorationImage(
@@ -52,7 +52,7 @@ class _homePageState extends State<homePage> {
                     child: Container(
                         padding: const EdgeInsets.all(0),
                         child: Card(
-                          color: Color(0xffD05B19),
+                          color: Color(0xff5A0C0C),
                           elevation: 10,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25)),
@@ -64,7 +64,7 @@ class _homePageState extends State<homePage> {
                                 style: TextStyle(
                                   fontFamily: 'Mouse Memoirs',
                                   fontSize: 35,
-                                  color: Color(0xff48210B),
+                                  color: Color(0xffffffff),
                                 ),
                               ),
                             ),
@@ -78,7 +78,7 @@ class _homePageState extends State<homePage> {
                     child: Container(
                         padding: const EdgeInsets.all(0),
                         child: Card(
-                          color: Color(0xffD05B19),
+                          color: Color(0xff5A0C0C),
                           elevation: 10,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25)),
@@ -90,7 +90,7 @@ class _homePageState extends State<homePage> {
                                 style: TextStyle(
                                   fontFamily: 'Mouse Memoirs',
                                   fontSize: 35,
-                                  color: Color(0xff48210B),
+                                  color: Color(0xffffffff),
                                 ),
                               ),
                             ),
@@ -104,7 +104,7 @@ class _homePageState extends State<homePage> {
                     child: Container(
                         padding: const EdgeInsets.all(0),
                         child: Card(
-                          color: Color(0xffD05B19),
+                          color: Color(0xff5A0C0C),
                           elevation: 10,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25)),
@@ -116,7 +116,7 @@ class _homePageState extends State<homePage> {
                                 style: TextStyle(
                                   fontFamily: 'Mouse Memoirs',
                                   fontSize: 35,
-                                  color: Color(0xff48210B),
+                                  color: Color(0xffffffff),
                                 ),
                               ),
                             ),
@@ -130,7 +130,7 @@ class _homePageState extends State<homePage> {
                     child: Container(
                         padding: const EdgeInsets.all(0),
                         child: Card(
-                          color: Color(0xffD05B19),
+                          color: Color(0xff5A0C0C),
                           elevation: 10,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25)),
@@ -142,7 +142,7 @@ class _homePageState extends State<homePage> {
                                 style: TextStyle(
                                   fontFamily: 'Mouse Memoirs',
                                   fontSize: 35,
-                                  color: Color(0xff48210B),
+                                  color: Color(0xffffffff),
                                 ),
                               ),
                             ),

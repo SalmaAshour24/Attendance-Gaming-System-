@@ -18,6 +18,7 @@ class _Drawer1sState extends State<Drawer1s> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 30),
             child: Row(
+              
               children: [
                 Image.asset(
                   'assets/profile.jpeg',
@@ -27,9 +28,10 @@ class _Drawer1sState extends State<Drawer1s> {
                   padding:
                       const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
                   child: Column(
+
                     children: [
-                      Text('laknvldknvdlksfnv'),
-                      Text('dlkfvndflkbndlfkbndlkbnd'),
+                      Text('Username'),
+                      Text('name@yahoo.com'),
                     ],
                   ),
                 ),
@@ -41,21 +43,21 @@ class _Drawer1sState extends State<Drawer1s> {
             thickness: 1.2,
           ),
           ListTile(
-            leading: Icon(Icons.favorite),
+            leading: Icon(Icons.favorite,color: Color(0xff5C2424),),
             title: Text('Home'),
             onTap: () {
               Navigator.pushNamed(context, '/third');
             },
           ),
           ListTile(
-            leading: Icon(Icons.favorite),
+            leading: Icon(Icons.favorite,color: Color(0xff5C2424)),
             title: Text('Edit Profile'),
             onTap: () {
               Navigator.pushNamed(context, '/edits');
             },
           ),
           ListTile(
-            leading: Icon(Icons.ac_unit_outlined),
+            leading: Icon(Icons.ac_unit_outlined,color: Color(0xff5C2424)),
             title: Text('Points'),
             onTap: () {
               Navigator.pushNamed(context, '/point');
@@ -66,7 +68,7 @@ class _Drawer1sState extends State<Drawer1s> {
             thickness: 1.2,
           ),
           ListTile(
-            leading: Icon(Icons.exit_to_app_rounded),
+            leading: Icon(Icons.exit_to_app_rounded,color: Color(0xff5C2424)),
             title: Text('Sign out'),
             onTap: () {
               Navigator.pushNamed(context, '/signout');

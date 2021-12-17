@@ -13,7 +13,7 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
-    final CountDownController _controller = CountDownController();
+  final CountDownController _controller = CountDownController();
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +30,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 color: Color(0xff6E85B2),
               ))
         ],
-        backgroundColor: Color(0xff0E0A57),
+        backgroundColor: Color(0xff3D0000),
       ),
-      backgroundColor: Color(0xffFFB703),
+      // backgroundColor: Color(0xffFFB703),
       body: Container(
         decoration: new BoxDecoration(
             image: new DecorationImage(
@@ -42,80 +42,84 @@ class _QuestionScreenState extends State<QuestionScreen> {
           child: ListView(
             children: [
               SizedBox(
-               // height: 80,
-                child:Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(20),
-                                bottomRight: Radius.circular(20))
-                            ),
-                        child: ListTile(
-                          title: Text(
-                            "theory of computation",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Mouse Memoirs',
-                              fontSize: 35,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        elevation: 40,
-                        color: Color(0xff110C52),
-                      )
-              ),
-              
-              Text(
-                "Please answer the following!",
-                style: TextStyle(
-                  fontFamily: 'Mouse Memoirs',
-                  fontSize: 30,
-                  color: Color(0xffffffff),
+                  // height: 80,
+                  child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20))),
+                child: ListTile(
+                  title: Text(
+                    "theory of computation",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'Mouse Memoirs',
+                      fontSize: 35,
+                      color: Color(0xffffffff),
+                    ),
+                  ),
                 ),
+                elevation: 40,
+                color: Color(0xff3D0000),
+              )),
+              Row(
+                children: [
+                  Text(
+                    "Please answer the following!",
+                    style: TextStyle(
+                      fontFamily: 'Mouse Memoirs',
+                      fontSize: 30,
+                      color: Color(0xff3D0000),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 30),
+                    child: CircularCountDownTimer(
+                      duration: 60,
+                      initialDuration: 0,
+                      controller: _controller,
+                      width: MediaQuery.of(context).size.width / 6,
+                      height: MediaQuery.of(context).size.height / 6,
+                      ringColor: Colors.grey[300]!,
+                      ringGradient: null,
+                      fillColor: Color(0xffAB4C4C),
+                      fillGradient: null,
+                      backgroundColor: Color(0xff3D0000),
+                      textStyle: const TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                      autoStart: true,
+                      onStart: () {
+                        print('Countdown Started');
+                      },
+                      onComplete: () {
+                        print('Countdown Ended');
+                      },
+                    ),
+                  ),
+                ],
               ),
-                    Container(
-margin: EdgeInsets.only(left: 240),  
-            child: CircularCountDownTimer(
-                duration: 60,
-                initialDuration: 0,
-                controller: _controller,
-                width: MediaQuery.of(context).size.width / 10,
-                height: MediaQuery.of(context).size.height / 10,
-                ringColor: Colors.grey[300]!,
-                ringGradient: null,
-                fillColor: Color(0xff8ECAE6),
-                fillGradient: null,
-                backgroundColor: Color(0xff0E0A57),
-                textStyle: const TextStyle(
-                    fontSize: 20.0,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
-                autoStart: true,
-                onStart: () {
-                  print('Countdown Started');
-                },
-                onComplete: () {
-                  print('Countdown Ended');
-                },
-              ),
-            ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                padding: const EdgeInsets.only(bottom: 12.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   child: Container(
-                    child:  Padding(
+                    child: Padding(
                       padding: const EdgeInsets.all(30.0),
-                      child: Text('q1:what is automata',textAlign: TextAlign.center, style: TextStyle(
+                      child: Text(
+                        'q1:what is automata',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
                           fontFamily: 'Mouse Memoirs',
-                          fontSize: 40,
-                          color: Color(0xff8C86F5),
-                        ),),
+                          fontSize: 30,
+                          color: Color(0xffffffff),
+                        ),
+                      ),
                     ),
-
                     width: double.infinity,
-                    height: 120,
-                    color: Colors.white,
+                    height: 90,
+                    color: Color(0xff5C2424),
                   ),
                 ),
               ),
@@ -147,20 +151,46 @@ margin: EdgeInsets.only(left: 240),
                   )
                 ],
               ),
-               Padding(
-                 padding: const EdgeInsets.all(10.0),
-                 child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                              primary: Color(0xff353189)),
-                          child: Text(
-                            'submit',
-                            style: TextStyle(
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-               ),
+              Column(children: [   Padding(
+                padding: const EdgeInsets.only(top:20.0),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xff523232),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(40),
+                    ),
+                  ),
+                  child: Text(
+                    'Submit all',
+                    style: TextStyle(
+                      color: Color(0xffffffff),
+                      fontSize: 25,
+                    ),
+                  ),
+                ),
+              ),
+
+               ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xff523232),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(40),
+                    ),
+                  ),
+                  child: Text(
+                    'Bonous Quwstions',
+                    style: TextStyle(
+                      color: Color(0xffffffff),
+                                            fontSize: 25,
+
+                    ),
+                  ),
+                ),
+              
+              ],)
+           
             ],
           ),
         ),
@@ -179,15 +209,19 @@ class AnswerWidget extends StatelessWidget {
       child: Container(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Text('Answer',textAlign: TextAlign.center, style: TextStyle(
-                            fontFamily: 'Mouse Memoirs',
-                            fontSize: 40,
-                            color: Color(0xffffffff),
-                          ),),
+          child: Text(
+            'Answer',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'Mouse Memoirs',
+              fontSize: 35,
+              color: Color(0xffffffff),
+            ),
+          ),
         ),
-        width: MediaQuery.of(context).size.width / 2 - 70,
-        height: MediaQuery.of(context).size.width / 2 - 90,
-        color: Color(0xff0E0A57),
+        width: 150,
+        height: 100,
+        color: Color(0xff3D0000),
       ),
     );
   }
