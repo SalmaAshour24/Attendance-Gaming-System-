@@ -6,6 +6,7 @@ import 'package:flutter_application_1/screens/doctor/view_courseD.dart';
 import 'package:flutter_application_1/screens/doctor/edit_profile.dart';
 import 'package:flutter_application_1/screens/students/bonus_questions.dart';
 import 'package:flutter_application_1/screens/students/edit_profiles.dart';
+import 'package:flutter_application_1/screens/students/instructions.dart';
 import 'package:flutter_application_1/screens/students/new_points.dart';
 import 'package:flutter_application_1/screens/students/question_screen.dart';
 import 'package:page_transition/page_transition.dart';
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
         '/homeD': (context) => ViewCourseD(),
         '/edits': (context) => Editprofiles(),
         '/question': (context) => QuestionScreen(),
+        '/ins': (context) => QuizIns(),
       },
 
       debugShowCheckedModeBanner: false,

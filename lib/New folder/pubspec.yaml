@@ -37,8 +37,9 @@ dependencies:
   provider: ^6.0.1
   animated_splash_screen: ^1.1.0
   circular_countdown_timer: ^0.2.0
-
-
+  #flutter_styled_toast: ^2.0.1
+  flutter_sliding_up_panel: ^1.2.1
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -47,7 +47,7 @@ class _homePageState extends State<homePage> {
                 children: <Widget>[
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/question');
+                      Navigator.pushNamed(context, '/ins');
                     },
                     child: Container(
                         padding: const EdgeInsets.all(0),
@@ -125,7 +125,7 @@ class _homePageState extends State<homePage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/question');
+                      Navigator.pushNamed(context, '/ins');
                     },
                     child: Container(
                         padding: const EdgeInsets.all(0),
