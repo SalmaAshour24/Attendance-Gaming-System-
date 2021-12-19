@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         '/edits': (context) => Editprofiles(),
         '/question': (context) => QuestionScreen(),
       },
-
+//
       debugShowCheckedModeBanner: false,
       title: 'AGS',
       home: AnimatedSplashScreen(
