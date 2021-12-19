@@ -11,8 +11,29 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff3D0000),
-        body: ListView(
+      backgroundColor: Color(0xff3D0000),
+      body: const MyCustomForm(),
+    );
+  }
+}
+
+class MyCustomForm extends StatefulWidget {
+  const MyCustomForm({Key? key}) : super(key: key);
+
+  @override
+  MyCustomFormState createState() {
+    return MyCustomFormState();
+  }
+}
+
+class MyCustomFormState extends State<MyCustomForm> {
+  final _formKey = GlobalKey<FormState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+        key: _formKey,
+        child: ListView(
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 1.0),
@@ -50,26 +71,21 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding:
                             const EdgeInsets.only(left: 15, right: 15, top: 5),
                         child: Container(
-                          decoration: BoxDecoration(
-                            color: Color(0xff8E7364),
-                            borderRadius: BorderRadius.circular(25.0),
-                          ),
                           child: TextFormField(
-                            cursorColor:
-                                Color(0XFFFFCCFF), //Cursor color change
-
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter some text';
+                              }
+                              return null;
+                            },
+                            cursorColor: Color(0XFFFFCCFF),
                             textAlign: TextAlign.center,
-                            decoration: const InputDecoration(
-                                border: InputBorder.none,
-                              hintText: 'Enter your Email',
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xffffffff),
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(25)),
-                              ),
-                            ),
+                            decoration: InputDecoration(
+                                labelText: 'Enter Email',
+                                border: OutlineInputBorder(),
+                                errorBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.red, width: 5))),
                           ),
                         ),
                       ),
@@ -77,26 +93,22 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding:
                             const EdgeInsets.only(left: 15, right: 15, top: 20),
                         child: Container(
-                          decoration: BoxDecoration(
-                            color: Color(0xff8E7364),
-                            borderRadius: BorderRadius.circular(25.0),
-                          ),
                           child: TextFormField(
                             // obscure tkhalih msh bayn el pass
-                            obscureText: true,
-cursorColor:
-                                Color(0XFFFFCCFF),
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter some text';
+                              }
+                              return null;
+                            },
+                            cursorColor: Color(0XFFFFCCFF),
                             textAlign: TextAlign.center,
-                            decoration: const InputDecoration(
-                                border: InputBorder.none,
-                                hintText: 'Enter your password',
-                                focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xffffffff),
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(25)),
-                              ),),
+                            decoration: InputDecoration(
+                                labelText: 'Enter Password',
+                                border: OutlineInputBorder(),
+                                errorBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.red, width: 5))),
                           ),
                         ),
                       ),
@@ -118,7 +130,13 @@ cursorColor:
                           children: [
                             ElevatedButton(
                                 onPressed: () {
-                                  Navigator.pushNamed(context, '/third');
+                                  if (_formKey.currentState!.validate()) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                          content: Text('Processing Data')),
+                                    );
+                                    Navigator.pushNamed(context, '/third');
+                                  }
                                 },
                                 style: ElevatedButton.styleFrom(
                                     primary: Color(0xff5A0C0C),
@@ -138,7 +156,13 @@ cursorColor:
                                 )),
                             ElevatedButton(
                                 onPressed: () {
-                                  Navigator.pushNamed(context, '/homeD');
+                                  if (_formKey.currentState!.validate()) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                          content: Text('Processing Data')),
+                                    );
+                                    Navigator.pushNamed(context, '/third');
+                                  }
                                 },
                                 style: ElevatedButton.styleFrom(
                                     primary: Color(0xff5A0C0C),

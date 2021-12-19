@@ -11,7 +11,6 @@ class _signupState extends State<signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       backgroundColor: Color(0xff5A0C0C),
       body: const MyCustomForm(),
     );
@@ -34,209 +33,204 @@ class MyCustomFormState extends State<MyCustomForm> {
   Widget build(BuildContext context) {
     return Form(
         key: _formKey,
-        child: 
-        Container(
-        decoration: new BoxDecoration(
-            image: new DecorationImage(
-                image: new AssetImage('assets/3.PNG'), fit: BoxFit.cover)),
-        child: ListView(
-          children: [ 
-            Column(
-                  children: [
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(35),
+        child: Container(
+          decoration: new BoxDecoration(
+              image: new DecorationImage(
+                  image: new AssetImage('assets/3.PNG'), fit: BoxFit.cover)),
+          child: ListView(
+            children: [
+              Column(
+                children: [
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(35),
+                    ),
+                    child: const ListTile(
+                      title: Text(
+                        "SIGN UP HERE",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'Mouse Memoirs',
+                          fontSize: 30,
+                          color: Color(0xffffffff),
+                        ),
                       ),
-                      child: const ListTile(
-                        title: Text(
-                          "SIGN UP HERE",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontFamily: 'Mouse Memoirs',
-                            fontSize: 30,
-                            color: Color(0xffffffff),
+                    ),
+                    elevation: 30,
+                    color: Color(0xff5A0C0C),
+                    margin: EdgeInsets.only(
+                        bottom: 45, top: 90, left: 95, right: 90),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15, right: 15, top: 5),
+                    child: Container(
+                      child: TextFormField(
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter some text';
+                          }
+                          return null;
+                        },
+                        cursorColor: Color(0XFFFFCCFF),
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                            labelText: 'Enter Your First Name',
+                            border: OutlineInputBorder(),
+                            errorBorder: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.red, width: 5))),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 15, right: 15, top: 20),
+                    child: Container(
+                      child: TextFormField(
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter some text';
+                          }
+                          return null;
+                        },
+                        cursorColor: Color(0XFFFFCCFF),
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                            labelText: 'Enter Your Last Name',
+                            border: OutlineInputBorder(),
+                            errorBorder: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.red, width: 5))),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 15, right: 15, top: 20),
+                    child: Container(
+                      child: TextFormField(
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter some text';
+                          }
+                          return null;
+                        },
+                        cursorColor: Color(0XFFFFCCFF),
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                            labelText: 'Enter your Email',
+                            border: OutlineInputBorder(),
+                            errorBorder: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.red, width: 5))),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 15, right: 15, top: 20),
+                    child: Container(
+                      child: TextFormField(
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter some text';
+                          }
+                          return null;
+                        },
+                        cursorColor: Color(0XFFFFCCFF),
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                            labelText: 'Enter Password',
+                            border: OutlineInputBorder(),
+                            errorBorder: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.red, width: 5))),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 15, right: 15, top: 20),
+                    child: Container(
+                      child: TextFormField(
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter some text';
+                          }
+                          return null;
+                        },
+                        cursorColor: Color(0XFFFFCCFF),
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                            labelText: 'Re-enter Password',
+                            border: OutlineInputBorder(),
+                            errorBorder: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.red, width: 5))),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 50.0, bottom: 130),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25.0),
                           ),
-                        ),
-                      ),
-                      elevation: 30,
-                      color: Color(0xff5A0C0C),
-                      margin: EdgeInsets.only(
-                          bottom: 45, top: 90, left: 95, right: 90),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(left: 15, right: 15, top: 5),
-                      child: Container(
-                        child: TextFormField(
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Please enter some text';
-                            }
-                            return null;
-                          },
-                          cursorColor: Color(0XFFFFCCFF),
-                          textAlign: TextAlign.center,
-                          decoration: InputDecoration(
-                    labelText: 'Enter Your First Name',
-                    border: OutlineInputBorder(),
-                    errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.red, width: 5))),
-                        
-                        ),
-                      
-                      ),
-                      
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(left: 15, right: 15, top: 20),
-                      child: Container(
-                        child: TextFormField(
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Please enter some text';
-                            }
-                            return null;
-                          },
-                          cursorColor: Color(0XFFFFCCFF),
-                          textAlign: TextAlign.center,
-                          decoration: InputDecoration(
-                    labelText: 'Enter Your Last Name',
-                    border: OutlineInputBorder(),
-                    errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.red, width: 5))),
-                        
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(left: 15, right: 15, top: 20),
-                      child: Container(
-                        child: TextFormField(
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Please enter some text';
-                            }
-                            return null;
-                          },
-                          cursorColor: Color(0XFFFFCCFF),
-                          textAlign: TextAlign.center,
-                          decoration: InputDecoration(
-                    labelText: 'Enter your Email',
-                    border: OutlineInputBorder(),
-                    errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.red, width: 5))),
-                        
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(left: 15, right: 15, top: 20),
-                      child: Container(
-                        child: TextFormField(
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Please enter some text';
-                            }
-                            return null;
-                          },
-                          cursorColor: Color(0XFFFFCCFF),
-                          textAlign: TextAlign.center,
-                          decoration: InputDecoration(
-                    labelText: 'Enter Password',
-                    border: OutlineInputBorder(),
-                    errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.red, width: 5))),
-                        
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(left: 15, right: 15, top: 20),
-                      child: Container(
-                        child: TextFormField(
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Please enter some text';
-                            }
-                            return null;
-                          },
-                          cursorColor: Color(0XFFFFCCFF),
-                          textAlign: TextAlign.center,
-                          decoration: InputDecoration(
-                    labelText: 'Re-enter Password',
-                    border: OutlineInputBorder(),
-                    errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.red, width: 5))),
-                        
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 50.0, bottom: 130),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(25.0),
-                            ),
-                            child: ElevatedButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              style: ElevatedButton.styleFrom(
-                                  primary: Color(0xff5A0C0C),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40),
-                                  ),
-                                  textStyle: TextStyle(
-                                    fontSize: 40,
-                                    fontFamily: 'Mouse Memoirs',
-                                  )),
-                              child: Text(
-                                'BACK',
-                                style: TextStyle(
-                                  color: Color(0xffffffff),
+                          child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            style: ElevatedButton.styleFrom(
+                                primary: Color(0xff5A0C0C),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(40),
                                 ),
+                                textStyle: TextStyle(
+                                  fontSize: 40,
+                                  fontFamily: 'Mouse Memoirs',
+                                )),
+                            child: Text(
+                              'BACK',
+                              style: TextStyle(
+                                color: Color(0xffffffff),
                               ),
                             ),
                           ),
-                          ElevatedButton(
-                              onPressed: () {
-                                // Validate returns true if the form is valid, or false otherwise.
-                                if (_formKey.currentState!.validate()) {
-                                  // If the form is valid, display a snackbar. In the real world,
-                                  // you'd often call a server or save the information in a database.
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                        content: Text('Processing Data')),
-                                  );
-                                }
-                              },
-                              style: ElevatedButton.styleFrom(
-                                  primary: Color(0xff5A0C0C),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40),
-                                  ),
-                                  textStyle: TextStyle(
-                                    fontSize: 40,
-                                    fontFamily: 'Mouse Memoirs',
-                                  )),
-                              child: Text(
-                                'SIGN UP',
-                                style: TextStyle(
-                                  color: Color(0xffffffff),
+                        ),
+                        ElevatedButton(
+                            onPressed: () {
+                              if (_formKey.currentState!.validate()) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content: Text('Processing Data')),
+                                );
+                              }
+                            },
+                            style: ElevatedButton.styleFrom(
+                                primary: Color(0xff5A0C0C),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(40),
                                 ),
-                              )),
-                        ],
-                      ),
+                                textStyle: TextStyle(
+                                  fontSize: 40,
+                                  fontFamily: 'Mouse Memoirs',
+                                )),
+                            child: Text(
+                              'SIGN UP',
+                              style: TextStyle(
+                                color: Color(0xffffffff),
+                              ),
+                            )),
+                      ],
                     ),
-                  ],
-                )],),
+                  ),
+                ],
+              )
+            ],
+          ),
         ));
   }
 }
