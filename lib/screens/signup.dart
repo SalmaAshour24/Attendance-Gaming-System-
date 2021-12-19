@@ -11,18 +11,37 @@ class _signupState extends State<signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff5A0C0C),
-        body: ListView(
-          children: [
-            Container(
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    //background
-                    image: AssetImage("assets/3.PNG"),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                child: Column(
+      
+      backgroundColor: Color(0xff5A0C0C),
+      body: const MyCustomForm(),
+    );
+  }
+}
+
+class MyCustomForm extends StatefulWidget {
+  const MyCustomForm({Key? key}) : super(key: key);
+
+  @override
+  MyCustomFormState createState() {
+    return MyCustomFormState();
+  }
+}
+
+class MyCustomFormState extends State<MyCustomForm> {
+  final _formKey = GlobalKey<FormState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+        key: _formKey,
+        child: 
+        Container(
+        decoration: new BoxDecoration(
+            image: new DecorationImage(
+                image: new AssetImage('assets/3.PNG'), fit: BoxFit.cover)),
+        child: ListView(
+          children: [ 
+            Column(
                   children: [
                     Card(
                       shape: RoundedRectangleBorder(
@@ -48,47 +67,45 @@ class _signupState extends State<signup> {
                       padding:
                           const EdgeInsets.only(left: 15, right: 15, top: 5),
                       child: Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xff8E7364),
-                          borderRadius: BorderRadius.circular(25.0),
-                        ),
                         child: TextFormField(
-                          cursorColor:
-                                Color(0XFFFFCCFF),
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter some text';
+                            }
+                            return null;
+                          },
+                          cursorColor: Color(0XFFFFCCFF),
                           textAlign: TextAlign.center,
-                          decoration: const InputDecoration(
-                              border: InputBorder.none,
-                              hintText: 'Enter your Name',  focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xffffffff),
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(25)),
-                              ),),
+                          decoration: InputDecoration(
+                    labelText: 'Enter Your First Name',
+                    border: OutlineInputBorder(),
+                    errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red, width: 5))),
+                        
                         ),
+                      
                       ),
+                      
                     ),
                     Padding(
                       padding:
                           const EdgeInsets.only(left: 15, right: 15, top: 20),
                       child: Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xff8E7364),
-                          borderRadius: BorderRadius.circular(25.0),
-                        ),
                         child: TextFormField(
-                          cursorColor:
-                                Color(0XFFFFCCFF),
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter some text';
+                            }
+                            return null;
+                          },
+                          cursorColor: Color(0XFFFFCCFF),
                           textAlign: TextAlign.center,
-                          decoration: const InputDecoration(
-                              border: InputBorder.none,
-                              hintText: 'Enter your ID',  focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xffffffff),
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(25)),
-                              ),),
+                          decoration: InputDecoration(
+                    labelText: 'Enter Your Last Name',
+                    border: OutlineInputBorder(),
+                    errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red, width: 5))),
+                        
                         ),
                       ),
                     ),
@@ -96,74 +113,65 @@ class _signupState extends State<signup> {
                       padding:
                           const EdgeInsets.only(left: 15, right: 15, top: 20),
                       child: Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xff8E7364),
-                          borderRadius: BorderRadius.circular(25.0),
-                        ),
-                        child: TextFormField(cursorColor:
-                                Color(0XFFFFCCFF),
-                          textAlign: TextAlign.center,
-                          decoration: const InputDecoration(
-                              border: InputBorder.none,
-                              hintText: 'Enter your Email',  focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xffffffff),
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(25)),
-                              ),),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(left: 15, right: 15, top: 20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xff8E7364),
-                          borderRadius: BorderRadius.circular(25.0),
-                        ),
-                        child: TextFormField(cursorColor:
-                                Color(0XFFFFCCFF),
-                          // obscure tkhalih msh bayn el pass
-                          obscureText: true,
-
-                          textAlign: TextAlign.center,
-                          decoration: const InputDecoration(
-                              border: InputBorder.none,
-                              hintText: 'Enter your password', 
-                               focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xffffffff),
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(25)),
-                              ),),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(left: 15, right: 15, top: 20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xff8E7364),
-                          borderRadius: BorderRadius.circular(25.0),
-                        ),
                         child: TextFormField(
-                          cursorColor:
-                                Color(0XFFFFCCFF),
-                          obscureText: true,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter some text';
+                            }
+                            return null;
+                          },
+                          cursorColor: Color(0XFFFFCCFF),
                           textAlign: TextAlign.center,
-                          decoration: const InputDecoration(
-                              border: InputBorder.none,
-                              hintText: 'Re-Enter your Password',  focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xffffffff),
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(25)),
-                              ),),
+                          decoration: InputDecoration(
+                    labelText: 'Enter your Email',
+                    border: OutlineInputBorder(),
+                    errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red, width: 5))),
+                        
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(left: 15, right: 15, top: 20),
+                      child: Container(
+                        child: TextFormField(
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter some text';
+                            }
+                            return null;
+                          },
+                          cursorColor: Color(0XFFFFCCFF),
+                          textAlign: TextAlign.center,
+                          decoration: InputDecoration(
+                    labelText: 'Enter Password',
+                    border: OutlineInputBorder(),
+                    errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red, width: 5))),
+                        
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(left: 15, right: 15, top: 20),
+                      child: Container(
+                        child: TextFormField(
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter some text';
+                            }
+                            return null;
+                          },
+                          cursorColor: Color(0XFFFFCCFF),
+                          textAlign: TextAlign.center,
+                          decoration: InputDecoration(
+                    labelText: 'Re-enter Password',
+                    border: OutlineInputBorder(),
+                    errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red, width: 5))),
+                        
                         ),
                       ),
                     ),
@@ -172,16 +180,15 @@ class _signupState extends State<signup> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                      
-                             Container(
-                                decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25.0),
-                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(25.0),
+                            ),
                             child: ElevatedButton(
                               onPressed: () {
                                 Navigator.pop(context);
                               },
-                                style: ElevatedButton.styleFrom(
+                              style: ElevatedButton.styleFrom(
                                   primary: Color(0xff5A0C0C),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(40),
@@ -190,15 +197,26 @@ class _signupState extends State<signup> {
                                     fontSize: 40,
                                     fontFamily: 'Mouse Memoirs',
                                   )),
-                                  child:      Text(
+                              child: Text(
                                 'BACK',
                                 style: TextStyle(
                                   color: Color(0xffffffff),
-                                ),),
+                                ),
+                              ),
                             ),
                           ),
                           ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                // Validate returns true if the form is valid, or false otherwise.
+                                if (_formKey.currentState!.validate()) {
+                                  // If the form is valid, display a snackbar. In the real world,
+                                  // you'd often call a server or save the information in a database.
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content: Text('Processing Data')),
+                                  );
+                                }
+                              },
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xff5A0C0C),
                                   shape: RoundedRectangleBorder(
@@ -214,36 +232,11 @@ class _signupState extends State<signup> {
                                   color: Color(0xffffffff),
                                 ),
                               )),
-                          
-                       
                         ],
                       ),
                     ),
-
-                    // Padding(
-                    //   padding: const EdgeInsets.only(top: 50, bottom: 70),
-                    //   child: ElevatedButton(
-                    //       onPressed: () {},
-                    //       style: ElevatedButton.styleFrom(
-                    //           primary: Color(0xffF7E6AD),
-                    //           shape: RoundedRectangleBorder(
-                    //             borderRadius: BorderRadius.circular(40),
-                    //           ),
-                    //           textStyle: TextStyle(
-                    //             fontSize: 40,
-                    //             fontWeight: FontWeight.bold,
-                    //             fontFamily: 'Mouse Memoirs',
-                    //           )),
-                    //       child: Text(
-                    //         'SIGN UP',
-                    //         style: TextStyle(
-                    //           color: Color(0xff110C52),
-                    //         ),
-                    //       )),
-                    // ),
                   ],
-                )),
-          ],
+                )],),
         ));
   }
 }
