@@ -4,6 +4,7 @@ import 'package:flutter_application_1/screens/doctor/students_points.dart';
 import 'package:flutter_application_1/screens/doctor/view_answers.dart';
 import 'package:flutter_application_1/screens/doctor/view_courseD.dart';
 import 'package:flutter_application_1/screens/doctor/edit_profile.dart';
+import 'package:flutter_application_1/screens/students/bonus_questions.dart';
 import 'package:flutter_application_1/screens/students/edit_profiles.dart';
 import 'package:flutter_application_1/screens/students/new_points.dart';
 import 'package:flutter_application_1/screens/students/question_screen.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
       //nshil shartet el debug
       initialRoute: '/',
       routes: {
+        '/bonus': (context) => BonusQuestionScreen(),
         '/addC': (context) => AddCourse(),
         '/second': (context) => signup(),
         '/third': (context) => homePage(),
@@ -42,7 +44,6 @@ class MyApp extends StatelessWidget {
         '/homeD': (context) => ViewCourseD(),
         '/edits': (context) => Editprofiles(),
         '/question': (context) => QuestionScreen(),
-        
       },
 
       debugShowCheckedModeBanner: false,

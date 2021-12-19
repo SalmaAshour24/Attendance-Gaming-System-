@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import '../doctor/app_bar.dart';
@@ -7,12 +5,12 @@ import '../doctor/drawer.dart';
 import 'app_barS.dart';
 import 'drawerS.dart';
 
-class QuestionScreen extends StatefulWidget {
+class BonusQuestionScreen extends StatefulWidget {
   @override
-  _QuestionScreenState createState() => _QuestionScreenState();
+  _BonusQuestionScreenState createState() => _BonusQuestionScreenState();
 }
 
-class _QuestionScreenState extends State<QuestionScreen> {
+class _BonusQuestionScreenState extends State<BonusQuestionScreen> {
   final CountDownController _controller = CountDownController();
 
   @override
@@ -75,7 +73,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   Container(
                     margin: EdgeInsets.only(left: 30),
                     child: CircularCountDownTimer(
-                      duration: 60,
+                      duration: 30,
                       initialDuration: 0,
                       controller: _controller,
                       width: MediaQuery.of(context).size.width / 6,
@@ -108,7 +106,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     child: Padding(
                       padding: const EdgeInsets.all(30.0),
                       child: Text(
-                        'q1:what is automata',
+                        'q1:what is meant by this?',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'Mouse Memoirs',
@@ -131,10 +129,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     children: [
                       Padding(
                           padding: const EdgeInsets.all(5.0),
-                          child: AnswerWidget()),
+                          child: Answer1Widget()),
                       Padding(
                           padding: const EdgeInsets.all(5.0),
-                          child: AnswerWidget()),
+                          child: Answer1Widget()),
                     ],
                   ),
                   Row(
@@ -143,10 +141,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     children: [
                       Padding(
                           padding: const EdgeInsets.all(5.0),
-                          child: AnswerWidget()),
+                          child: Answer1Widget()),
                       Padding(
                           padding: const EdgeInsets.all(5.0),
-                          child: AnswerWidget()),
+                          child: Answer1Widget()),
                     ],
                   )
                 ],
@@ -156,7 +154,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   Padding(
                     padding: const EdgeInsets.only(top: 20.0),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/third');
+                      },
                       style: ElevatedButton.styleFrom(
                         primary: Color(0xff523232),
                         shape: RoundedRectangleBorder(
@@ -172,24 +172,6 @@ class _QuestionScreenState extends State<QuestionScreen> {
                       ),
                     ),
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/bonus');
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xff523232),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40),
-                      ),
-                    ),
-                    child: Text(
-                      'Bonus Questions',
-                      style: TextStyle(
-                        color: Color(0xffffffff),
-                        fontSize: 25,
-                      ),
-                    ),
-                  ),
                 ],
               )
             ],
@@ -200,8 +182,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
   }
 }
 
-class AnswerWidget extends StatelessWidget {
-  const AnswerWidget({Key? key}) : super(key: key);
+class Answer1Widget extends StatelessWidget {
+  const Answer1Widget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
