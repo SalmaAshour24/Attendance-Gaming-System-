@@ -10,6 +10,7 @@ import 'package:flutter_application_1/screens/students/question_screen.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter/material.dart';
 import "package:animated_splash_screen/animated_splash_screen.dart";
+import 'screens/doctor/add_course.dart';
 import 'screens/students/home_page.dart';
 import 'screens/home_screen.dart';
 import 'screens/signup.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
       //nshil shartet el debug
       initialRoute: '/',
       routes: {
+        '/addC': (context) => AddCourse(),
         '/second': (context) => signup(),
         '/third': (context) => homePage(),
         '/edit': (context) => Editprofile(),
@@ -39,7 +41,8 @@ class MyApp extends StatelessWidget {
         '/pointsD': (context) => NewPoints1(),
         '/homeD': (context) => ViewCourseD(),
         '/edits': (context) => Editprofiles(),
-        '/question': (context) => QuestionScreen()
+        '/question': (context) => QuestionScreen(),
+        
       },
 
       debugShowCheckedModeBanner: false,

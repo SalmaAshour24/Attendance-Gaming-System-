@@ -46,6 +46,13 @@ class _Drawer1State extends State<Drawer1> {
             },
           ),
           ListTile(
+            leading: Icon(Icons.ac_unit_outlined),
+            title: Text('Add Course'),
+            onTap: () {
+              Navigator.pushNamed(context, '/addC');
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.favorite),
             title: Text('Edit profile'),
             onTap: () {
