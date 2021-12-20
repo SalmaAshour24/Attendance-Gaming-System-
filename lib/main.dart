@@ -7,6 +7,7 @@ import 'package:flutter_application_1/screens/doctor/edit_profile.dart';
 import 'package:flutter_application_1/screens/students/bonus_questions.dart';
 import 'package:flutter_application_1/screens/students/edit_profiles.dart';
 import 'package:flutter_application_1/screens/students/instructions.dart';
+//import 'package:flutter_application_1/screens/students/instructions.dart';
 import 'package:flutter_application_1/screens/students/new_points.dart';
 import 'package:flutter_application_1/screens/students/question_screen.dart';
 import 'package:page_transition/page_transition.dart';
@@ -26,7 +27,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       //nshil shartet el debug
       initialRoute: '/',
@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
         '/homeD': (context) => ViewCourseD(),
         '/edits': (context) => Editprofiles(),
         '/question': (context) => QuestionScreen(),
+        '/ins': (context) => QuizIns(),
       },
 
       debugShowCheckedModeBanner: false,
@@ -56,7 +57,7 @@ class MyApp extends StatelessWidget {
           "assets/1.PNG",
           fit: BoxFit.fill,
         ),
-        nextScreen: QuizIns(),
+        nextScreen: homePage(),
         backgroundColor: Color(0xff3D0000),
         splashIconSize: double.infinity,
         splashTransition: SplashTransition.slideTransition,

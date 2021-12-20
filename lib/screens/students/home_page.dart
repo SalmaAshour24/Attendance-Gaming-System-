@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/students/question_screen.dart';
 
 import '../doctor/app_bar.dart';
 import '../doctor/drawer.dart';
@@ -19,7 +21,6 @@ class _homePageState extends State<homePage> {
       drawer: Drawer1s(),
       appBar: AppBar(
         title: Apps(),
-        
         backgroundColor: Color(0xff3D0000),
       ),
       //backgroundColor: Color(0xffFFB703),
@@ -39,7 +40,14 @@ class _homePageState extends State<homePage> {
                 children: <Widget>[
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/question');
+                      // AnimatedSplashScreen(
+                      //   nextScreen: QuestionScreen(),
+                      //   splash: Image.asset(
+                      //     "assets/1.PNG",
+                      //     fit: BoxFit.fill,
+                      //   ),
+                      // );
+                      Navigator.pushNamed(context, '/ins');
                     },
                     child: Container(
                         padding: const EdgeInsets.all(0),
@@ -65,7 +73,7 @@ class _homePageState extends State<homePage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/question');
+                      Navigator.pushNamed(context, '/ins');
                     },
                     child: Container(
                         padding: const EdgeInsets.all(0),
@@ -91,7 +99,7 @@ class _homePageState extends State<homePage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/question');
+                      Navigator.pushNamed(context, '/ins');
                     },
                     child: Container(
                         padding: const EdgeInsets.all(0),
@@ -117,7 +125,7 @@ class _homePageState extends State<homePage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/question');
+                      Navigator.pushNamed(context, '/ins');
                     },
                     child: Container(
                         padding: const EdgeInsets.all(0),

@@ -40,7 +40,7 @@ dependencies:
   search_page: ^2.0.0+1
   #flutter_styled_toast: ^2.0.1
   flutter_sliding_up_panel: ^2.0.1
-
+  circular_menu: ^1.2.3
 
 dev_dependencies:
   flutter_test:
