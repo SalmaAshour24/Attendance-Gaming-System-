@@ -16,16 +16,8 @@ class _PointsState extends State<NewPoints> {
         drawer: Drawer1s(),
       appBar: AppBar(
         title: Apps(),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.search,
-                size: 30,
-                color: Color(0xff6E85B2),
-              ))
-        ],
-        backgroundColor: Color(0xff5A0C0C),
+    
+        backgroundColor: Color(0xff3D0000),
       ),
         backgroundColor: Color(0xffFFB703),
         body: Container(

@@ -16,15 +16,7 @@ class _AddCourseState extends State<AddCourse> {
       drawer: Drawer1(),
       appBar: AppBar(
         title: App(),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.search,
-                size: 30,
-                color: Color(0xff6E85B2),
-              ))
-        ],
+      
         backgroundColor: Color(0xff581313),
       ),
       backgroundColor: Color(0xffFFB703),

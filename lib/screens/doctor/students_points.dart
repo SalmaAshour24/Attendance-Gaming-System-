@@ -15,15 +15,7 @@ class _PointsState extends State<NewPoints1> {
         appBar: AppBar(          backgroundColor: Color(0xff581313),
 
           title: App(),
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.search,
-                  size: 30,
-                  color: Color(0xff6E85B2),
-                ))
-          ],
+        
         ),
         backgroundColor: Color(0xff581313),
         body: Container(

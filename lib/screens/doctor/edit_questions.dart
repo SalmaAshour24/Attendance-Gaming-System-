@@ -16,15 +16,7 @@ class _EditQuestionsState extends State<EditQuestions> {
       drawer: Drawer1(),
       appBar: AppBar(
         title: App(),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.search,
-                size: 30,
-                color: Color(0xff6E85B2),
-              ))
-        ],
+       
         backgroundColor: Color(0xff5A0C0C),
       ),
       backgroundColor: Color(0xffFFB703),
