@@ -131,6 +131,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                         const EdgeInsets.only(left: 15, right: 15, top: 20),
                     child: Container(
                       child: TextFormField(
+                        obscureText: true,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'Please enter some text';
@@ -153,6 +154,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                         const EdgeInsets.only(left: 15, right: 15, top: 20),
                     child: Container(
                       child: TextFormField(
+                        obscureText: true,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'Please enter some text';

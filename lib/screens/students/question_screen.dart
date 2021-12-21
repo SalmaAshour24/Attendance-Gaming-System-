@@ -21,7 +21,6 @@ class _QuestionScreenState extends State<QuestionScreen> {
       drawer: Drawer1s(),
       appBar: AppBar(
         title: Apps(),
-      
         backgroundColor: Color(0xff3D0000),
       ),
       // backgroundColor: Color(0xffFFB703),
@@ -148,7 +147,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   Padding(
                     padding: const EdgeInsets.only(top: 20.0),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/third');
+                      },
                       style: ElevatedButton.styleFrom(
                         primary: Color(0xff523232),
                         shape: RoundedRectangleBorder(

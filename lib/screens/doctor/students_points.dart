@@ -12,10 +12,9 @@ class _PointsState extends State<NewPoints1> {
   Widget build(BuildContext context) {
     return Scaffold(
         drawer: Drawer1(),
-        appBar: AppBar(          backgroundColor: Color(0xff581313),
-
+        appBar: AppBar(
+          backgroundColor: Color(0xff3D0000),
           title: App(),
-        
         ),
         backgroundColor: Color(0xff581313),
         body: Container(

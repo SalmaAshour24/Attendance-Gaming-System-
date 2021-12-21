@@ -13,10 +13,8 @@ class _ViewAnswersState extends State<ViewAnswers> {
     return Scaffold(
         drawer: Drawer1(),
         appBar: AppBar(
-                    backgroundColor: Color(0xff581313),
-
+          backgroundColor: Color(0xff3D0000),
           title: App(),
-        
         ),
         backgroundColor: Color(0xffFFB703),
         body: Container(
@@ -46,70 +44,64 @@ class _ViewAnswersState extends State<ViewAnswers> {
                     EdgeInsets.only(bottom: 7, top: 40, left: 90, right: 90),
               ),
               Column(
-
                 children: [
-                  Column(
-                      children: [
-                        Padding(padding: EdgeInsets.all(10)),
-                        const Text('Maha: ',
-                            style: TextStyle(
-                                fontSize: 35,
-                                fontFamily: 'Mouse Memoirs',
-                                color: Colors.black)),
-
-                        const Text('Answer1-> A, Answer2-> A, Answer3-> A, Answer4-> A ',
-                            style: TextStyle(
-                                fontSize: 23,
-                                fontFamily: 'Mouse Memoirs',
-                                color: Colors.black))
-                      ]),
-                  Column(
-
-                    children: [
+                  Column(children: [
+                    Padding(padding: EdgeInsets.all(10)),
+                    const Text('Maha: ',
+                        style: TextStyle(
+                            fontSize: 35,
+                            fontFamily: 'Mouse Memoirs',
+                            color: Colors.black)),
+                    const Text(
+                        'Answer1-> A, Answer2-> A, Answer3-> A, Answer4-> A ',
+                        style: TextStyle(
+                            fontSize: 23,
+                            fontFamily: 'Mouse Memoirs',
+                            color: Colors.black))
+                  ]),
+                  Column(children: [
                     Padding(padding: EdgeInsets.all(10)),
                     const Text('Salma: ',
                         style: TextStyle(
                             fontSize: 35,
                             fontFamily: 'Mouse Memoirs',
                             color: Colors.black)),
-                    const Text('Answer1-> B,Answer2-> A, Answer3-> A, Answer4-> A',
+                    const Text(
+                        'Answer1-> B,Answer2-> A, Answer3-> A, Answer4-> A',
                         style: TextStyle(
                             fontSize: 23,
                             fontFamily: 'Mouse Memoirs',
                             color: Colors.black))
                   ]),
-                  Column(
-                                         
-children: [
+                  Column(children: [
                     Padding(padding: EdgeInsets.all(10)),
                     const Text('Shadwa: ',
                         style: TextStyle(
                             fontSize: 35,
                             fontFamily: 'Mouse Memoirs',
                             color: Colors.black)),
-                    const Text('Answer1-> C,Answer2-> A, Answer3-> A, Answer4-> A',
+                    const Text(
+                        'Answer1-> C,Answer2-> A, Answer3-> A, Answer4-> A',
                         style: TextStyle(
                             fontSize: 23,
                             fontFamily: 'Mouse Memoirs',
                             color: Colors.black))
                   ]),
-                  Column(                     
-
-                    children: [
+                  Column(children: [
                     Padding(padding: EdgeInsets.all(10)),
                     const Text('Bassant: ',
                         style: TextStyle(
                             fontSize: 35,
                             fontFamily: 'Mouse Memoirs',
                             color: Colors.black)),
-                    const Text('Answer1-> D,Answer2-> A, Answer3-> A, Answer4-> A',
+                    const Text(
+                        'Answer1-> D,Answer2-> A, Answer3-> A, Answer4-> A',
                         style: TextStyle(
                             fontSize: 23,
                             fontFamily: 'Mouse Memoirs',
                             color: Colors.black))
                   ]),
-                  Column(
-children: const [
+                  Column(children: const [
                     Padding(padding: EdgeInsets.all(10)),
                     Text('Omar: ',
                         style: TextStyle(

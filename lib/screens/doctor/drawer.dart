@@ -39,35 +39,35 @@ class _Drawer1State extends State<Drawer1> {
             thickness: 1.2,
           ),
           ListTile(
-            leading: Icon(Icons.favorite),
+            leading: Icon(Icons.home),
             title: Text('Home'),
             onTap: () {
               Navigator.pushNamed(context, '/homeD');
             },
           ),
           ListTile(
-            leading: Icon(Icons.ac_unit_outlined),
+            leading: Icon(Icons.add),
             title: Text('Add Course'),
             onTap: () {
               Navigator.pushNamed(context, '/addC');
             },
           ),
           ListTile(
-            leading: Icon(Icons.favorite),
+            leading: Icon(Icons.person),
             title: Text('Edit profile'),
             onTap: () {
               Navigator.pushNamed(context, '/edit');
             },
           ),
           ListTile(
-            leading: Icon(Icons.favorite),
+            leading: Icon(Icons.circle, size: 25),
             title: Text('Student Points'),
             onTap: () {
               Navigator.pushNamed(context, '/pointsD');
             },
           ),
           ListTile(
-            leading: Icon(Icons.ac_unit_outlined),
+            leading: Icon(Icons.book_online_outlined),
             title: Text('View Answers'),
             onTap: () {
               Navigator.pushNamed(context, '/viewA');

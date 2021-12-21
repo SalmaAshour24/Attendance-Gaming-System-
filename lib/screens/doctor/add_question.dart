@@ -16,8 +16,7 @@ class _AddQuestionsState extends State<AddQuestions> {
       drawer: Drawer1(),
       appBar: AppBar(
         title: App(),
-      
-        backgroundColor: Color(0xff581313),
+        backgroundColor: Color(0xff3D0000),
       ),
       backgroundColor: Color(0xffFFB703),
       body: Container(
@@ -83,8 +82,8 @@ class _AddQuestionsState extends State<AddQuestions> {
                         fontSize: 35,
                         color: Color(0xff000000),
                       ),
-                      ),
-                      Padding(
+                    ),
+                    Padding(
                       padding: EdgeInsets.all(15),
                       child: Container(
                         decoration: BoxDecoration(
@@ -135,17 +134,20 @@ class _AddQuestionsState extends State<AddQuestions> {
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                              primary: Color(0xff5A0C0C)),
-                          child: Text(
-                            'Add',
-                            style: TextStyle(
-                              color: Color(0xffffffff),fontSize: 50,                                    fontFamily: 'Mouse Memoirs',
-
-                            ),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/homeD');
+                        },
+                        style: ElevatedButton.styleFrom(
+                            primary: Color(0xff5A0C0C)),
+                        child: Text(
+                          'Add',
+                          style: TextStyle(
+                            color: Color(0xffffffff),
+                            fontSize: 50,
+                            fontFamily: 'Mouse Memoirs',
                           ),
                         ),
+                      ),
                     ),
                   ],
                 ),

@@ -94,6 +94,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                             const EdgeInsets.only(left: 15, right: 15, top: 20),
                         child: Container(
                           child: TextFormField(
+                            obscureText: true,
                             // obscure tkhalih msh bayn el pass
                             validator: (value) {
                               if (value == null || value.isEmpty) {
@@ -161,7 +162,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                                       const SnackBar(
                                           content: Text('Processing Data')),
                                     );
-                                    Navigator.pushNamed(context, '/third');
+                                    Navigator.pushNamed(context, '/homeD');
                                   }
                                 },
                                 style: ElevatedButton.styleFrom(

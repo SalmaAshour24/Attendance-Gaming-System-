@@ -16,8 +16,7 @@ class _EditQuestionsState extends State<EditQuestions> {
       drawer: Drawer1(),
       appBar: AppBar(
         title: App(),
-       
-        backgroundColor: Color(0xff5A0C0C),
+        backgroundColor: Color(0xff3D0000),
       ),
       backgroundColor: Color(0xffFFB703),
       body: Container(
@@ -34,7 +33,7 @@ class _EditQuestionsState extends State<EditQuestions> {
                   ),
                   child: const ListTile(
                     title: Text(
-                      "Add Question",
+                      "Edit Question",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: 'Mouse Memoirs',
@@ -166,7 +165,9 @@ class _EditQuestionsState extends State<EditQuestions> {
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/homeD');
+                        },
                         style: ElevatedButton.styleFrom(
                             primary: Color(0xff5A0C0C)),
                         child: Text(

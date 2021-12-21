@@ -19,10 +19,9 @@ class _ViewCourseDState extends State<ViewCourseD> {
       drawer: Drawer1(),
       appBar: AppBar(
         title: App(),
-     
-        backgroundColor: Color(0xff5A0C0C),
+        backgroundColor: Color(0xff3D0000),
       ),
-      backgroundColor: Color(0xff5A0C0C),
+      // backgroundColor: Color(0xff5A0C0C),
       body: Container(
         decoration: new BoxDecoration(
             image: new DecorationImage(

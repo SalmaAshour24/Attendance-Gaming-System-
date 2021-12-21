@@ -19,16 +19,7 @@ class _QuizInsState extends State<QuizIns> {
         drawer: Drawer1s(),
         appBar: AppBar(
           title: Apps(),
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.search,
-                  size: 30,
-                  color: Color(0xff6E85B2),
-                ))
-          ],
-          backgroundColor: Color(0xff581313),
+          backgroundColor: Color(0xff3D0000),
         ),
         backgroundColor: Color(0xffFFB703),
         body: Container(
@@ -37,6 +28,74 @@ class _QuizInsState extends State<QuizIns> {
                     image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
             child: ListView(children: [
               Column(children: [
+                Text(
+                  "Please See the instructions bellow",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Mouse Memoirs',
+                    fontSize: 35,
+                    color: Color(0xff581313),
+                  ),
+                ),
+                SizedBox(
+                  height: 70,
+                ),
+                Container(
+                  height: 400,
+                  color: Color(0xff581313),
+                  child: Column(
+                    children: [
+                      Text(
+                        "1)Feel free to navigate through the questions.",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontFamily: 'Mouse Memoirs',
+                          fontSize: 35,
+                          color: Color(0xffffffff),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      Text(
+                        "2)You can submit only one time during the exam time.",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontFamily: 'Mouse Memoirs',
+                          fontSize: 35,
+                          color: Color(0xffffffff),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      Text(
+                        "3)The time will start once you started the quiz.",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontFamily: 'Mouse Memoirs',
+                          fontSize: 35,
+                          color: Color(0xffffffff),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      Text(
+                        "4)If any thing happened during the quiz, Contact your doctor.",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontFamily: 'Mouse Memoirs',
+                          fontSize: 35,
+                          color: Color(0xffffffff),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/question');
@@ -55,71 +114,6 @@ class _QuizInsState extends State<QuizIns> {
                     ),
                   ),
                 ),
-                Text(
-                  "Please See the instructions bellow",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontFamily: 'Mouse Memoirs',
-                    fontSize: 35,
-                    color: Color(0xff581313),
-                  ),
-                ),
-                SizedBox(
-                  height: 70,
-                ),
-                Container(
-                  height: 300,
-                  color: Color(0xff581313),
-                  child: Column(
-                    children: [
-                      Text(
-                        "1)Feel free to navigate through the questions",
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontFamily: 'Mouse Memoirs',
-                          fontSize: 35,
-                          color: Color(0xffffffff),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 25,
-                      ),
-                      Text(
-                        "2)You can submit only one time",
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontFamily: 'Mouse Memoirs',
-                          fontSize: 35,
-                          color: Color(0xffffffff),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 25,
-                      ),
-                      Text(
-                        "3)The time will start once you started the quiz",
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontFamily: 'Mouse Memoirs',
-                          fontSize: 35,
-                          color: Color(0xffffffff),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 25,
-                      ),
-                      Text(
-                        "4)If any thing happened during the quiz, Contact your doctor",
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontFamily: 'Mouse Memoirs',
-                          fontSize: 35,
-                          color: Color(0xffffffff),
-                        ),
-                      ),
-                    ],
-                  ),
-                )
               ])
             ])));
   }

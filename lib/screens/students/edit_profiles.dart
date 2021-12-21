@@ -17,7 +17,6 @@ class _EditprofilesState extends State<Editprofiles> {
         drawer: Drawer1s(),
         appBar: AppBar(
           title: Apps(),
-       
           backgroundColor: Color(0xff3D0000),
         ),
         // backgroundColor: Color(0xffFFB703),
@@ -50,7 +49,7 @@ class _EditprofilesState extends State<Editprofiles> {
                           bottom: 40, top: 60, left: 90, right: 90),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left:20.0),
+                      padding: const EdgeInsets.only(left: 20.0),
                       child: Column(
                         children: [
                           Padding(
@@ -95,114 +94,114 @@ class _EditprofilesState extends State<Editprofiles> {
                             height: 30,
                           ),
                           Row(
-                                 children: [
-                                const Text('Email:',
-                                    style: TextStyle(
-                                        fontSize: 30,
-                                        fontFamily: 'Mouse Memoirs',
-                                        color: Colors.black)),
-                                Flexible(
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(10.0),
-                                    child: Container(
-                                        decoration: BoxDecoration(
-                                          color: Color(0xff8E7364),
-                                          borderRadius:
-                                              new BorderRadius.circular(25.0),
-                                        ),
-                                        child: TextFormField(
-                                            cursorColor: Color(0XFFFFCCFF),
-                                            textAlign: TextAlign.center,
-                                            decoration: const InputDecoration(
-                                              border: InputBorder.none,
-                                              hintText: 'Edit your Email',
-                                              focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0xffffffff),
-                                                ),
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(25)),
+                            children: [
+                              const Text('Email:',
+                                  style: TextStyle(
+                                      fontSize: 30,
+                                      fontFamily: 'Mouse Memoirs',
+                                      color: Colors.black)),
+                              Flexible(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Container(
+                                      decoration: BoxDecoration(
+                                        color: Color(0xff8E7364),
+                                        borderRadius:
+                                            new BorderRadius.circular(25.0),
+                                      ),
+                                      child: TextFormField(
+                                          cursorColor: Color(0XFFFFCCFF),
+                                          textAlign: TextAlign.center,
+                                          decoration: const InputDecoration(
+                                            border: InputBorder.none,
+                                            hintText: 'Edit your Email',
+                                            focusedBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color: Color(0xffffffff),
                                               ),
-                                            ))),
-                                  ),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(25)),
+                                            ),
+                                          ))),
                                 ),
-                              ],
+                              ),
+                            ],
                           ),
                           SizedBox(
                             width: 50,
                             height: 30,
                           ),
                           Row(
-                                children: [
-                                const Text('ID:',
-                                    style: TextStyle(
-                                        fontSize: 30,
-                                        fontFamily: 'Mouse Memoirs',
-                                        color: Colors.black)),
-                                Flexible(
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(10.0),
-                                    child: Container(
-                                        decoration: BoxDecoration(
-                                          color: Color(0xff8E7364),
-                                          borderRadius:
-                                              new BorderRadius.circular(25.0),
-                                        ),
-                                        child: TextFormField(
-                                            cursorColor: Color(0XFFFFCCFF),
-                                            textAlign: TextAlign.center,
-                                            decoration: const InputDecoration(
-                                              border: InputBorder.none,
-                                              hintText: 'Edit your ID',
-                                              focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0xffffffff),
-                                                ),
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(25)),
+                            children: [
+                              const Text('ID:',
+                                  style: TextStyle(
+                                      fontSize: 30,
+                                      fontFamily: 'Mouse Memoirs',
+                                      color: Colors.black)),
+                              Flexible(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Container(
+                                      decoration: BoxDecoration(
+                                        color: Color(0xff8E7364),
+                                        borderRadius:
+                                            new BorderRadius.circular(25.0),
+                                      ),
+                                      child: TextFormField(
+                                          cursorColor: Color(0XFFFFCCFF),
+                                          textAlign: TextAlign.center,
+                                          decoration: const InputDecoration(
+                                            border: InputBorder.none,
+                                            hintText: 'Edit your ID',
+                                            focusedBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color: Color(0xffffffff),
                                               ),
-                                            ))),
-                                  ),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(25)),
+                                            ),
+                                          ))),
                                 ),
-                              ],
+                              ),
+                            ],
                           ),
                           SizedBox(
                             width: 50,
                             height: 30,
                           ),
                           Row(
-                                children: [
-                                const Text('Password:',
-                                    style: TextStyle(
-                                        fontSize: 30,
-                                        fontFamily: 'Mouse Memoirs',
-                                        color: Colors.black)),
-                                Flexible(
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(10.0),
-                                    child: Container(
-                                        decoration: BoxDecoration(
-                                          color: Color(0xff8E7364),
-                                          borderRadius:
-                                              new BorderRadius.circular(25.0),
-                                        ),
-                                        child: TextFormField(
-                                            cursorColor: Color(0XFFFFCCFF),
-                                            textAlign: TextAlign.center,
-                                            decoration: const InputDecoration(
-                                              border: InputBorder.none,
-                                              hintText: 'Edit your password',
-                                              focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0xffffffff),
-                                                ),
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(25)),
+                            children: [
+                              const Text('Password:',
+                                  style: TextStyle(
+                                      fontSize: 30,
+                                      fontFamily: 'Mouse Memoirs',
+                                      color: Colors.black)),
+                              Flexible(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Container(
+                                      decoration: BoxDecoration(
+                                        color: Color(0xff8E7364),
+                                        borderRadius:
+                                            new BorderRadius.circular(25.0),
+                                      ),
+                                      child: TextFormField(
+                                          cursorColor: Color(0XFFFFCCFF),
+                                          textAlign: TextAlign.center,
+                                          decoration: const InputDecoration(
+                                            border: InputBorder.none,
+                                            hintText: 'Edit your password',
+                                            focusedBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color: Color(0xffffffff),
                                               ),
-                                            ))),
-                                  ),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(25)),
+                                            ),
+                                          ))),
                                 ),
-                              ],
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -217,30 +216,31 @@ class _EditprofilesState extends State<Editprofiles> {
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                              primary: Color(0xff581313),
-                              shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40),
-                                  ), 
-                              
-                              ),
-                       
+                            primary: Color(0xff581313),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(40),
+                            ),
+                          ),
                           child: Text(
                             'Discard',
                             style: TextStyle(
-                              color: Color(0xffffffff),
-                              fontSize: 30
-                            ),
+                                color: Color(0xffffffff), fontSize: 30),
                           ),
                         ),
                         ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/third');
+                            },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff581313), shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40),
-                                  ),),
+                              primary: Color(0xff581313),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(40),
+                              ),
+                            ),
                             child: Text(
                               'Submit',
-                              style: TextStyle(color: Color(0xffffffff),fontSize: 30),
+                              style: TextStyle(
+                                  color: Color(0xffffffff), fontSize: 30),
                             ))
                       ],
                     )
