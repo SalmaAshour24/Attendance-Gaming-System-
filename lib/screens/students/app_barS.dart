@@ -1,23 +1,11 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:search_page/search_page.dart';
-
-class Course {
-  final String coursename, description;
-  // final num age;
-
-  Course(this.coursename, this.description);
-}
-
-class Apps extends StatelessWidget {
-  static List<Course> courses = [
-    Course('Theory of computaion', 'theory'),
-    Course('Mobile development', 'flutter'),
-    Course('Data eng', 'network'),
-    Course('graduation', 'E tongue'),
-    Course('selected topics', 'machine learning'),
-  ];
+import 'package:flutter_application_1/Model/course_model';
   @override
+  class Apps extends StatelessWidget {
+  
+  
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false, // this will hide Drawer hamburger icon
@@ -63,7 +51,7 @@ class Apps extends StatelessWidget {
       ),
     );
   }
-}
+  }
 //ListView.builder(
   //      itemCount: people.length,
     //    itemBuilder: (context, index) {

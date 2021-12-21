@@ -47,7 +47,7 @@ class _homePageState extends State<homePage> {
                       //     fit: BoxFit.fill,
                       //   ),
                       // );
-                      Navigator.pushNamed(context, '/ins');
+                      Navigator.pushNamed(context, '/question');
                     },
                     child: Container(
                         padding: const EdgeInsets.all(0),
@@ -73,7 +73,7 @@ class _homePageState extends State<homePage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/ins');
+                      Navigator.pushNamed(context, '/question');
                     },
                     child: Container(
                         padding: const EdgeInsets.all(0),
@@ -99,7 +99,7 @@ class _homePageState extends State<homePage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/ins');
+                      Navigator.pushNamed(context, '/question');
                     },
                     child: Container(
                         padding: const EdgeInsets.all(0),
@@ -125,7 +125,7 @@ class _homePageState extends State<homePage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/ins');
+                      Navigator.pushNamed(context, '/question');
                     },
                     child: Container(
                         padding: const EdgeInsets.all(0),

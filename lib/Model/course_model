@@ -1,0 +1,14 @@
+class Course {
+  final String coursename, description;
+  // final num age;
+
+  Course(this.coursename, this.description);
+}
+
+   List<Course> courses = [
+    Course('Theory of computaion', 'theory'),
+    Course('Mobile development', 'flutter'),
+    Course('Data eng', 'network'),
+    Course('graduation', 'E tongue'),
+    Course('selected topics', 'machine learning'),
+  ];
