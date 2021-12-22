@@ -211,8 +211,11 @@ class MyCustomFormState extends State<MyCustomForm> {
                                   const SnackBar(
                                       content: Text('Processing Data')),
                                 );
+                              Navigator.pop(context);
                               }
+                              
                             },
+                            
                             style: ElevatedButton.styleFrom(
                                 primary: Color(0xff5A0C0C),
                                 shape: RoundedRectangleBorder(
