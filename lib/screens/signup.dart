@@ -113,6 +113,10 @@ class MyCustomFormState extends State<MyCustomForm> {
                           if (value == null || value.isEmpty) {
                             return 'Please enter some text';
                           }
+                          if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]")
+                              .hasMatch(value)) {
+                            return 'Please Enter a valid Email';
+                          }
                           return null;
                         },
                         cursorColor: Color(0XFFFFCCFF),
