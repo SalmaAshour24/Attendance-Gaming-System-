@@ -4,8 +4,6 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/students/question_screen.dart';
 
-import '../doctor/app_bar.dart';
-import '../doctor/drawer.dart';
 import 'app_barS.dart';
 import 'drawerS.dart';
 

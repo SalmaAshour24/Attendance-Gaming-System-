@@ -2,8 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
-import '../doctor/app_bar.dart';
-import '../doctor/drawer.dart';
+
 import 'app_barS.dart';
 import 'drawerS.dart';
 
