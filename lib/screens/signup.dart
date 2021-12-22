@@ -38,8 +38,6 @@ class MyCustomFormState extends State<MyCustomForm> {
               image: new DecorationImage(
                   image: new AssetImage('assets/3.PNG'), fit: BoxFit.cover)),
           child: ListView(
-            children: [
-              Column(
                 children: [
                   Card(
                     shape: RoundedRectangleBorder(
@@ -234,8 +232,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                     ),
                   ),
                 ],
-              )
-            ],
+              
           ),
         ));
   }
