@@ -1,0 +1,52 @@
+class Users {
+  final String firstname;
+  final String lastname;
+
+  final String email;
+  final String password;
+  final String re_password;
+
+
+
+  Users({ this.firstname, this.lastname, this.email,this.password,this.re_password});
+}
+
+
+const List User  = [
+  { 
+   
+    "firstname":
+        "shadwa",
+    "lastname": "khaled",
+    "email": "shadwakhaled@miuegypt",
+    "password":"123",
+    "re_password":"123",
+  },
+  {
+   
+    "firstname":
+        "salma",
+    "lastname": "mohamed",
+    "email": "salmamohamed@miuegypt",
+    "password":"123",
+    "re_password":"123",
+  },
+  {
+    
+"firstname":
+        "bassant",
+    "lastname": "mohamed",
+    "email": "bassantmohamed@miuegypt",
+    "password":"123",
+    "re_password":"123",
+  },
+  {
+   
+   "firstname":
+        "maha",
+    "lastname": "dahshan",
+    "email": "mahadahshan@miuegypt",
+    "password":"123",
+    "re_password":"123",
+  },
+];
