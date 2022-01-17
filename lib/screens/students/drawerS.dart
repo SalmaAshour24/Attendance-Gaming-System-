@@ -43,7 +43,7 @@ class _Drawer1sState extends State<Drawer1s> {
           ListTile(
             leading: Icon(
               Icons.home,
-              color: Color(0xff5C2424),
+              color: Color(0xff36344b),
             ),
             title: Text('Home'),
             onTap: () {
@@ -51,14 +51,14 @@ class _Drawer1sState extends State<Drawer1s> {
             },
           ),
           ListTile(
-            leading: Icon(Icons.person, color: Color(0xff5C2424)),
+            leading: Icon(Icons.person, color: Color(0xff36344b)),
             title: Text('Edit Profile'),
             onTap: () {
               Navigator.pushNamed(context, '/edits');
             },
           ),
           ListTile(
-            leading: Icon(Icons.circle, size: 20, color: Color(0xff5C2424)),
+            leading: Icon(Icons.circle, size: 20, color: Color(0xff36344b)),
             title: Text('Points'),
             onTap: () {
               Navigator.pushNamed(context, '/point');
@@ -69,7 +69,7 @@ class _Drawer1sState extends State<Drawer1s> {
             thickness: 1.2,
           ),
           ListTile(
-            leading: Icon(Icons.exit_to_app_rounded, color: Color(0xff5C2424)),
+            leading: Icon(Icons.exit_to_app_rounded, color: Color(0xff36344b)),
             title: Text('Sign out'),
             onTap: () {
               Navigator.pushNamed(context, '/signout');

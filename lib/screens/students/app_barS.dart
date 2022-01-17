@@ -11,10 +11,10 @@ class Apps extends StatelessWidget {
     return AppBar(
       automaticallyImplyLeading: false, // this will hide Drawer hamburger icon
 
-      backgroundColor: Color(0xff3D0000),
+      backgroundColor: Color(0xff36344b),
 
       title: Padding(
-        padding: const EdgeInsets.only(left: 270, bottom: 20),
+        padding: const EdgeInsets.only(left: 250, bottom: 55),
         child: IconButton(
           icon: Icon(Icons.search),
           tooltip: 'Search your Course',
@@ -24,7 +24,7 @@ class Apps extends StatelessWidget {
               onQueryUpdate: (s) => print(s),
               items: courses,
               searchLabel: 'Search  Courses',
-              searchStyle: TextStyle(color: Color(0xff3D0000)),
+              searchStyle: TextStyle(color: Color(0xff36344b)),
               barTheme: ThemeData.dark(),
               suggestion: Center(
                 child: Text('search ..'),

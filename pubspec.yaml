@@ -58,9 +58,9 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   fonts:
-    - family: Mouse Memoirs
+    - family: Lora-VariableFont_wght
       fonts:
-        - asset: assets/MouseMemoirs-Regular.ttf
+        - asset: assets/Lora-VariableFont_wght.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

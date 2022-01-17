@@ -11,7 +11,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff3D0000),
+      backgroundColor: Color(0xff36344b),
       body: const MyCustomForm(),
     );
   }
@@ -39,33 +39,60 @@ class MyCustomFormState extends State<MyCustomForm> {
               padding: const EdgeInsets.only(top: 1.0),
               child: Container(
                   decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      //background
-                      image: AssetImage("assets/2.PNG"),
-                      fit: BoxFit.cover,
-                    ),
+                              color: Color(0xfff8edee),
+
                   ),
                   child: Column(
                     children: [
+                       Row(
+                        children: const [
+                          Padding(
+                            padding: EdgeInsets.only(top: 10.0, left: 20),
+                            child: Text(
+                              'MIU ',
+                              style: TextStyle(
+                                color: Color(0xff36344b),
+                                fontWeight: FontWeight.w900,
+                                fontSize: 30,
+                                fontFamily: 'Lora-VariableFont_wght',
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 30.0),
+                            child: Text(
+                              'Attendance system ',
+                              style: TextStyle(
+                                color: Color(0xff6c6996),
+                                fontFamily: 'Lora-VariableFont_wght',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                       Card(
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(35),
+                           borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20))
                         ),
                         child: const ListTile(
                           title: Text(
                             "SIGN IN HERE",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: 'Mouse Memoirs',
-                              fontSize: 40,
+                                fontFamily: 'Lora-VariableFont_wght',
+                              fontSize: 25,
                               color: Color(0xffffffff),
                             ),
                           ),
                         ),
                         elevation: 30,
-                        color: Color(0xff3D0000),
+                        color: Color(0xff36344b),
                         margin: EdgeInsets.only(
-                            bottom: 60, top: 100, left: 90, right: 90),
+                            bottom: 45, top: 30, left: 95, right: 90),
                       ),
                       Padding(
                         padding:
@@ -85,7 +112,16 @@ class MyCustomFormState extends State<MyCustomForm> {
                             textAlign: TextAlign.center,
                             decoration: InputDecoration(
                                 labelText: 'Enter Email',
-                                border: OutlineInputBorder(),
+                                 labelStyle: TextStyle(
+                                    color: Color(0xff36344b),
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 20),
+                                border: null,
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                      color: Color(0xff6c6996), width: 2.0),
+                                  borderRadius: BorderRadius.circular(25.0),
+                                ),
                                 errorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                         color: Colors.red, width: 5))),
@@ -105,11 +141,20 @@ class MyCustomFormState extends State<MyCustomForm> {
                               }
                               return null;
                             },
-                            cursorColor: Color(0XFFFFCCFF),
+                           cursorColor: Color(0XFFFFCCFF),
                             textAlign: TextAlign.center,
                             decoration: InputDecoration(
                                 labelText: 'Enter Password',
-                                border: OutlineInputBorder(),
+                                labelStyle: TextStyle(
+                                    color: Color(0xff36344b),
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 20),
+                                border: null,
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                      color: Color(0xff6c6996), width: 2.0),
+                                  borderRadius: BorderRadius.circular(25.0),
+                                ),
                                 errorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                         color: Colors.red, width: 5))),
@@ -121,9 +166,9 @@ class MyCustomFormState extends State<MyCustomForm> {
                         child: Text(
                           'SignIn',
                           style: TextStyle(
-                            fontSize: 30,
-                            color: Color(0xff5A0C0C),
-                            fontFamily: 'Mouse Memoirs',
+                            fontSize: 20,
+                            color: Color(0xff36344b),
+                            fontFamily: 'Lora-VariableFont_wght',
                           ),
                         ),
                       ),
@@ -142,15 +187,14 @@ class MyCustomFormState extends State<MyCustomForm> {
                                     Navigator.pushNamed(context, '/third');
                                   }
                                 },
-                                style: ElevatedButton.styleFrom(
-                                    primary: Color(0xff5A0C0C),
+                                   style: ElevatedButton.styleFrom(
+                                    primary: Color(0xff6c6996),
                                     shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(40),
+                                      borderRadius: BorderRadius.circular(1),
                                     ),
                                     textStyle: TextStyle(
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.normal,
-                                      fontFamily: 'Mouse Memoirs',
+                                      fontSize: 30,
+                                      fontFamily: 'Lora-VariableFont_wght',
                                     )),
                                 child: Text(
                                   'As Student',
@@ -169,14 +213,13 @@ class MyCustomFormState extends State<MyCustomForm> {
                                   }
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: Color(0xff5A0C0C),
+                                    primary: Color(0xff6c6996),
                                     shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(40),
+                                      borderRadius: BorderRadius.circular(1),
                                     ),
                                     textStyle: TextStyle(
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.normal,
-                                      fontFamily: 'Mouse Memoirs',
+                                      fontSize: 30,
+                                      fontFamily: 'Lora-VariableFont_wght',
                                     )),
                                 child: Text(
                                   'As Doctor',
@@ -192,8 +235,8 @@ class MyCustomFormState extends State<MyCustomForm> {
                         child: Text(
                           'Do not have an account?',
                           style: TextStyle(
-                            color: Color(0xff5A0C0C),
-                            fontFamily: 'Mouse Memoirs',
+                            color: Color(0xff6c6996),
+                            fontFamily: 'Lora-VariableFont_wght',
                             fontSize: 30,
                           ),
                         ),
@@ -204,15 +247,14 @@ class MyCustomFormState extends State<MyCustomForm> {
                             onPressed: () {
                               Navigator.pushNamed(context, '/second');
                             },
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xff3D0000),
+                              style: ElevatedButton.styleFrom(
+                                primary: Color(0xff36344b),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
+                                  borderRadius: BorderRadius.circular(1),
                                 ),
                                 textStyle: TextStyle(
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.normal,
-                                  fontFamily: 'Mouse Memoirs',
+                                  fontSize: 30,
+                                  fontFamily: 'Lora-VariableFont_wght',
                                 )),
                             child: Text(
                               'SIGN UP',

@@ -19,13 +19,13 @@ class _homePageState extends State<homePage> {
       drawer: Drawer1s(),
       appBar: AppBar(
         title: Apps(),
-        backgroundColor: Color(0xff3D0000),
+        backgroundColor: Color(0xff36344b),
       ),
-      //backgroundColor: Color(0xffFFB703),
       body: Container(
         decoration: new BoxDecoration(
-            image: new DecorationImage(
-                image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
+                                        color: Color(0xfff8edee),
+
+         ),
         child: CustomScrollView(
           primary: false,
           slivers: <Widget>[
