@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -27,7 +28,35 @@ class MyCustomForm extends StatefulWidget {
 }
 
 class MyCustomFormState extends State<MyCustomForm> {
+  var password, email;
   final _formKey = GlobalKey<FormState>();
+
+  signIN() async {
+    var formdata = _formKey.currentState;
+    if (formdata!.validate()) {
+      print('valid');
+      formdata.save();
+      try {
+        UserCredential userCredential = await FirebaseAuth.instance
+            .signInWithEmailAndPassword(email: email, password: password);
+        return userCredential;
+      } on FirebaseException catch (e) {
+        if (e.code == 'user-not-found') {
+          // AwesomeDialog(
+          //     context: context,
+          //     title: "Error",
+          //     body: Text('the password is too weak'))..show();
+          print('No user found for that email');
+        } else if (e.code == 'wrong-password') {
+          print('re-enter password, the password is wrong');
+        }
+      } catch (e) {
+        print(e);
+      }
+    } else {
+      print('not valid');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,12 +68,11 @@ class MyCustomFormState extends State<MyCustomForm> {
               padding: const EdgeInsets.only(top: 1.0),
               child: Container(
                   decoration: const BoxDecoration(
-                              color: Color(0xfff8edee),
-
+                    color: Color(0xfff8edee),
                   ),
                   child: Column(
                     children: [
-                       Row(
+                      Row(
                         children: const [
                           Padding(
                             padding: EdgeInsets.only(top: 10.0, left: 20),
@@ -74,16 +102,15 @@ class MyCustomFormState extends State<MyCustomForm> {
                       ),
                       Card(
                         shape: RoundedRectangleBorder(
-                           borderRadius: BorderRadius.only(
+                            borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
-                                bottomRight: Radius.circular(20))
-                        ),
+                                bottomRight: Radius.circular(20))),
                         child: const ListTile(
                           title: Text(
                             "SIGN IN HERE",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontFamily: 'Lora-VariableFont_wght',
+                              fontFamily: 'Lora-VariableFont_wght',
                               fontSize: 25,
                               color: Color(0xffffffff),
                             ),
@@ -99,11 +126,16 @@ class MyCustomFormState extends State<MyCustomForm> {
                             const EdgeInsets.only(left: 15, right: 15, top: 5),
                         child: Container(
                           child: TextFormField(
+                            onSaved: (val) {
+                              email = val;
+                            },
                             validator: (value) {
                               if (value == null || value.isEmpty) {
                                 return 'Please enter some text';
                               }
-                              if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) {
+                              if (!RegExp(
+                                      "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]")
+                                  .hasMatch(value)) {
                                 return 'Please Enter a valid Email';
                               }
                               return null;
@@ -112,7 +144,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                             textAlign: TextAlign.center,
                             decoration: InputDecoration(
                                 labelText: 'Enter Email',
-                                 labelStyle: TextStyle(
+                                labelStyle: TextStyle(
                                     color: Color(0xff36344b),
                                     fontWeight: FontWeight.w600,
                                     fontSize: 20),
@@ -135,13 +167,17 @@ class MyCustomFormState extends State<MyCustomForm> {
                           child: TextFormField(
                             obscureText: true,
                             // obscure tkhalih msh bayn el pass
+                            onSaved: (val) {
+                              password = val;
+                            },
+
                             validator: (value) {
                               if (value == null || value.isEmpty) {
                                 return 'Please enter some text';
                               }
                               return null;
                             },
-                           cursorColor: Color(0XFFFFCCFF),
+                            cursorColor: Color(0XFFFFCCFF),
                             textAlign: TextAlign.center,
                             decoration: InputDecoration(
                                 labelText: 'Enter Password',
@@ -178,39 +214,23 @@ class MyCustomFormState extends State<MyCustomForm> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             ElevatedButton(
-                                onPressed: () {
-                                  if (_formKey.currentState!.validate()) {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      const SnackBar(
-                                          content: Text('Processing Data')),
-                                    );
+                                onPressed: () async {
+                                  var user = await signIN();
+
+                                  if (user != null) {
                                     Navigator.pushNamed(context, '/third');
+                                    //Navigator.of(context).pushNamed("signout");
+                                  } else {
+                                    print("Sign in failed");
                                   }
-                                },
-                                   style: ElevatedButton.styleFrom(
-                                    primary: Color(0xff6c6996),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(1),
-                                    ),
-                                    textStyle: TextStyle(
-                                      fontSize: 30,
-                                      fontFamily: 'Lora-VariableFont_wght',
-                                    )),
-                                child: Text(
-                                  'As Student',
-                                  style: TextStyle(
-                                    color: Color(0xffffffff),
-                                  ),
-                                )),
-                            ElevatedButton(
-                                onPressed: () {
-                                  if (_formKey.currentState!.validate()) {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      const SnackBar(
-                                          content: Text('Processing Data')),
-                                    );
-                                    Navigator.pushNamed(context, '/homeD');
-                                  }
+
+                                  //   if (_formKey.currentState!.validate()) {
+                                  //     ScaffoldMessenger.of(context).showSnackBar(
+                                  //       const SnackBar(
+                                  //           content: Text('Processing Data')),
+                                  //     );
+                                  //     //  Navigator.pushNamed(context, '/third');
+                                  //   }
                                 },
                                 style: ElevatedButton.styleFrom(
                                     primary: Color(0xff6c6996),
@@ -222,7 +242,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                                       fontFamily: 'Lora-VariableFont_wght',
                                     )),
                                 child: Text(
-                                  'As Doctor',
+                                  'Sign In',
                                   style: TextStyle(
                                     color: Color(0xffffffff),
                                   ),
@@ -247,7 +267,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                             onPressed: () {
                               Navigator.pushNamed(context, '/second');
                             },
-                              style: ElevatedButton.styleFrom(
+                            style: ElevatedButton.styleFrom(
                                 primary: Color(0xff36344b),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(1),
