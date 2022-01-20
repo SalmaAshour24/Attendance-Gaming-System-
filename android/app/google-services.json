@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "398916944780",
+    "project_id": "attendance-gaming-system-d5ea1",
+    "storage_bucket": "attendance-gaming-system-d5ea1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398916944780:android:4e395edcc3dee1aaf08ca9",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398916944780-ckkjrs56ipoe05efaguughhvihfaejiq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzjJILDNY_tXvYPl_k3qCxZ-2B82oOIhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398916944780-ckkjrs56ipoe05efaguughhvihfaejiq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

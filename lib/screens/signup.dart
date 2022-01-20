@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class signup extends StatefulWidget {
@@ -27,7 +28,35 @@ class MyCustomForm extends StatefulWidget {
 }
 
 class MyCustomFormState extends State<MyCustomForm> {
+  var username, password, email;
+
   final _formKey = GlobalKey<FormState>();
+  signUp() async {
+    var formdata = _formKey.currentState;
+    if (formdata!.validate()) {
+      print('valid');
+      formdata.save();
+      try {
+        UserCredential userCredential = await FirebaseAuth.instance
+            .createUserWithEmailAndPassword(email: email, password: password);
+        return userCredential;
+      } on FirebaseException catch (e) {
+        if (e.code == 'weak-password') {
+          // AwesomeDialog(
+          //     context: context,
+          //     title: "Error",
+          //     body: Text('the password is too weak'))..show();
+          print('the password is too weak');
+        } else if (e.code == 'email-already-in-use') {
+          print('the account already exists');
+        }
+      } catch (e) {
+        print(e);
+      }
+    } else {
+      print('not valid');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -92,6 +121,9 @@ class MyCustomFormState extends State<MyCustomForm> {
                 padding: const EdgeInsets.only(left: 15, right: 15, top: 5),
                 child: Container(
                   child: TextFormField(
+                    onSaved: (val) {
+                      username = val;
+                    },
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
@@ -104,7 +136,8 @@ class MyCustomFormState extends State<MyCustomForm> {
                         labelText: 'Enter Your First Name',
                         labelStyle: TextStyle(
                             color: Color(0xff36344b),
-                            fontWeight: FontWeight.w600,fontSize: 20),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20),
                         border: null,
                         focusedBorder: OutlineInputBorder(
                           borderSide: const BorderSide(
@@ -131,12 +164,12 @@ class MyCustomFormState extends State<MyCustomForm> {
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                         labelText: 'Enter Your Last Name',
-                             labelStyle: TextStyle(
+                        labelStyle: TextStyle(
                             color: Color(0xff36344b),
                             fontWeight: FontWeight.w600,
                             fontSize: 20),
                         border: null,
-                            focusedBorder: OutlineInputBorder(
+                        focusedBorder: OutlineInputBorder(
                           borderSide: const BorderSide(
                               color: Color(0xff6c6996), width: 2.0),
                           borderRadius: BorderRadius.circular(25.0),
@@ -151,6 +184,9 @@ class MyCustomFormState extends State<MyCustomForm> {
                 padding: const EdgeInsets.only(left: 15, right: 15, top: 20),
                 child: Container(
                   child: TextFormField(
+                    onSaved: (val) {
+                      email = val;
+                    },
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
@@ -165,12 +201,12 @@ class MyCustomFormState extends State<MyCustomForm> {
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                         labelText: 'Enter your Email',
-                             labelStyle: TextStyle(
+                        labelStyle: TextStyle(
                             color: Color(0xff36344b),
                             fontWeight: FontWeight.w600,
                             fontSize: 20),
                         border: null,
-                            focusedBorder: OutlineInputBorder(
+                        focusedBorder: OutlineInputBorder(
                           borderSide: const BorderSide(
                               color: Color(0xff6c6996), width: 2.0),
                           borderRadius: BorderRadius.circular(25.0),
@@ -186,6 +222,9 @@ class MyCustomFormState extends State<MyCustomForm> {
                 child: Container(
                   child: TextFormField(
                     obscureText: true,
+                    onSaved: (val) {
+                      password = val;
+                    },
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
@@ -196,12 +235,12 @@ class MyCustomFormState extends State<MyCustomForm> {
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                         labelText: 'Enter Password',
-                             labelStyle: TextStyle(
+                        labelStyle: TextStyle(
                             color: Color(0xff36344b),
                             fontWeight: FontWeight.w600,
                             fontSize: 20),
                         border: null,
-                            focusedBorder: OutlineInputBorder(
+                        focusedBorder: OutlineInputBorder(
                           borderSide: const BorderSide(
                               color: Color(0xff6c6996), width: 2.0),
                           borderRadius: BorderRadius.circular(25.0),
@@ -227,12 +266,12 @@ class MyCustomFormState extends State<MyCustomForm> {
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                         labelText: 'Re-enter Password',
-                             labelStyle: TextStyle(
+                        labelStyle: TextStyle(
                             color: Color(0xff36344b),
                             fontWeight: FontWeight.w600,
                             fontSize: 20),
                         border: null,
-                            focusedBorder: OutlineInputBorder(
+                        focusedBorder: OutlineInputBorder(
                           borderSide: const BorderSide(
                               color: Color(0xff6c6996), width: 2.0),
                           borderRadius: BorderRadius.circular(25.0),
@@ -274,13 +313,22 @@ class MyCustomFormState extends State<MyCustomForm> {
                       ),
                     ),
                     ElevatedButton(
-                        onPressed: () {
-                          if (_formKey.currentState!.validate()) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(content: Text('Processing Data')),
-                            );
-                            Navigator.pop(context);
+                        onPressed: () async {
+                          UserCredential response = await signUp();
+
+                          if (response != null) {
+                            Navigator.of(context).pushNamed("third");
+                          } else {
+                            print("Sign up failed");
                           }
+                          //  print(response.user);
+                          // if (_formKey.currentState!.validate()) {
+                          //   ScaffoldMessenger.of(context).showSnackBar(
+                          //     const SnackBar(content: Text('Processing Data')),
+                          //   );
+                          //   //     FirebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
+                          //   Navigator.pop(context);
+                          // }
                         },
                         style: ElevatedButton.styleFrom(
                             primary: Color(0xff36344b),

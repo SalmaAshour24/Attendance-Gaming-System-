@@ -16,8 +16,12 @@ import 'screens/doctor/add_course.dart';
 import 'screens/students/home_page.dart';
 import 'screens/home_screen.dart';
 import 'screens/signup.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  //3shan yt2ked eno 7sal initialize abl ma yrun el progg
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
