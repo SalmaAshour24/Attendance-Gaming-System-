@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -317,7 +316,8 @@ class MyCustomFormState extends State<MyCustomForm> {
                           UserCredential response = await signUp();
 
                           if (response != null) {
-                            Navigator.of(context).pushNamed("third");
+                            Navigator.pushNamed(context, '/signout');
+                            //Navigator.of(context).pushNamed("signout");
                           } else {
                             print("Sign up failed");
                           }
