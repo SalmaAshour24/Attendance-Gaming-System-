@@ -69,7 +69,7 @@ class MyCustomFormState extends State<MyCustomForm> {
           "lastname": lastname,
           "email": email,
           "password": password,
-          "usertype": "3",
+          "usertype": 3,
         });
 
         return userCredential;

@@ -12,6 +12,8 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
+var UT;
+
 class _HomeScreenState extends State<HomeScreen> {
   getData() async {
     CollectionReference usersref =
@@ -247,7 +249,25 @@ class MyCustomFormState extends State<MyCustomForm> {
                                   var user = await signIN();
 
                                   if (user != null) {
-                                    Navigator.pushNamed(context, '/third');
+                                    CollectionReference usersref =
+                                        FirebaseFirestore.instance
+                                            .collection("users");
+
+                                    await usersref.where("email", isEqualTo: email).get().then((value) {
+                                      value.docs.forEach((element) {
+                                        var UT = element['usertype'];
+                                        if (UT == 2) {
+                                          Navigator.pushNamed(
+                                              context, '/bonus');
+                                        }
+                                        else if(UT==3)
+                                        {
+                                          Navigator.pushNamed(
+                                              context, '/third');
+                                        }
+                                      });
+                                    });
+
                                     //Navigator.of(context).pushNamed("signout");
                                   } else {
                                     print("Sign in failed");
