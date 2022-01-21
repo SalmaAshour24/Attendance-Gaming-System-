@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+// import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class signup extends StatefulWidget {
   @override
@@ -9,6 +12,24 @@ class signup extends StatefulWidget {
 
 class _signupState extends State<signup> {
   @override
+  // addData() {
+  //   CollectionReference usersref =
+  //       FirebaseFirestore.instance.collection("users");
+  //   usersref.add({
+  //     "firstname": "Sayed",
+  //     "lastname": "saad",
+  //     "email": "sayed@gmail.com",
+  //     "password": "Sayed123",
+  //     "usertype": "3",
+  //   });
+  // }
+
+  @override
+  void initState() {
+    // addData();
+    super.initState();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff36344b),
@@ -27,26 +48,45 @@ class MyCustomForm extends StatefulWidget {
 }
 
 class MyCustomFormState extends State<MyCustomForm> {
-  var username, password, email;
+  var firstname, lastname, password, email;
 
   final _formKey = GlobalKey<FormState>();
+
   signUp() async {
     var formdata = _formKey.currentState;
     if (formdata!.validate()) {
       print('valid');
       formdata.save();
       try {
+        CollectionReference usersref =
+            FirebaseFirestore.instance.collection("users");
         UserCredential userCredential = await FirebaseAuth.instance
             .createUserWithEmailAndPassword(email: email, password: password);
+        var currentUser = FirebaseAuth.instance.currentUser;
+        var uid = currentUser!.uid;
+        usersref.add({
+          "firstname": firstname,
+          "lastname": lastname,
+          "email": email,
+          "password": password,
+          "usertype": "3",
+        });
+
         return userCredential;
       } on FirebaseException catch (e) {
         if (e.code == 'weak-password') {
-          // AwesomeDialog(
-          //     context: context,
-          //     title: "Error",
-          //     body: Text('the password is too weak'))..show();
-          print('the password is too weak');
+          // Alert(
+          //         context: context,
+          //         title: "Password Issue",
+          //         desc: "It's a weak password please enter stronger one.")
+          //     .show();
+          // print('the password is too weak');
         } else if (e.code == 'email-already-in-use') {
+          // Alert(
+          //         context: context,
+          //         title: "Email Issue",
+          //         desc: "The account already exists.")
+          //     .show();
           print('the account already exists');
         }
       } catch (e) {
@@ -121,7 +161,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                 child: Container(
                   child: TextFormField(
                     onSaved: (val) {
-                      username = val;
+                      firstname = val;
                     },
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -153,6 +193,9 @@ class MyCustomFormState extends State<MyCustomForm> {
                 padding: const EdgeInsets.only(left: 15, right: 15, top: 20),
                 child: Container(
                   child: TextFormField(
+                    onSaved: (val) {
+                      lastname = val;
+                    },
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter some text';
@@ -254,6 +297,9 @@ class MyCustomFormState extends State<MyCustomForm> {
                 padding: const EdgeInsets.only(left: 15, right: 15, top: 20),
                 child: Container(
                   child: TextFormField(
+                    onSaved: (val) {
+                      password = val;
+                    },
                     obscureText: true,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -322,13 +368,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                             print("Sign up failed");
                           }
                           //  print(response.user);
-                          // if (_formKey.currentState!.validate()) {
-                          //   ScaffoldMessenger.of(context).showSnackBar(
-                          //     const SnackBar(content: Text('Processing Data')),
-                          //   );
-                          //   //     FirebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
-                          //   Navigator.pop(context);
-                          // }
+                          if (_formKey.currentState!.validate()) {}
                         },
                         style: ElevatedButton.styleFrom(
                             primary: Color(0xff36344b),

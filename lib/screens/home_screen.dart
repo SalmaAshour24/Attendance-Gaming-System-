@@ -2,6 +2,10 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+//import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:flutter_application_1/screens/students/question_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -9,6 +13,24 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  getData() async {
+    CollectionReference usersref =
+        FirebaseFirestore.instance.collection("users");
+    await usersref.get().then((value) {
+      value.docs.forEach((element) {
+        print(element.data());
+        print("================================");
+      });
+    });
+  }
+
+  @override
+  void initState() {
+    //  addData();
+    getData();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,12 +64,19 @@ class MyCustomFormState extends State<MyCustomForm> {
         return userCredential;
       } on FirebaseException catch (e) {
         if (e.code == 'user-not-found') {
-          // AwesomeDialog(
-          //     context: context,
-          //     title: "Error",
-          //     body: Text('the password is too weak'))..show();
-          print('No user found for that email');
+          // Alert(
+          //         context: context,
+          //         title: "Email Issue",
+          //         desc: "Email doesn't exists.")
+          //     .show();
+          // print('No user found for that email');
         } else if (e.code == 'wrong-password') {
+          // Alert(
+          //       context: context,
+          //       title: "Password Issue",
+          //       desc: "Password is wrong re-enter it ")
+          //   .show();
+
           print('re-enter password, the password is wrong');
         }
       } catch (e) {

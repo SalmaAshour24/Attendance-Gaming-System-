@@ -2,6 +2,8 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Drawer1s extends StatefulWidget {
   @override
@@ -9,6 +11,8 @@ class Drawer1s extends StatefulWidget {
 }
 
 class _Drawer1sState extends State<Drawer1s> {
+  CollectionReference usersref = FirebaseFirestore.instance.collection("users");
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -29,8 +33,8 @@ class _Drawer1sState extends State<Drawer1s> {
                       const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
                   child: Column(
                     children: [
-                      Text('Username'),
-                      Text('name@yahoo.com'),
+                      //  Text("${usersref.data()['firstname']}"),
+                      //Text("${document.data()['email']}"),
                     ],
                   ),
                 ),

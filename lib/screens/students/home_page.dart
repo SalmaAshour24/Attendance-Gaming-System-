@@ -4,9 +4,10 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/students/question_screen.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'app_barS.dart';
 import 'drawerS.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class homePage extends StatefulWidget {
   @override
@@ -22,10 +23,6 @@ class _homePageState extends State<homePage> {
   }
 
 //3shan tt3mel awel ma el user yft7 el home page
-  void initState() {
-    getUser();
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
