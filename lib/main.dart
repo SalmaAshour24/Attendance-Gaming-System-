@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
       home: AnimatedSplashScreen(
         duration: 2000,
         splash: Image.asset(
-          "assets/1.PNG",
+          "assets/11.PNG",
           fit: BoxFit.fill,
         ),
         //law hwa mch 3aml login ykhlyh y-login law 3ael ydkhlo direct 3l homepage

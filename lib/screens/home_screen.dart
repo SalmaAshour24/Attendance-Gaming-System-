@@ -258,7 +258,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                                         var UT = element['usertype'];
                                         if (UT == 2) {
                                           Navigator.pushNamed(
-                                              context, '/bonus');
+                                              context, '/addC');
                                         }
                                         else if(UT==3)
                                         {

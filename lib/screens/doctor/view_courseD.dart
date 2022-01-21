@@ -19,26 +19,25 @@ class _ViewCourseDState extends State<ViewCourseD> {
       drawer: Drawer1(),
       appBar: AppBar(
         title: App(),
-        backgroundColor: Color(0xff3D0000),
+        backgroundColor: Color(0xff36344b),
       ),
       // backgroundColor: Color(0xff5A0C0C),
       body: Container(
         decoration: new BoxDecoration(
-            image: new DecorationImage(
-                image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
+                              color: Color(0xfff8edee),
+        ),
         child: ListView(
           children: [
             Column(
               children: [
-                Row(
-                  children: [
+                
                     Container(
                         padding: const EdgeInsets.all(20),
                         child: Card(
-                          color: Color(0xff8E7364),
+                          color: Color(0xff6c6996),
                           elevation: 10,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(25)),
+                              borderRadius: BorderRadius.circular(2)),
                           child: GridTile(
                             child: Center(
                               child: Padding(
@@ -49,23 +48,24 @@ class _ViewCourseDState extends State<ViewCourseD> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontFamily: 'Mouse Memoirs',
-                                      fontSize: 35,
-                                      color: Color(0xff000000),
+                                      fontSize: 20,
+                                      color: Color(0xffffffff),
                                     ),
                                   )),
                             ),
                           ),
                         )),
-                    Column(
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         ElevatedButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/addQ');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff581313),
+                                primary: Color(0xff36344b),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
+                                  borderRadius: BorderRadius.circular(2),
                                 ),
                                 textStyle: TextStyle(
                                   fontSize: 20,
@@ -75,7 +75,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               child: Text(
                                 'Add',
                                 style: TextStyle(
-                                  color: Color(0xffE7B8CD),
+                                  color: Color(0XFFffffff),
                                 ),
                               ),
                             )),
@@ -84,9 +84,9 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/eq');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff581313),
+                                primary: Color(0xff36344b),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
+                                  borderRadius: BorderRadius.circular(2),
                                 ),
                                 textStyle: TextStyle(
                                   fontSize: 20,
@@ -96,7 +96,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               child: Text(
                                 'Edit',
                                 style: TextStyle(
-                                  color: Color(0xffE7B8CD),
+                                  color: Color(0xffffffff),
                                 ),
                               ),
                             )),
@@ -105,9 +105,9 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/homeD');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff581313),
+                                primary: Color(0xff36344b),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
+                                  borderRadius: BorderRadius.circular(2),
                                 ),
                                 textStyle: TextStyle(
                                   fontSize: 20,
@@ -117,23 +117,25 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               child: Text(
                                 'Delete',
                                 style: TextStyle(
-                                  color: Color(0xffE7B8CD),
+                                  color: Color(0xffffffff),
                                 ),
                               ),
                             )),
                       ],
                     ),
-                  ],
+                                 SizedBox(
+                  height: 30,
                 ),
-                Row(
+
+                Column(
                   children: [
                     Container(
                         padding: const EdgeInsets.all(20),
                         child: Card(
-                          color: Color(0xff8E7364),
+                          color: Color(0xff6c6996),
                           elevation: 10,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(25)),
+                              borderRadius: BorderRadius.circular(2)),
                           child: GridTile(
                             child: Center(
                               child: Padding(
@@ -143,24 +145,25 @@ class _ViewCourseDState extends State<ViewCourseD> {
                                     "Mobile Programming",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontFamily: 'Mouse Memoirs',
-                                      fontSize: 35,
-                                      color: Color(0xff000000),
+                      fontFamily: 'Lora-VariableFont_wght',
+                                      fontSize: 20,
+                                      color: Color(0xffffffff),
                                     ),
                                   )),
                             ),
                           ),
                         )),
-                    Column(
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         ElevatedButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/addQ');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff581313),
+                                primary: Color(0xff36344b),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
+                                  borderRadius: BorderRadius.circular(2),
                                 ),
                                 textStyle: TextStyle(
                                   fontSize: 20,
@@ -170,7 +173,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               child: Text(
                                 'Add',
                                 style: TextStyle(
-                                  color: Color(0xffE7B8CD),
+                                  color: Color(0XFFffffff),
                                 ),
                               ),
                             )),
@@ -179,9 +182,9 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/eq');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff581313),
+                                primary: Color(0xff36344b),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
+                                  borderRadius: BorderRadius.circular(2),
                                 ),
                                 textStyle: TextStyle(
                                   fontSize: 20,
@@ -191,7 +194,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               child: Text(
                                 'Edit',
                                 style: TextStyle(
-                                  color: Color(0xffE7B8CD),
+                                  color: Color(0xffffffff),
                                 ),
                               ),
                             )),
@@ -200,9 +203,9 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/homeD');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff581313),
+                                primary: Color(0xff36344b),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
+                                  borderRadius: BorderRadius.circular(2),
                                 ),
                                 textStyle: TextStyle(
                                   fontSize: 20,
@@ -212,7 +215,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               child: Text(
                                 'Delete',
                                 style: TextStyle(
-                                  color: Color(0xffE7B8CD),
+                                  color: Color(0xffffffff),
                                 ),
                               ),
                             )),
@@ -220,15 +223,16 @@ class _ViewCourseDState extends State<ViewCourseD> {
                     ),
                   ],
                 ),
-                Row(
+                SizedBox(height: 30,),
+                Column(
                   children: [
                     Container(
                         padding: const EdgeInsets.all(20),
                         child: Card(
-                          color: Color(0xff8E7364),
+                          color: Color(0xff6c6996),
                           elevation: 10,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(25)),
+                              borderRadius: BorderRadius.circular(2)),
                           child: GridTile(
                             child: Center(
                               child: Padding(
@@ -239,23 +243,24 @@ class _ViewCourseDState extends State<ViewCourseD> {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontFamily: 'Mouse Memoirs',
-                                      fontSize: 35,
-                                      color: Color(0xff000000),
+                                      fontSize: 20,
+                                      color: Color(0xffffffff),
                                     ),
                                   )),
                             ),
                           ),
                         )),
-                    Column(
+                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         ElevatedButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/addQ');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff581313),
+                                primary: Color(0xff36344b),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
+                                  borderRadius: BorderRadius.circular(2),
                                 ),
                                 textStyle: TextStyle(
                                   fontSize: 20,
@@ -265,7 +270,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               child: Text(
                                 'Add',
                                 style: TextStyle(
-                                  color: Color(0xffE7B8CD),
+                                  color: Color(0XFFffffff),
                                 ),
                               ),
                             )),
@@ -274,9 +279,9 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/eq');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff581313),
+                                primary: Color(0xff36344b),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
+                                  borderRadius: BorderRadius.circular(2),
                                 ),
                                 textStyle: TextStyle(
                                   fontSize: 20,
@@ -286,7 +291,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               child: Text(
                                 'Edit',
                                 style: TextStyle(
-                                  color: Color(0xffE7B8CD),
+                                  color: Color(0xffffffff),
                                 ),
                               ),
                             )),
@@ -295,9 +300,9 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               Navigator.pushNamed(context, '/homeD');
                             },
                             style: ElevatedButton.styleFrom(
-                                primary: Color(0xff581313),
+                                primary: Color(0xff36344b),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(40),
+                                  borderRadius: BorderRadius.circular(2),
                                 ),
                                 textStyle: TextStyle(
                                   fontSize: 20,
@@ -307,7 +312,7 @@ class _ViewCourseDState extends State<ViewCourseD> {
                               child: Text(
                                 'Delete',
                                 style: TextStyle(
-                                  color: Color(0xffE7B8CD),
+                                  color: Color(0xffffffff),
                                 ),
                               ),
                             )),

@@ -16,34 +16,34 @@ class _AddQuestionsState extends State<AddQuestions> {
       drawer: Drawer1(),
       appBar: AppBar(
         title: App(),
-        backgroundColor: Color(0xff3D0000),
+        backgroundColor: Color(0xff36344b),
       ),
-      backgroundColor: Color(0xffFFB703),
+      backgroundColor: Color(0xff36344b),
       body: Container(
         decoration: new BoxDecoration(
-            image: new DecorationImage(
-                image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
+                          color: Color(0xfff8edee),
+        ),
         child: ListView(
           children: [
             Column(
               children: [
                 Card(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(35),
+                    borderRadius: BorderRadius.circular(2),
                   ),
                   child: const ListTile(
                     title: Text(
                       "Add Question",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontFamily: 'Mouse Memoirs',
-                        fontSize: 40,
+                                  fontFamily: 'Lora-VariableFont_wght',
+                        fontSize: 20,
                         color: Color(0xffFFFFFF),
                       ),
                     ),
                   ),
                   elevation: 20,
-                  color: Color(0xff581313),
+                  color: Color(0xff36344b),
                   margin:
                       EdgeInsets.only(bottom: 30, top: 30, left: 90, right: 90),
                 ),
@@ -53,23 +53,26 @@ class _AddQuestionsState extends State<AddQuestions> {
                       'Question',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontFamily: 'Mouse Memoirs',
-                        fontSize: 35,
-                        color: Color(0xffFFFFFF),
+                                  fontFamily: 'Lora-VariableFont_wght',
+                        fontSize: 30,
+                        color: Color(0xff36344b),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(20),
                       child: Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xff8E7364),
-                          borderRadius: BorderRadius.circular(25.0),
-                        ),
+                     
                         child: TextFormField(
                           textAlign: TextAlign.center,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: "Add question",
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Color(0xff6c6996), width: 2),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5)),
+                            ),
                           ),
                         ),
                       ),
@@ -78,57 +81,66 @@ class _AddQuestionsState extends State<AddQuestions> {
                       'Choices:',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                         fontSize: 35,
-                        color: Color(0xff000000),
+                        color: Color(0xff36344b),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xff8E7364),
-                          borderRadius: BorderRadius.circular(25.0),
-                        ),
+                        
                         child: TextFormField(
-                          textAlign: TextAlign.center,
-                          decoration: const InputDecoration(
-                            border: InputBorder.none,
-                            hintText: '1',
-                          ),
-                        ),
+                              cursorColor: Color(0XFFFFCCFF),
+                              textAlign: TextAlign.center,
+                              decoration: const InputDecoration(
+                                border: null,
+                                hintText: '1',
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: Color(0xff6c6996), width: 2),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(5)),
+                                ),
+                              ))
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xff8E7364),
-                          borderRadius: BorderRadius.circular(25.0),
-                        ),
+                      
                         child: TextFormField(
-                          textAlign: TextAlign.center,
-                          decoration: const InputDecoration(
-                            border: InputBorder.none,
-                            hintText: '2',
-                          ),
-                        ),
+                              cursorColor: Color(0XFFFFCCFF),
+                              textAlign: TextAlign.center,
+                              decoration: const InputDecoration(
+                                border: null,
+                                hintText: '2',
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: Color(0xff6c6996), width: 2),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(5)),
+                                ),
+                              ))
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xff8E7364),
-                          borderRadius: BorderRadius.circular(25.0),
-                        ),
+                       
                         child: TextFormField(
-                          textAlign: TextAlign.center,
-                          decoration: const InputDecoration(
-                            border: InputBorder.none,
-                            hintText: '3',
-                          ),
-                        ),
+                              cursorColor: Color(0XFFFFCCFF),
+                              textAlign: TextAlign.center,
+                              decoration: const InputDecoration(
+                                border: null,
+                                hintText: '3',
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: Color(0xff6c6996), width: 2),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(5)),
+                                ),
+                              ))
                       ),
                     ),
                     Padding(
@@ -138,13 +150,13 @@ class _AddQuestionsState extends State<AddQuestions> {
                           Navigator.pushNamed(context, '/homeD');
                         },
                         style: ElevatedButton.styleFrom(
-                            primary: Color(0xff5A0C0C)),
+                            primary: Color(0xff36344b)),
                         child: Text(
                           'Add',
                           style: TextStyle(
                             color: Color(0xffffffff),
-                            fontSize: 50,
-                            fontFamily: 'Mouse Memoirs',
+                            fontSize: 30,
+                                  fontFamily: 'Lora-VariableFont_wght',
                           ),
                         ),
                       ),
