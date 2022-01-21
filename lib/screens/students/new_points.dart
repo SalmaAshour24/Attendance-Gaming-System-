@@ -16,32 +16,32 @@ class _PointsState extends State<NewPoints> {
       appBar: AppBar(
         title: Apps(),
     
-        backgroundColor: Color(0xff3D0000),
+        backgroundColor: Color(0xff36344b),
       ),
-        backgroundColor: Color(0xffFFB703),
+        backgroundColor: Color(0xff36344b),
         body: Container(
           decoration: new BoxDecoration(
-              image: new DecorationImage(
-                  image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
+                           color: Color(0xfff8edee),
+          ),
           child: ListView(children: [
             Column(children: [
               Card(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(35),
+                  borderRadius: BorderRadius.circular(2),
                 ),
                 child: const ListTile(
                   title: Text(
                     "Points",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontFamily: 'Mouse Memoirs',
-                      fontSize: 50,
+                      fontFamily: 'Lora-VariableFont_wght',
+                      fontSize: 40,
                       color: Color(0xffFFFFFF),
                     ),
                   ),
                 ),
                 elevation: 30,
-                color: Color(0xff5A0C0C),
+                color: Color(0xff36344b),
                 margin:
                     EdgeInsets.only(bottom: 60, top: 60, left: 90, right: 90),
               ),
@@ -52,12 +52,12 @@ class _PointsState extends State<NewPoints> {
                     const Text('Name:',
                         style: TextStyle(
                             fontSize: 35,
-                            fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                             color: Colors.black)),
                     const Text('40 Points',
                         style: TextStyle(
                             fontSize: 35,
-                            fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                             color: Colors.black)),
                   ],
                 ),

@@ -36,131 +36,136 @@ class _homePageState extends State<homePage> {
         decoration: new BoxDecoration(
           color: Color(0xfff8edee),
         ),
-        child: CustomScrollView(
-          primary: false,
-          slivers: <Widget>[
-            SliverPadding(
-              padding: const EdgeInsets.all(20),
-              sliver: SliverGrid.count(
-                crossAxisSpacing: 30,
-                mainAxisSpacing: 40,
-                crossAxisCount: 2,
-                children: <Widget>[
-                  GestureDetector(
-                    onTap: () {
-                      // AnimatedSplashScreen(
-                      //   nextScreen: QuestionScreen(),
-                      //   splash: Image.asset(
-                      //     "assets/1.PNG",
-                      //     fit: BoxFit.fill,
-                      //   ),
-                      // );
-                      Navigator.pushNamed(context, '/ins');
-                    },
-                    child: Container(
-                        padding: const EdgeInsets.all(0),
-                        child: Card(
-                          color: Color(0xff5A0C0C),
-                          elevation: 10,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(25)),
-                          child: GridTile(
-                            child: Center(
-                              child: Text(
-                                "Data Engineering",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontFamily: 'Mouse Memoirs',
-                                  fontSize: 35,
-                                  color: Color(0xffffffff),
+        child: Padding(
+          padding: const EdgeInsets.all(17.0),
+          child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    GestureDetector(
+                      
+                      onTap: () {
+                     
+                        Navigator.pushNamed(context, '/ins');
+                      },
+                      child: Container(
+                          padding: const EdgeInsets.all(0),
+                          child: Card(
+                            
+                            color: Color(0xff36344b),
+                            elevation: 10,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(2)),
+                            child: GridTile(
+                              child: Center(
+                                child:Padding(padding: const EdgeInsets.symmetric(
+                                vertical: 40, horizontal: 10),
+                                child: Text(
+                                  "Data Engineering",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                              fontFamily: 'Lora-VariableFont_wght',
+                                    fontSize: 30,
+                                    color: Color(0xffffffff),
+                                  ),
+                                ),
+                              ),
+                              ),
+                            ),
+                          )),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/ins');
+                      },
+                      child: Container(
+                          padding: const EdgeInsets.all(0),
+                          child: Card(
+                            color: Color(0xff36344b),
+                            elevation: 10,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(2)),
+                            child: GridTile(
+                              child: Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                vertical: 40, horizontal: 10),
+                                  child: Text(
+                                    "Selected topics",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                              fontFamily: 'Lora-VariableFont_wght',
+                                      fontSize: 30,
+                                      color: Color(0xffffffff),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        )),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/ins');
-                    },
-                    child: Container(
-                        padding: const EdgeInsets.all(0),
-                        child: Card(
-                          color: Color(0xff5A0C0C),
-                          elevation: 10,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(25)),
-                          child: GridTile(
-                            child: Center(
-                              child: Text(
-                                "Selected topics",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontFamily: 'Mouse Memoirs',
-                                  fontSize: 35,
-                                  color: Color(0xffffffff),
+                          )),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/ins');
+                      },
+                      child: Container(
+                          padding: const EdgeInsets.all(0),
+                          child: Card(
+                            color: Color(0xff36344b),
+                            elevation: 10,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(2)),
+                            child: GridTile(
+                              child: Center(
+                                child: Padding(
+padding: const EdgeInsets.symmetric(
+                                vertical: 40, horizontal: 10),                                  child: Text(
+                                    "Mobile Device programming",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                              fontFamily: 'Lora-VariableFont_wght',
+                                      fontSize: 30,
+                                      color: Color(0xffffffff),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        )),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/ins');
-                    },
-                    child: Container(
-                        padding: const EdgeInsets.all(0),
-                        child: Card(
-                          color: Color(0xff5A0C0C),
-                          elevation: 10,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(25)),
-                          child: GridTile(
-                            child: Center(
-                              child: Text(
-                                "Mobile Device programming",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontFamily: 'Mouse Memoirs',
-                                  fontSize: 35,
-                                  color: Color(0xffffffff),
+                          )),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/ins');
+                      },
+                      child: Container(
+                          padding: const EdgeInsets.all(0),
+                          child: Card(
+                            color: Color(0xff36344b),
+                            elevation: 10,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(2)),
+                            child: GridTile(
+                              child: Center(
+                                child: Padding(
+padding: const EdgeInsets.symmetric(
+                                vertical: 40, horizontal: 10),                                  child: Text(
+                                    "Theory of computation",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                              fontFamily: 'Lora-VariableFont_wght',
+                                      fontSize: 30,
+                                      color: Color(0xffffffff),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        )),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/ins');
-                    },
-                    child: Container(
-                        padding: const EdgeInsets.all(0),
-                        child: Card(
-                          color: Color(0xff5A0C0C),
-                          elevation: 10,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(25)),
-                          child: GridTile(
-                            child: Center(
-                              child: Text(
-                                "Theory of computation",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontFamily: 'Mouse Memoirs',
-                                  fontSize: 35,
-                                  color: Color(0xffffffff),
-                                ),
-                              ),
-                            ),
-                          ),
-                        )),
-                  ),
-                ],
-              ),
-            ),
-          ],
+                          )),
+                    ),
+                 // ],
+               // ),
+            //  ),
+            ],
+          ),
         ),
       ),
     );

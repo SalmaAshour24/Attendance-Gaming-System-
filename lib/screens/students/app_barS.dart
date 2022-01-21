@@ -14,7 +14,7 @@ class Apps extends StatelessWidget {
       backgroundColor: Color(0xff36344b),
 
       title: Padding(
-        padding: const EdgeInsets.only(left: 250, bottom: 55),
+        padding: const EdgeInsets.only(left: 250, bottom: 44),
         child: IconButton(
           icon: Icon(Icons.search),
           tooltip: 'Search your Course',

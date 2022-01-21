@@ -5,7 +5,9 @@ import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 
 import 'app_barS.dart';
 import 'drawerS.dart';
-
+import 'package:motion_toast/motion_toast.dart';
+import 'package:motion_toast/resources/arrays.dart';
+import 'package:motion_toast/resources/constants.dart';
 class QuestionScreen extends StatefulWidget {
   @override
   _QuestionScreenState createState() => _QuestionScreenState();
@@ -16,6 +18,28 @@ class _QuestionScreenState extends State<QuestionScreen> {
 
   @override
   Widget build(BuildContext context) {
+     void _displayErrorMotionToast() {
+      MotionToast(
+        icon: Icons.error,
+        //the Duration of the toast animation by default it's 1.5 seconds
+
+        animationDuration: defaultAnimationDuration,
+        secondaryColor: Color(0xff8c0606),
+        backgroundType: BACKGROUND_TYPE.lighter,
+        primaryColor: Color(0xff8c0606),
+        title: Text(
+          "Please",
+          style: TextStyle(color: Color(0xff000000), fontSize: 20),
+        ),
+        description: Text(
+          "Timeout!",
+          style: TextStyle(color: Color(0xff000000), fontSize: 20),
+        ),
+        position: MOTION_TOAST_POSITION.top,
+        animationType: ANIMATION.fromTop,
+      
+      ).show(context);
+    }
     return Scaffold(
       drawer: Drawer1s(),
       appBar: AppBar(
@@ -84,8 +108,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                         print('Countdown Started');
                       },
                       onComplete: () {
-                        print('Countdown Ended');
-                      },
+_displayErrorMotionToast();                      },
                     ),
                   ),
                 ],

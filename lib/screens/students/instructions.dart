@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/students/app_barS.dart';
 import 'app_barS.dart';
 import 'drawerS.dart';
+import 'package:delayed_display/delayed_display.dart';
 
 class QuizIns extends StatefulWidget {
   const QuizIns({Key? key}) : super(key: key);
@@ -27,8 +28,12 @@ class _QuizInsState extends State<QuizIns> {
                              color: Color(0xfff8edee),
             ),
             child: ListView(children: [
-              Column(children: [
-                Padding(
+              Column(
+                  
+                children: [
+                   DelayedDisplay(
+                  delay: Duration(seconds: 1),
+              child:  Padding(
                   padding: const EdgeInsets.only(top:38.0),
                   child: Text(
                     "Please See the instructions bellow",
@@ -40,6 +45,7 @@ class _QuizInsState extends State<QuizIns> {
                     ),
                   ),
                 ),
+              ),
                 SizedBox(
                   height: 30,
                 ),

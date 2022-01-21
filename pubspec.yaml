@@ -46,6 +46,9 @@ dependencies:
   cloud_firestore: ^3.1.6
   firebase_storage: ^10.2.5
   firebase_messaging: ^11.2.5
+  delayed_display: ^2.0.0
+  motion_toast: ^2.1.0
+  
   dependencies:
   #rflutter_alert: ^1.0.3
   
