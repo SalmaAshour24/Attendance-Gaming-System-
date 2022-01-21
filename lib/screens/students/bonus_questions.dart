@@ -19,13 +19,13 @@ class _BonusQuestionScreenState extends State<BonusQuestionScreen> {
       appBar: AppBar(
         title: Apps(),
        
-        backgroundColor: Color(0xff3D0000),
+        backgroundColor: Color(0xff36344b),
       ),
       // backgroundColor: Color(0xffFFB703),
       body: Container(
         decoration: new BoxDecoration(
-            image: new DecorationImage(
-                image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
+                     color: Color(0xfff8edee),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: ListView(
@@ -42,23 +42,23 @@ class _BonusQuestionScreenState extends State<BonusQuestionScreen> {
                     "Name of the subject",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontFamily: 'Mouse Memoirs',
-                      fontSize: 35,
+                      fontFamily: 'Lora-VariableFont_wght',
+                      fontSize: 25,
                       color: Color(0xffffffff),
                     ),
                   ),
                 ),
                 elevation: 40,
-                color: Color(0xff3D0000),
+                color: Color(0xff36344b),
               )),
               Row(
                 children: [
                   Text(
                     "Please answer the following!",
                     style: TextStyle(
-                      fontFamily: 'Mouse Memoirs',
-                      fontSize: 30,
-                      color: Color(0xff3D0000),
+                      fontFamily: 'Lora-VariableFont_wght',
+                      fontSize: 20,
+                      color: Color(0xff36344b),
                     ),
                   ),
                   Container(
@@ -71,9 +71,9 @@ class _BonusQuestionScreenState extends State<BonusQuestionScreen> {
                       height: MediaQuery.of(context).size.height / 6,
                       ringColor: Colors.grey[300]!,
                       ringGradient: null,
-                      fillColor: Color(0xffAB4C4C),
+                      fillColor: Color(0xff6c6996),
                       fillGradient: null,
-                      backgroundColor: Color(0xff3D0000),
+                      backgroundColor: Color(0xff36344b),
                       textStyle: const TextStyle(
                           fontSize: 20.0,
                           color: Colors.white,
@@ -95,20 +95,20 @@ class _BonusQuestionScreenState extends State<BonusQuestionScreen> {
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   child: Container(
                     child: Padding(
-                      padding: const EdgeInsets.all(30.0),
+                      padding: const EdgeInsets.all(20.0),
                       child: Text(
                         'q1:what is meant by this?',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontFamily: 'Mouse Memoirs',
-                          fontSize: 30,
+                         fontFamily: 'Lora-VariableFont_wght',
+                          fontSize: 25,
                           color: Color(0xffffffff),
                         ),
                       ),
                     ),
                     width: double.infinity,
                     height: 90,
-                    color: Color(0xff5C2424),
+                    color: Color(0xff36344b),
                   ),
                 ),
               ),
@@ -149,7 +149,7 @@ class _BonusQuestionScreenState extends State<BonusQuestionScreen> {
                         Navigator.pushNamed(context, '/third');
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xff523232),
+                        primary: Color(0xff36344b),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40),
                         ),
@@ -158,7 +158,7 @@ class _BonusQuestionScreenState extends State<BonusQuestionScreen> {
                         'Submit all',
                         style: TextStyle(
                           color: Color(0xffffffff),
-                          fontSize: 25,
+                          fontSize: 30,
                         ),
                       ),
                     ),
@@ -182,20 +182,20 @@ class Answer1Widget extends StatelessWidget {
       borderRadius: BorderRadius.all(Radius.circular(40)),
       child: Container(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.only(top:40.0),
           child: Text(
             'Answer',
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontFamily: 'Mouse Memoirs',
-              fontSize: 35,
+                                  fontFamily: 'Lora-VariableFont_wght',
+              fontSize: 20,
               color: Color(0xffffffff),
             ),
           ),
         ),
         width: 150,
         height: 100,
-        color: Color(0xff3D0000),
+        color: Color(0xff6c6996),
       ),
     );
   }
