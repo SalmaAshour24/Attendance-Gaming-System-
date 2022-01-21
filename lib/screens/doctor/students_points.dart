@@ -13,33 +13,31 @@ class _PointsState extends State<NewPoints1> {
     return Scaffold(
         drawer: Drawer1(),
         appBar: AppBar(
-          backgroundColor: Color(0xff3D0000),
+          backgroundColor: Color(0xff36344b),
           title: App(),
         ),
-        backgroundColor: Color(0xff581313),
+//        backgroundColor: Color(0xff581313),
         body: Container(
           decoration: new BoxDecoration(
-              image: new DecorationImage(
-                  image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
+                           color: Color(0xfff8edee),
+          ),
           child: ListView(children: [
             Column(children: [
               Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(35),
-                ),
+                
                 child: const ListTile(
                   title: Text(
                     "Points",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontFamily: 'Mouse Memoirs',
-                      fontSize: 50,
+                                  fontFamily: 'Lora-VariableFont_wght',
+                      fontSize: 40,
                       color: Color(0xffFFFFFF),
                     ),
                   ),
                 ),
                 elevation: 30,
-                color: Color(0xff581313),
+                color: Color(0xff36344b),
                 margin:
                     EdgeInsets.only(bottom: 60, top: 60, left: 90, right: 90),
               ),
@@ -51,12 +49,12 @@ class _PointsState extends State<NewPoints1> {
                     const Text('Maha: ',
                         style: TextStyle(
                             fontSize: 35,
-                            fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                             color: Colors.black)),
                     const Text('40 Points',
                         style: TextStyle(
                             fontSize: 35,
-                            fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                             color: Colors.black))
                   ]),
                   Row(children: [
@@ -64,12 +62,12 @@ class _PointsState extends State<NewPoints1> {
                     const Text('Salma: ',
                         style: TextStyle(
                             fontSize: 35,
-                            fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                             color: Colors.black)),
                     const Text('35 Points',
                         style: TextStyle(
                             fontSize: 35,
-                            fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                             color: Colors.black))
                   ]),
                   Row(children: [
@@ -77,12 +75,12 @@ class _PointsState extends State<NewPoints1> {
                     const Text('Shadwa: ',
                         style: TextStyle(
                             fontSize: 35,
-                            fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                             color: Colors.black)),
                     const Text('30 Points',
                         style: TextStyle(
                             fontSize: 35,
-                            fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                             color: Colors.black))
                   ]),
                   Row(children: [
@@ -90,12 +88,12 @@ class _PointsState extends State<NewPoints1> {
                     const Text('Bassant: ',
                         style: TextStyle(
                             fontSize: 35,
-                            fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                             color: Colors.black)),
                     const Text('25 Points',
                         style: TextStyle(
                             fontSize: 35,
-                            fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                             color: Colors.black))
                   ]),
                   Row(children: [
@@ -103,12 +101,12 @@ class _PointsState extends State<NewPoints1> {
                     const Text('Omar: ',
                         style: TextStyle(
                             fontSize: 35,
-                            fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                             color: Colors.black)),
                     const Text('40 Points',
                         style: TextStyle(
                             fontSize: 35,
-                            fontFamily: 'Mouse Memoirs',
+                                  fontFamily: 'Lora-VariableFont_wght',
                             color: Colors.black))
                   ]),
                 ],
