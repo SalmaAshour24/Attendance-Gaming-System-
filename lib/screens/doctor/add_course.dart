@@ -16,34 +16,34 @@ class _AddCourseState extends State<AddCourse> {
       drawer: Drawer1(),
       appBar: AppBar(
         title: App(),
-        backgroundColor: Color(0xff3D0000),
+        backgroundColor: Color(0xff36344b),
       ),
-      backgroundColor: Color(0xffFFB703),
+      backgroundColor: Color(0xff36344b),
       body: Container(
         decoration: new BoxDecoration(
-            image: new DecorationImage(
-                image: new AssetImage('assets/4.PNG'), fit: BoxFit.cover)),
+                    color: Color(0xffFFFFFF),
+        ),
         child: ListView(
           children: [
             Column(
               children: [
                 Card(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(35),
+                    borderRadius: BorderRadius.circular(2),
                   ),
                   child: const ListTile(
                     title: Text(
                       "Add Course",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontFamily: 'Mouse Memoirs',
-                        fontSize: 40,
+                                  fontFamily: 'Lora-VariableFont_wght',
+                        fontSize: 25,
                         color: Color(0xffFFFFFF),
                       ),
                     ),
                   ),
                   elevation: 20,
-                  color: Color(0xff581313),
+                  color: Color(0xff36344b),
                   margin:
                       EdgeInsets.only(bottom: 30, top: 30, left: 90, right: 90),
                 ),
@@ -57,24 +57,28 @@ class _AddCourseState extends State<AddCourse> {
                             'Name: ',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: 'Mouse Memoirs',
-                              fontSize: 35,
+                                  fontFamily: 'Lora-VariableFont_wght',
+                              fontSize: 20,
                             ),
                           ),
                           Flexible(
                               child: Padding(
                             padding: EdgeInsets.all(5),
                             child: Container(
-                              decoration: BoxDecoration(
-                                color: Color(0xff8E7364),
-                                borderRadius: BorderRadius.circular(25.0),
-                              ),
+                              
                               child: TextFormField(
-                                textAlign: TextAlign.center,
-                                decoration: const InputDecoration(
-                                  border: InputBorder.none,
-                                ),
-                              ),
+                                    cursorColor: Color(0XFFFFCCFF),
+                                    textAlign: TextAlign.center,
+                                    decoration: const InputDecoration(
+                                      border: null,
+                                      hintText: 'Add course name',
+                                      focusedBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                            color: Color(0xff6c6996), width: 2),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(25)),
+                                      ),
+                                    ))
                             ),
                           )),
                         ],
@@ -88,24 +92,28 @@ class _AddCourseState extends State<AddCourse> {
                             'Description: ',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: 'Mouse Memoirs',
-                              fontSize: 35,
+                                  fontFamily: 'Lora-VariableFont_wght',
+                              fontSize: 20,
                             ),
                           ),
                           Flexible(
                               child: Padding(
                             padding: EdgeInsets.all(5),
                             child: Container(
-                              decoration: BoxDecoration(
-                                color: Color(0xff8E7364),
-                                borderRadius: BorderRadius.circular(25.0),
-                              ),
+                              
                               child: TextFormField(
-                                textAlign: TextAlign.center,
-                                decoration: const InputDecoration(
-                                  border: InputBorder.none,
-                                ),
-                              ),
+                                    cursorColor: Color(0XFFFFCCFF),
+                                    textAlign: TextAlign.center,
+                                    decoration: const InputDecoration(
+                                      border: null,
+                                      hintText: 'Add  your description',
+                                      focusedBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                            color: Color(0xff6c6996), width: 2),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(25)),
+                                      ),
+                                    ))
                             ),
                           )),
                         ],
@@ -118,13 +126,13 @@ class _AddCourseState extends State<AddCourse> {
                           Navigator.pushNamed(context, '/homeD');
                         },
                         style: ElevatedButton.styleFrom(
-                            primary: Color(0xff5A0C0C)),
+                            primary: Color(0xff36344b)),
                         child: Text(
                           'Add',
                           style: TextStyle(
                             color: Color(0xffffffff),
-                            fontSize: 40,
-                            fontFamily: 'Mouse Memoirs',
+                            fontSize: 30,
+                                  fontFamily: 'Lora-VariableFont_wght',
                           ),
                         ),
                       ),
