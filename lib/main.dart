@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_application_1/screens/doctor/add_question.dart';
 import 'package:flutter_application_1/screens/doctor/edit_questions.dart';
 import 'package:flutter_application_1/screens/doctor/students_points.dart';
@@ -18,10 +19,20 @@ import 'screens/home_screen.dart';
 import 'screens/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
 
+bool islogin = false;
+
 void main() async {
   //3shan yt2ked eno 7sal initialize abl ma yrun el progg
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  //3shan mch kol mara a3mel hotreload yrg3ny lel signin yfdl zy mahwaaa.
+  var user = FirebaseAuth.instance.currentUser;
+  if (user == null) {
+    islogin = false;
+  } else {
+    islogin = true;
+  }
+
   runApp(MyApp());
 }
 
@@ -60,7 +71,8 @@ class MyApp extends StatelessWidget {
           "assets/1.PNG",
           fit: BoxFit.fill,
         ),
-        nextScreen: HomeScreen(),
+        //law hwa mch 3aml login ykhlyh y-login law 3ael ydkhlo direct 3l homepage
+        nextScreen: islogin == false ? HomeScreen() : homePage(),
         backgroundColor: Color(0xff36344b),
         splashIconSize: double.infinity,
         splashTransition: SplashTransition.slideTransition,

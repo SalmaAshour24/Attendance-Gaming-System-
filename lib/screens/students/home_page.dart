@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/students/question_screen.dart';
 
@@ -13,6 +14,19 @@ class homePage extends StatefulWidget {
 }
 
 class _homePageState extends State<homePage> {
+  getUser() {
+    //ygbly m3lomat el user el 3amel 3nde auth, akher shakhs 3ml sign in bynato htkon mtsgela w dy myza fl firebase
+    //user who is signed in
+    var user = FirebaseAuth.instance.currentUser;
+    print(user!.email);
+  }
+
+//3shan tt3mel awel ma el user yft7 el home page
+  void initState() {
+    getUser();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,9 +37,8 @@ class _homePageState extends State<homePage> {
       ),
       body: Container(
         decoration: new BoxDecoration(
-                                        color: Color(0xfff8edee),
-
-         ),
+          color: Color(0xfff8edee),
+        ),
         child: CustomScrollView(
           primary: false,
           slivers: <Widget>[

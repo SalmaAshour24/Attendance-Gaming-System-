@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class Drawer1s extends StatefulWidget {
@@ -71,7 +72,8 @@ class _Drawer1sState extends State<Drawer1s> {
           ListTile(
             leading: Icon(Icons.exit_to_app_rounded, color: Color(0xff36344b)),
             title: Text('Sign out'),
-            onTap: () {
+            onTap: () async {
+              await FirebaseAuth.instance.signOut();
               Navigator.pushNamed(context, '/signout');
             },
           ),
