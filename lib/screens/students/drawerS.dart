@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_application_1/Model/users_model.dart';
 
 class Drawer1s extends StatefulWidget {
   @override
@@ -11,15 +12,20 @@ class Drawer1s extends StatefulWidget {
 }
 
 class _Drawer1sState extends State<Drawer1s> {
+  Users us= Users();
   CollectionReference usersref = FirebaseFirestore.instance.collection("users");
 
   @override
   Widget build(BuildContext context) {
+   
     return Drawer(
+
+      
       child: ListView(
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
         children: <Widget>[
+          
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 30),
             child: Row(
@@ -33,8 +39,8 @@ class _Drawer1sState extends State<Drawer1s> {
                       const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
                   child: Column(
                     children: [
-                      //  Text("${usersref.data()['firstname']}"),
-                      //Text("${document.data()['email']}"),
+                      Text("${us.getUT()}"),
+                      Text("${us.getEmail()}"),
                     ],
                   ),
                 ),

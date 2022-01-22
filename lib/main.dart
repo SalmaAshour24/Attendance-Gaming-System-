@@ -42,6 +42,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
       //nshil shartet el debug
       initialRoute: '/',
@@ -66,19 +67,22 @@ class MyApp extends StatelessWidget {
 
       debugShowCheckedModeBanner: false,
       title: 'AGS',
-      home: AnimatedSplashScreen(
-        duration: 2000,
-        splash: Image.asset(
-          "assets/11.PNG",
-          fit: BoxFit.fill,
-        ),
-        //law hwa mch 3aml login ykhlyh y-login law 3ael ydkhlo direct 3l homepage
-        nextScreen: islogin == false ? HomeScreen() : homePage(),
-        backgroundColor: Color(0xff36344b),
-        splashIconSize: double.infinity,
-        splashTransition: SplashTransition.slideTransition,
-        pageTransitionType: PageTransitionType.leftToRight,
-      ),
+      home:HomeScreen()
+      // home: AnimatedSplashScreen(
+      //   duration: 2000,
+      //   splash: Image.asset(
+      //     "assets/11.PNG",
+      //     fit: BoxFit.fill,
+      //   ),
+      //   //law hwa mch 3aml login ykhlyh y-login law 3ael ydkhlo direct 3l homepage
+      //   nextScreen: islogin == false ? HomeScreen() : homePage(),
+      //   backgroundColor: Color(0xff36344b),
+      //   splashIconSize: double.infinity,
+      //   splashTransition: SplashTransition.slideTransition,
+      //   pageTransitionType: PageTransitionType.leftToRight,
+      // ),
     );
+    
   }
+  
 }

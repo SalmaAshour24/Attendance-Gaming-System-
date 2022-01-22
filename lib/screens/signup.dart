@@ -48,7 +48,7 @@ class MyCustomForm extends StatefulWidget {
 }
 
 class MyCustomFormState extends State<MyCustomForm> {
-  var firstname, lastname, password, email;
+  late var firstname, lastname, password, email;
 
   final _formKey = GlobalKey<FormState>();
 
@@ -58,22 +58,44 @@ class MyCustomFormState extends State<MyCustomForm> {
       print('valid');
       formdata.save();
       try {
-        CollectionReference usersref =
-            FirebaseFirestore.instance.collection("users");
-        UserCredential userCredential = await FirebaseAuth.instance
-            .createUserWithEmailAndPassword(email: email, password: password);
-        var currentUser = FirebaseAuth.instance.currentUser;
-        var uid = currentUser!.uid;
-        usersref.add({
-          "firstname": firstname,
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: email, password: password);
+
+        DocumentReference r = FirebaseFirestore.instance.collection('users').doc(FirebaseAuth.instance.currentUser!.uid);
+
+FirebaseFirestore.instance.runTransaction((transaction) async{
+DocumentSnapshot snapShot = await transaction.get(r);
+
+if(!snapShot.exists){
+	r.set({
+    "firstname": firstname,
           "lastname": lastname,
           "email": email,
-          "password": password,
           "usertype": 3,
-        });
+		});
+    
 
-        return userCredential;
-      } on FirebaseException catch (e) {
+}
+
+},
+
+        // CollectionReference usersref =
+        //     FirebaseFirestore.instance.collection("users");
+        // UserCredential userCredential = await FirebaseAuth.instance
+        //     .createUserWithEmailAndPassword(email: email, password: password);
+        // var currentUser = FirebaseAuth.instance.currentUser;
+        // var uid = currentUser!.uid;
+
+        // usersref.add({
+        //   "firstname": firstname,
+        //   "lastname": lastname,
+        //   "email": email,
+        //   "password": password,
+        //   "usertype": 3,
+        // });
+
+        // return userCredential;
+);} on FirebaseException catch (e) {
         if (e.code == 'weak-password') {
           // Alert(
           //         context: context,
@@ -95,6 +117,7 @@ class MyCustomFormState extends State<MyCustomForm> {
     } else {
       print('not valid');
     }
+    return 'ok';
   }
 
   @override
@@ -359,11 +382,11 @@ class MyCustomFormState extends State<MyCustomForm> {
                     ),
                     ElevatedButton(
                         onPressed: () async {
-                          UserCredential response = await signUp();
-
-                          if (response != null) {
-                            Navigator.pushNamed(context, '/signout');
-                            //Navigator.of(context).pushNamed("signout");
+                         if(await signUp() == 'ok'){
+print("object....................................................................................................................................");
+                            //Navigator.pushNamed(context, '/signout');
+                            Navigator.of(context).pushNamed("/signout");
+                            
                           } else {
                             print("Sign up failed");
                           }

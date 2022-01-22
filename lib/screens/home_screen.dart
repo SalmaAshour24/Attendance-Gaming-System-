@@ -3,8 +3,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 //import 'package:rflutter_alert/rflutter_alert.dart';
-import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:flutter_application_1/screens/students/question_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -15,10 +13,11 @@ class HomeScreen extends StatefulWidget {
 var UT;
 
 class _HomeScreenState extends State<HomeScreen> {
-  getData() async {
+  
+  getData() {
     CollectionReference usersref =
-        FirebaseFirestore.instance.collection("users");
-    await usersref.get().then((value) {
+     FirebaseFirestore.instance.collection("users");
+     usersref.get().then((value) {
       value.docs.forEach((element) {
         print(element.data());
         print("================================");
