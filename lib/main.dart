@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_application_1/screens/doctor/add_question.dart';
+import 'package:flutter_application_1/screens/doctor/app_bar.dart';
 import 'package:flutter_application_1/screens/doctor/edit_questions.dart';
 import 'package:flutter_application_1/screens/doctor/students_points.dart';
 import 'package:flutter_application_1/screens/doctor/view_answers.dart';
@@ -19,6 +20,7 @@ import 'screens/home_screen.dart';
 import 'screens/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'Model/course_model.dart';
 
 bool islogin = false;
 
@@ -42,7 +44,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    
+    Courses course = Courses();
+    course.setCData();
+
     return MaterialApp(
       //nshil shartet el debug
       initialRoute: '/',
@@ -64,25 +68,22 @@ class MyApp extends StatelessWidget {
         '/question': (context) => QuestionScreen(),
         '/ins': (context) => QuizIns(),
       },
-
       debugShowCheckedModeBanner: false,
       title: 'AGS',
-      home:HomeScreen()
-      // home: AnimatedSplashScreen(
-      //   duration: 2000,
-      //   splash: Image.asset(
-      //     "assets/11.PNG",
-      //     fit: BoxFit.fill,
-      //   ),
-      //   //law hwa mch 3aml login ykhlyh y-login law 3ael ydkhlo direct 3l homepage
-      //   nextScreen: islogin == false ? HomeScreen() : homePage(),
-      //   backgroundColor: Color(0xff36344b),
-      //   splashIconSize: double.infinity,
-      //   splashTransition: SplashTransition.slideTransition,
-      //   pageTransitionType: PageTransitionType.leftToRight,
-      // ),
+      //home: HomeScreen()
+      home: AnimatedSplashScreen(
+        duration: 2000,
+        splash: Image.asset(
+          "assets/11.PNG",
+          fit: BoxFit.fill,
+        ),
+        //law hwa mch 3aml login ykhlyh y-login law 3ael ydkhlo direct 3l homepage
+        nextScreen: islogin == false ? HomeScreen() : homePage(),
+        backgroundColor: Color(0xff36344b),
+        splashIconSize: double.infinity,
+        splashTransition: SplashTransition.slideTransition,
+        pageTransitionType: PageTransitionType.leftToRight,
+      ),
     );
-    
   }
-  
 }
