@@ -1,38 +1,23 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-
-class Courses {
-  String? name;
+class Course {
+   String? coursename;
   String? description;
-  String? CID;
+  String? id;
+  // final num age;
 
-  Courses() {
-    setCData();
-  }
+  Course({this.id, this.coursename, this.description});
 
-  setCData() {
-    var course = FirebaseAuth.instance.currentUser;
-    name = course!.email;
-    CollectionReference usersref =
-        FirebaseFirestore.instance.collection("courses");
-    usersref.get().then((value) {
-      value.docs.forEach((element) {
-        var el = element.data();
-        print(element.data());
-        print("================================");
-      });
-    });
-  }
-
-  String? getCName() {
-    return name;
-  }
-
-  String? getDes() {
-    return description;
-  }
-
-  String? getCID() {
-    return CID;
+  factory Course.fromJson(Map<String, dynamic> json) {
+    return Course(
+        id: json['id'],
+        coursename: json['data']['name'],
+        description: json['data']['description']);
   }
 }
+
+// List<Course> courses = [
+//   Course('Theory of computaion', 'theory'),
+//   Course('Mobile development', 'flutter'),
+//   Course('Data eng', 'network'),
+//   Course('graduation', 'E tongue'),
+//   Course('selected topics', 'machine learning'),
+// ];
