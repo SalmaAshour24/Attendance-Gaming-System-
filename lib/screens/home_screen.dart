@@ -13,11 +13,10 @@ class HomeScreen extends StatefulWidget {
 var UT;
 
 class _HomeScreenState extends State<HomeScreen> {
-  
   getData() {
     CollectionReference usersref =
-     FirebaseFirestore.instance.collection("users");
-     usersref.get().then((value) {
+        FirebaseFirestore.instance.collection("users");
+    usersref.get().then((value) {
       value.docs.forEach((element) {
         print(element.data());
         print("================================");
@@ -252,22 +251,20 @@ class MyCustomFormState extends State<MyCustomForm> {
                                         FirebaseFirestore.instance
                                             .collection("users");
 
-                                    await usersref.where("email", isEqualTo: email).get().then((value) {
+                                    await usersref
+                                        .where("email", isEqualTo: email)
+                                        .get()
+                                        .then((value) {
                                       value.docs.forEach((element) {
                                         var UT = element['usertype'];
                                         if (UT == 2) {
                                           Navigator.pushNamed(
                                               context, '/homeD');
-                                        }
-                                        else if(UT==3)
-                                        {
+                                        } else if (UT == 3) {
                                           Navigator.pushNamed(
                                               context, '/third');
-                                        }
-                                         else if(UT==1)
-                                        {
-                                          Navigator.pushNamed(
-                                              context, '/addD');
+                                        } else if (UT == 1) {
+                                          Navigator.pushNamed(context, '/addC');
                                         }
                                       });
                                     });

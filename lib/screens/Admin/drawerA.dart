@@ -53,7 +53,7 @@ class _DrawerAState extends State<DrawerA> {
             ),
             title: Text('Home'),
             onTap: () {
-              Navigator.pushNamed(context, '/addC');
+              Navigator.pushNamed(context, '/adminc');
             },
           ),
           ListTile(

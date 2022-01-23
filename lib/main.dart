@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_application_1/providers/course_provider.dart';
+import 'package:flutter_application_1/screens/Admin/courses_admin.dart';
 import 'package:flutter_application_1/screens/doctor/add_question.dart';
 import 'package:flutter_application_1/screens/doctor/edit_questions.dart';
 import 'package:flutter_application_1/screens/doctor/students_points.dart';
@@ -49,46 +50,45 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
-        //nshil shartet el debug
-        initialRoute: '/',
-        routes: {
-          '/bonus': (context) => BonusQuestionScreen(),
-          '/addC': (context) => AddCourse(),
-          '/second': (context) => signup(),
-          '/third': (context) => homePage(),
-          '/edit': (context) => Editprofile(),
-          '/signout': (context) => HomeScreen(),
-          '/point': (context) => NewPoints(),
-          '/vp': (context) => NewPoints1(),
-          '/addQ': (context) => AddQuestions(),
-          '/eq': (context) => EditQuestions(),
-          '/viewA': (context) => ViewAnswers(),
-          '/pointsD': (context) => NewPoints1(),
-          '/homeD': (context) => ViewCourseD(),
-          '/edits': (context) => Editprofiles(),
-          '/question': (context) => QuestionScreen(),
-          '/ins': (context) => QuizIns(),
-          '/ins': (context) => QuizIns(),
-          '/addD': (context) => AddDr(),
-          '/assignD': (context) => AssignD(),
-        },
-        debugShowCheckedModeBanner: false,
-        title: 'AGS',
-        home: HomeScreen()
-        // home: AnimatedSplashScreen(
-        //   duration: 2000,
-        //   splash: Image.asset(
-        //     "assets/11.PNG",
-        //     fit: BoxFit.fill,
-        //   ),
-        //   //law hwa mch 3aml login ykhlyh y-login law 3ael ydkhlo direct 3l homepage
-        //   nextScreen: islogin == false ? HomeScreen() : homePage(),
-        //   backgroundColor: Color(0xff36344b),
-        //   splashIconSize: double.infinity,
-        //   splashTransition: SplashTransition.slideTransition,
-        //   pageTransitionType: PageTransitionType.leftToRight,
-        // ),
-        );
+      //nshil shartet el debug
+      initialRoute: '/',
+      routes: {
+        '/bonus': (context) => BonusQuestionScreen(),
+        '/addC': (context) => AddCourse(),
+        '/second': (context) => signup(),
+        '/third': (context) => homePage(),
+        '/edit': (context) => Editprofile(),
+        '/signout': (context) => HomeScreen(),
+        '/point': (context) => NewPoints(),
+        '/vp': (context) => NewPoints1(),
+        '/addQ': (context) => AddQuestions(),
+        '/eq': (context) => EditQuestions(),
+        '/viewA': (context) => ViewAnswers(),
+        '/pointsD': (context) => NewPoints1(),
+        '/homeD': (context) => ViewCourseD(),
+        '/edits': (context) => Editprofiles(),
+        '/question': (context) => QuestionScreen(),
+        '/ins': (context) => QuizIns(),
+        '/addD': (context) => AddDr(),
+        '/assignD': (context) => AssignD(),
+        '/adminc': (context) => viewcourseAdmin(),
+      },
+      debugShowCheckedModeBanner: false,
+      title: 'AGS',
+      //home: HomeScreen()
+      home: AnimatedSplashScreen(
+        duration: 2000,
+        splash: Image.asset(
+          "assets/11.PNG",
+          fit: BoxFit.fill,
+        ),
+        //law hwa mch 3aml login ykhlyh y-login law 3ael ydkhlo direct 3l homepage
+        nextScreen: islogin == false ? HomeScreen() : homePage(),
+        backgroundColor: Color(0xff36344b),
+        splashIconSize: double.infinity,
+        splashTransition: SplashTransition.slideTransition,
+        pageTransitionType: PageTransitionType.leftToRight,
+      ),
+    );
   }
 }
