@@ -18,7 +18,6 @@ class _ViewCourseDState extends State<ViewCourseD> {
     return Scaffold(
       drawer: Drawer1(),
       appBar: AppBar(
-        title: App(),
         backgroundColor: Color(0xff36344b),
       ),
       // backgroundColor: Color(0xff5A0C0C),

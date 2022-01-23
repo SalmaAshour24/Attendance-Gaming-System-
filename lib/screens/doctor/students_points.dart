@@ -14,7 +14,6 @@ class _PointsState extends State<NewPoints1> {
         drawer: Drawer1(),
         appBar: AppBar(
           backgroundColor: Color(0xff36344b),
-          title: App(),
         ),
 //        backgroundColor: Color(0xff581313),
         body: Container(

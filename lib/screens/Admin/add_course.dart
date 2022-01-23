@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'app_bar.dart';
-import 'drawer.dart';
+import 'drawerA.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -16,9 +15,8 @@ class _AddCourseState extends State<AddCourse> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer1(),
+      drawer: DrawerA(),
       appBar: AppBar(
-        title: App(),
         backgroundColor: Color(0xff36344b),
       ),
       backgroundColor: Color(0xff36344b),

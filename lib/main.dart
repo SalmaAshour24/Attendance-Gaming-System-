@@ -11,11 +11,13 @@ import 'package:flutter_application_1/screens/students/edit_profiles.dart';
 import 'package:flutter_application_1/screens/students/instructions.dart';
 import 'package:flutter_application_1/screens/students/new_points.dart';
 import 'package:flutter_application_1/screens/students/question_screen.dart';
+import 'package:flutter_application_1/screens/Admin/add_Dr.dart';
+import 'package:flutter_application_1/screens/Admin/assign_Dr.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter/material.dart';
 import "package:animated_splash_screen/animated_splash_screen.dart";
 import 'package:provider/provider.dart';
-import 'screens/doctor/add_course.dart';
+import 'screens/Admin/add_course.dart';
 import 'screens/students/home_page.dart';
 import 'screens/home_screen.dart';
 import 'screens/signup.dart';
@@ -67,6 +69,9 @@ class MyApp extends StatelessWidget {
           '/edits': (context) => Editprofiles(),
           '/question': (context) => QuestionScreen(),
           '/ins': (context) => QuizIns(),
+          '/ins': (context) => QuizIns(),
+          '/addD': (context) => AddDr(),
+          '/assignD': (context) => AssignD(),
         },
         debugShowCheckedModeBanner: false,
         title: 'AGS',

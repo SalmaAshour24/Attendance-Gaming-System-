@@ -1,4 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_application_1/Model/users_model.dart';
 
 class Drawer1 extends StatefulWidget {
   @override
@@ -6,6 +10,7 @@ class Drawer1 extends StatefulWidget {
 }
 
 class _Drawer1State extends State<Drawer1> {
+  Users us= Users();
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -26,8 +31,7 @@ class _Drawer1State extends State<Drawer1> {
                       const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
                   child: Column(
                     children: [
-                      Text('laknvldknvdlksfnv'),
-                      Text('dlkfvndflkbndlfkbndlkbnd'),
+                      Text("${us.getEmail()}"),
                     ],
                   ),
                 ),
@@ -43,20 +47,6 @@ class _Drawer1State extends State<Drawer1> {
             title: Text('Home'),
             onTap: () {
               Navigator.pushNamed(context, '/homeD');
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.add),
-            title: Text('Add Course'),
-            onTap: () {
-              Navigator.pushNamed(context, '/addC');
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Edit profile'),
-            onTap: () {
-              Navigator.pushNamed(context, '/edit');
             },
           ),
           ListTile(

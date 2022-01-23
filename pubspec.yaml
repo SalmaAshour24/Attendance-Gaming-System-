@@ -49,6 +49,8 @@ dependencies:
   firebase_messaging: ^11.2.5
   delayed_display: ^2.0.0
   motion_toast: ^2.1.0
+  awesome_dropdown: ^0.0.4
+
   
   dependencies:
   #rflutter_alert: ^1.0.3

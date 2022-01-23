@@ -6,26 +6,22 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_application_1/Model/users_model.dart';
 
-class Drawer1s extends StatefulWidget {
+class DrawerA extends StatefulWidget {
   @override
-  _Drawer1sState createState() => _Drawer1sState();
+  _DrawerAState createState() => _DrawerAState();
 }
 
-class _Drawer1sState extends State<Drawer1s> {
-  Users us= Users();
+class _DrawerAState extends State<DrawerA> {
+  Users us = Users();
   CollectionReference usersref = FirebaseFirestore.instance.collection("users");
 
   @override
   Widget build(BuildContext context) {
-   
     return Drawer(
-
-      
       child: ListView(
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
         children: <Widget>[
-          
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 30),
             child: Row(
@@ -57,21 +53,21 @@ class _Drawer1sState extends State<Drawer1s> {
             ),
             title: Text('Home'),
             onTap: () {
-              Navigator.pushNamed(context, '/third');
+              Navigator.pushNamed(context, '/addC');
             },
           ),
           ListTile(
             leading: Icon(Icons.person, color: Color(0xff36344b)),
-            title: Text('Edit Profile'),
+            title: Text('Add Dr'),
             onTap: () {
-              Navigator.pushNamed(context, '/edits');
+              Navigator.pushNamed(context, '/addD');
             },
           ),
           ListTile(
             leading: Icon(Icons.circle, size: 20, color: Color(0xff36344b)),
-            title: Text('Points'),
+            title: Text('Assign Dr'),
             onTap: () {
-              Navigator.pushNamed(context, '/point');
+              Navigator.pushNamed(context, '/assignD');
             },
           ),
           Divider(

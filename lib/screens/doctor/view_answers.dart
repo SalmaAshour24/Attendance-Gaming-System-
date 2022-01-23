@@ -14,7 +14,6 @@ class _ViewAnswersState extends State<ViewAnswers> {
         drawer: Drawer1(),
         appBar: AppBar(
           backgroundColor: Color(0xff36344b),
-          title: App(),
         ),
         backgroundColor: Color(0xff36344b),
         body: Container(

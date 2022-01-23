@@ -153,8 +153,8 @@ class CardList extends StatelessWidget {
                 )),
             child: ListTile(
               leading: Icon(Icons.supervisor_account),
-              title: Text(course?.coursename ?? 'name'),
-              subtitle: Text(course?.description ?? 'descr'),
+              title: Text(course.coursename ?? 'name'),
+              subtitle: Text(course.description ?? 'descr'),
               trailing: Icon(
                 Icons.arrow_forward_ios,
                 color: Colors.black26,
