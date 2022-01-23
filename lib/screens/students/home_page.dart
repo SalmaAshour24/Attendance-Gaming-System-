@@ -173,15 +173,7 @@ class CardList extends StatelessWidget {
             motion: const DrawerMotion(),
             extentRatio: 0.25,
             children: [
-              // SlidableAction(
-              //   label: 'Delete',
-              //   backgroundColor: Colors.red,
-              //   icon: Icons.delete,
-              //   onPressed: (context) {
-              //     Provider.of<CourseProviders>(context, listen: false)
-              //         .removeCourse(index);
-              //   },
-              // ),
+             
             ],
           ),
         ));
