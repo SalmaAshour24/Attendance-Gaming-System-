@@ -4,6 +4,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Model/course_model.dart';
+import 'package:flutter_application_1/Model/questions_model.dart';
 import 'package:flutter_application_1/providers/course_provider.dart';
 import 'package:flutter_application_1/screens/students/question_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -11,10 +12,10 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:provider/provider.dart';
 import 'app_barS.dart';
 import 'drawerS.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class viewcourse extends StatelessWidget {
   // This widget is the root of your application.
+ 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -23,7 +24,8 @@ class viewcourse extends StatelessWidget {
           title: 'Course',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            primarySwatch: Colors.cyan,
+            primarySwatch: colors.basic,
+
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
           home: homePage()),
@@ -59,7 +61,7 @@ class _homePageState extends State<homePage> {
     return Scaffold(
         drawer: Drawer1s(),
         appBar: AppBar(
-          title: Apps(),
+         // title: Apps(),
           backgroundColor: Color(0xff36344b),
         ),
         body: Container(
@@ -76,8 +78,14 @@ class _homePageState extends State<homePage> {
                             onTap: () {
                               showAlertDialog(context,
                                   index: index, course: data.getCourse[index]);
+                    
                             },
-                            child: CardList(data.getCourse[index], index));
+                            child: CardList(data.getCourse[index], index),
+                                
+                            
+                            
+                            );
+                     
                       },
                     )
                   : Padding(
@@ -180,7 +188,7 @@ class CardList extends StatelessWidget {
   }
 }
 
-showAlertDialog(BuildContext context, {int index = -1, Course? course = null}) {
+showAlertDialog(BuildContext context, {int index = -1, Course? course = null, Question? question}) {
   TextEditingController _name = TextEditingController();
   TextEditingController _description = TextEditingController();
 
@@ -188,9 +196,20 @@ showAlertDialog(BuildContext context, {int index = -1, Course? course = null}) {
   _description.text = (course?.description) ?? "";
   // Create button
   Widget okButton = ElevatedButton(
-    child: Text("Confirm"),
+    child: Text("Attempt Quiz", style: TextStyle(
+                          color: Color(0xffffffff),
+                          fontSize: 25,
+                        ),),
+     style: ElevatedButton.styleFrom(
+      primary: Color(0xff36344b),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(2),
+      ),
+    ),
     onPressed: () {
-      Navigator.of(context, rootNavigator: true).pop();
+                       Navigator.pushNamed(context, '/question');
+
+   //   Navigator.of(context, rootNavigator: true).pop();
       DateTime now = DateTime.now();
       String id = now.hour.toString() +
           now.minute.toString() +
@@ -228,7 +247,7 @@ showAlertDialog(BuildContext context, {int index = -1, Course? course = null}) {
       ],
     ),
     actions: [
-      //  okButton,
+        okButton,
     ],
   );
 
@@ -239,4 +258,13 @@ showAlertDialog(BuildContext context, {int index = -1, Course? course = null}) {
       return alert;
     },
   );
+  
 }
+ class colors{
+    static MaterialColor basic =  MaterialColor(
+      0xff36344b,
+      const <int,Color>{
+        100:const Color(0xff36344b),
+      }
+    );
+  }
