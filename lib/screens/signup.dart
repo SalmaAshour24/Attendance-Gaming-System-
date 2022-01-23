@@ -2,7 +2,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-// import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class signup extends StatefulWidget {
@@ -12,21 +11,7 @@ class signup extends StatefulWidget {
 
 class _signupState extends State<signup> {
   @override
-  // addData() {
-  //   CollectionReference usersref =
-  //       FirebaseFirestore.instance.collection("users");
-  //   usersref.add({
-  //     "firstname": "Sayed",
-  //     "lastname": "saad",
-  //     "email": "sayed@gmail.com",
-  //     "password": "Sayed123",
-  //     "usertype": "3",
-  //   });
-  // }
-
-  @override
   void initState() {
-    // addData();
     super.initState();
   }
 
@@ -58,44 +43,45 @@ class MyCustomFormState extends State<MyCustomForm> {
       print('valid');
       formdata.save();
       try {
-        await FirebaseAuth.instance.createUserWithEmailAndPassword(
-          email: email, password: password);
+        await FirebaseAuth.instance
+            .createUserWithEmailAndPassword(email: email, password: password);
 
-        DocumentReference r = FirebaseFirestore.instance.collection('users').doc(FirebaseAuth.instance.currentUser!.uid);
+        DocumentReference r = FirebaseFirestore.instance
+            .collection('users')
+            .doc(FirebaseAuth.instance.currentUser!.uid);
 
-FirebaseFirestore.instance.runTransaction((transaction) async{
-DocumentSnapshot snapShot = await transaction.get(r);
+        FirebaseFirestore.instance.runTransaction(
+          (transaction) async {
+            DocumentSnapshot snapShot = await transaction.get(r);
 
-if(!snapShot.exists){
-	r.set({
-    "firstname": firstname,
-          "lastname": lastname,
-          "email": email,
-          "usertype": 3,
-		});
-    
+            if (!snapShot.exists) {
+              r.set({
+                "firstname": firstname,
+                "lastname": lastname,
+                "email": email,
+                "usertype": 3,
+              });
+            }
+          },
 
-}
+          // CollectionReference usersref =
+          //     FirebaseFirestore.instance.collection("users");
+          // UserCredential userCredential = await FirebaseAuth.instance
+          //     .createUserWithEmailAndPassword(email: email, password: password);
+          // var currentUser = FirebaseAuth.instance.currentUser;
+          // var uid = currentUser!.uid;
 
-},
+          // usersref.add({
+          //   "firstname": firstname,
+          //   "lastname": lastname,
+          //   "email": email,
+          //   "password": password,
+          //   "usertype": 3,
+          // });
 
-        // CollectionReference usersref =
-        //     FirebaseFirestore.instance.collection("users");
-        // UserCredential userCredential = await FirebaseAuth.instance
-        //     .createUserWithEmailAndPassword(email: email, password: password);
-        // var currentUser = FirebaseAuth.instance.currentUser;
-        // var uid = currentUser!.uid;
-
-        // usersref.add({
-        //   "firstname": firstname,
-        //   "lastname": lastname,
-        //   "email": email,
-        //   "password": password,
-        //   "usertype": 3,
-        // });
-
-        // return userCredential;
-);} on FirebaseException catch (e) {
+          // return userCredential;
+        );
+      } on FirebaseException catch (e) {
         if (e.code == 'weak-password') {
           // Alert(
           //         context: context,
@@ -382,11 +368,10 @@ if(!snapShot.exists){
                     ),
                     ElevatedButton(
                         onPressed: () async {
-                         if(await signUp() == 'ok'){
-print("object....................................................................................................................................");
-                            //Navigator.pushNamed(context, '/signout');
+                          if (await signUp() == 'ok') {
+                            print(
+                                "object....................................................................................................................................");
                             Navigator.of(context).pushNamed("/signout");
-                            
                           } else {
                             print("Sign up failed");
                           }
