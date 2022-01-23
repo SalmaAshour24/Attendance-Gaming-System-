@@ -207,7 +207,7 @@ showAlertDialog(BuildContext context, {int index = -1, Course? course = null, Qu
       ),
     ),
     onPressed: () {
-                       Navigator.pushNamed(context, '/question');
+                       Navigator.pushNamed(context, '/ins');
 
    //   Navigator.of(context, rootNavigator: true).pop();
       DateTime now = DateTime.now();

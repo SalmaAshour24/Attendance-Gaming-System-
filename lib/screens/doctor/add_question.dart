@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/home_screen.dart';
 import 'app_bar.dart';
 import 'drawer.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:provider/provider.dart';
 
 class AddQuestions extends StatefulWidget {
   const AddQuestions({Key? key}) : super(key: key);
@@ -11,14 +15,65 @@ class AddQuestions extends StatefulWidget {
 
 class _AddQuestionsState extends State<AddQuestions> {
   @override
+   void initState() {
+    // addData();
+    super.initState();
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer1(),
       appBar: AppBar(
+        title: App(),
         backgroundColor: Color(0xff36344b),
       ),
       backgroundColor: Color(0xff36344b),
-      body: Container(
+      body: const MyCustomForm(),
+      
+     
+    );
+  }
+}
+class MyCustomForm extends StatefulWidget {
+  const MyCustomForm({ Key? key }) : super(key: key);
+
+  @override
+  _MyCustomFormState createState() => _MyCustomFormState();
+}
+
+class _MyCustomFormState extends State<MyCustomForm> {
+   late var question, trueans, option1, option2, option3;
+
+  final _formKey = GlobalKey<FormState>();
+
+
+  getData() async {
+    var formdata = _formKey.currentState;
+    if (formdata!.validate()) {
+      print('valid');
+      formdata.save();
+      try {
+        CollectionReference usersref =
+            FirebaseFirestore.instance.collection("Question");
+        usersref.add({"Question": question, "trueans": trueans,"option1":option1,
+          "option2": option2
+        ,
+          "option3": option3
+      });
+      } catch (e) {
+        print(e);
+      }
+    } else {
+      print('not valid');
+    }
+  }
+
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: _formKey,
+      child:   Container(
         decoration: new BoxDecoration(
                           color: Color(0xfff8edee),
         ),
@@ -62,6 +117,9 @@ class _AddQuestionsState extends State<AddQuestions> {
                       child: Container(
                      
                         child: TextFormField(
+                           onSaved: (val) {
+                            question = val;
+                          },
                           textAlign: TextAlign.center,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
@@ -90,11 +148,14 @@ class _AddQuestionsState extends State<AddQuestions> {
                       child: Container(
                         
                         child: TextFormField(
+                           onSaved: (val) {
+                                trueans = val;
+                              },
                               cursorColor: Color(0XFFFFCCFF),
                               textAlign: TextAlign.center,
                               decoration: const InputDecoration(
                                 border: null,
-                                hintText: '1',
+                                hintText: 'True',
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                       color: Color(0xff6c6996), width: 2),
@@ -109,11 +170,14 @@ class _AddQuestionsState extends State<AddQuestions> {
                       child: Container(
                       
                         child: TextFormField(
+                           onSaved: (val) {
+                                option1 = val;
+                              },
                               cursorColor: Color(0XFFFFCCFF),
                               textAlign: TextAlign.center,
                               decoration: const InputDecoration(
                                 border: null,
-                                hintText: '2',
+                                hintText: 'option1',
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                       color: Color(0xff6c6996), width: 2),
@@ -128,11 +192,14 @@ class _AddQuestionsState extends State<AddQuestions> {
                       child: Container(
                        
                         child: TextFormField(
+                           onSaved: (val) {
+                                option2 = val;
+                              },
                               cursorColor: Color(0XFFFFCCFF),
                               textAlign: TextAlign.center,
                               decoration: const InputDecoration(
                                 border: null,
-                                hintText: '3',
+                                hintText: 'optoin2',
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                       color: Color(0xff6c6996), width: 2),
@@ -142,10 +209,32 @@ class _AddQuestionsState extends State<AddQuestions> {
                               ))
                       ),
                     ),
+                            Padding(
+                      padding: EdgeInsets.all(15),
+                      child: Container(
+                          child: TextFormField(
+                              onSaved: (val) {
+                                option3 = val;
+                              },
+                              cursorColor: Color(0XFFFFCCFF),
+                              textAlign: TextAlign.center,
+                              decoration: const InputDecoration(
+                                border: null,
+                                hintText: 'optoin3',
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: Color(0xff6c6996), width: 2),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(5)),
+                                ),
+                              ))),
+                    ),
                     Padding(
                       padding: EdgeInsets.all(15),
                       child: ElevatedButton(
-                        onPressed: () {
+                        onPressed: ()  async{
+                                                    await getData();
+
                           Navigator.pushNamed(context, '/homeD');
                         },
                         style: ElevatedButton.styleFrom(
