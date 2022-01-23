@@ -23,7 +23,6 @@ class _AddQuestionsState extends State<AddQuestions> {
     return Scaffold(
       drawer: Drawer1(),
       appBar: AppBar(
-        title: App(),
         backgroundColor: Color(0xff36344b),
       ),
       backgroundColor: Color(0xff36344b),
