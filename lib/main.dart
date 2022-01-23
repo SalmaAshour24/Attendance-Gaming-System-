@@ -23,7 +23,6 @@ import 'screens/students/home_page.dart';
 import 'screens/home_screen.dart';
 import 'screens/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 bool islogin = false;
 
@@ -73,6 +72,7 @@ class MyApp extends StatelessWidget {
         '/assignD': (context) => AssignD(),
         '/adminc': (context) => homePageAdmin(),
       },
+
       debugShowCheckedModeBanner: false,
       title: 'AGS',
       //home: HomeScreen()
