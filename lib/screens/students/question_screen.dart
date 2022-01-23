@@ -43,7 +43,6 @@ class _QuestionScreenState extends State<QuestionScreen> {
     return Scaffold(
       drawer: Drawer1s(),
       appBar: AppBar(
-        title: Apps(),
         backgroundColor: Color(0xff36344b),
       ),
       // backgroundColor: Color(0xffFFB703),
