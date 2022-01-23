@@ -60,13 +60,7 @@ class _Drawer1sState extends State<Drawer1s> {
               Navigator.pushNamed(context, '/third');
             },
           ),
-          ListTile(
-            leading: Icon(Icons.person, color: Color(0xff36344b)),
-            title: Text('Edit Profile'),
-            onTap: () {
-              Navigator.pushNamed(context, '/edits');
-            },
-          ),
+         
           ListTile(
             leading: Icon(Icons.circle, size: 20, color: Color(0xff36344b)),
             title: Text('Points'),
