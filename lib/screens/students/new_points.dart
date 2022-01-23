@@ -14,7 +14,6 @@ class _PointsState extends State<NewPoints> {
     return Scaffold(
         drawer: Drawer1s(),
       appBar: AppBar(
-        title: Apps(),
     
         backgroundColor: Color(0xff36344b),
       ),
