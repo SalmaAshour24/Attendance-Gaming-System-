@@ -264,7 +264,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                                           Navigator.pushNamed(
                                               context, '/third');
                                         } else if (UT == 1) {
-                                          Navigator.pushNamed(context, '/addC');
+                                          Navigator.pushNamed(context, '/adminc');
                                         }
                                       });
                                     });

@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
         '/ins': (context) => QuizIns(),
         '/addD': (context) => AddDr(),
         '/assignD': (context) => AssignD(),
-        '/adminc': (context) => viewcourseAdmin(),
+        '/adminc': (context) => homePageAdmin(),
       },
       debugShowCheckedModeBanner: false,
       title: 'AGS',

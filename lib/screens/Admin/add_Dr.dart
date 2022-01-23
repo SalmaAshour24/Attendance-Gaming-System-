@@ -342,7 +342,7 @@ print("object...................................................................
                               fontFamily: 'Lora-VariableFont_wght',
                             )),
                         child: Text(
-                          'SIGN UP',
+                          'Add Doctor',
                           style: TextStyle(
                             color: Color(0xffffffff),
                           ),

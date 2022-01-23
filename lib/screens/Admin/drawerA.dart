@@ -64,6 +64,13 @@ class _DrawerAState extends State<DrawerA> {
             },
           ),
           ListTile(
+            leading: Icon(Icons.person, color: Color(0xff36344b)),
+            title: Text('Add Course'),
+            onTap: () {
+              Navigator.pushNamed(context, '/addC');
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.circle, size: 20, color: Color(0xff36344b)),
             title: Text('Assign Dr'),
             onTap: () {
